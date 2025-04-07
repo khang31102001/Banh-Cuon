@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Clock, Facebook, Instagram, Globe } from 'lucide-react';
 import { useLanguage } from '@/Contexts/LanguageContext';
+import { Media } from '@/assets/Media';
 // import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
@@ -14,9 +15,10 @@ const Footer: React.FC = () => {
           {/* Brand & Info */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
-              <h3 className="font-poppins font-bold text-2xl text-banhcuon-800 dark:text-banhcuon-200">
+            <img src={Media.logo || ""} className="w-48 h-48 object-contain "/>
+              {/* <h3 className="font-poppins font-bold text-2xl text-banhcuon-800 dark:text-banhcuon-200">
                 Bánh Cuốn <span className="text-cta">Tây Hồ</span>
-              </h3>
+              </h3> */}
             </Link>
             <p className="text-muted-foreground">
               {t('home.welcomeText').substring(0, 120)}...

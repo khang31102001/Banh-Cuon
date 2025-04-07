@@ -4,7 +4,7 @@ import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Language, useLanguage } from '@/Contexts/LanguageContext';
 import { Media } from '@/assets/Media';
-import { Button } from '../ui/button';
+// import { Button } from '../ui/button';
 
 
 const Header: React.FC = () => {
@@ -55,18 +55,18 @@ const Header: React.FC = () => {
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
-        {/* <Link
+        <Link
           to="/"
           className="flex items-center justify-center font-poppins font-bold text-2xl text-banhcuon-800"
         >
-          <div className="  w-20 h-20 p-1 bg-gradient-to-r from-primary to-secondary rounded-full shadow-lg  ">
+          <div className="">
             <img
               src={Media.logo}
               alt="Bánh Cuốn Tây Hồ Logo"
-              className="w-20 h-20 rounded-full object-cover"
+              className="w-48  object-cover"
             />
           </div>
-        </Link> */}
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">

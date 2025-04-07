@@ -23,8 +23,8 @@ const Menu: React.FC = () => {
 
   const filteredItems = menuItems.filter((item) => {
     if (filter === 'all') return true;
-    if (filter === 'vegetarian') return item.isVegetarian;
-    if (filter === 'non-vegetarian') return !item.isVegetarian;
+    if (filter === 'vegetarian') return item.category.name;
+    if (filter === 'non-vegetarian') return !item.category.name;
     return true;
   });
 

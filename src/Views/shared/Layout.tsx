@@ -4,12 +4,48 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 
-// import { LayoutFooter } from "@/components/Layout/Footer";
-// import { LayoutHeader } from "@/components/Layout/Header";
+const setupSrollAnimated = () => {
+  const element = document.querySelectorAll(".animated-on-sroll");
+  const observer = new IntersectionObserver((entries) =>
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        const children = entry.target.querySelectorAll('.staggered-item');
+        children.forEach((child, index) => {
+          setTimeout(() => {
+            (child as HTMLElement).style.opacity = '1';
+            (child as HTMLElement).style.transform = 'translateY(0)';
+          }, 150 * index);
+        });
+      }
+    }, { threshold: 0.1 })
+  );
 
+  element.forEach((el) => observer.observe(el));
+};
 const Layout = () => {
   const [isMounted, setIsMounted] = useState(false);
 
+  useEffect(() => {
+
+    window.scroll(0, 0);
+    setupSrollAnimated();
+    
+    const observer = new MutationObserver(() => {
+      setupSrollAnimated();
+    });
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    document.documentElement.style.scrollBehavior = "smoth";
+
+    return () => {
+      observer.disconnect();
+      document.documentElement.style.scrollBehavior = "";
+    };
+  }, []);
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -19,10 +55,9 @@ const Layout = () => {
       <Header />
       <main className="flex-grow">
         <Outlet />
-
       </main>
       <Footer />
     </div>
   );
-}
+};
 export default Layout;
