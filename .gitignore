@@ -1,0 +1,38 @@
+# ⛔ Đừng commit thư viện cài bằng npm/yarn
+node_modules/
+
+# ⛔ Đừng commit file build
+dist/
+build/
+
+# ⛔ File lock (nếu bạn chỉ dùng 1 trình quản lý gói)
+# Nếu dùng npm, giữ lại package-lock.json và ignore yarn.lock
+yarn.lock
+
+# ⛔ Biến môi trường
+.env
+.env.*.local
+
+# ⛔ Tạm thời / cache Vite
+.vite/
+.cache/
+.temp/
+
+# ⛔ IDE settings
+.vscode/
+.idea/
+*.log
+
+# ⛔ OS/system file
+.DS_Store
+Thumbs.db
+
+# ⛔ Git hooks
+husky/
+
+# ⛔ Storybook (nếu dùng)
+storybook-static/
+
+# ⛔ File cấu hình export
+*.local
+
