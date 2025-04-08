@@ -31,7 +31,7 @@ const HeroSection = () => {
             <div className="hero">
                 <div ref={parallaxRef} className="absolute inset-0 overflow-hidden">
                     <video
-                        src={Media.vedieo_header_home}
+                        src=""
                         className="w-full h-full object-cover"
                         autoPlay
                         loop

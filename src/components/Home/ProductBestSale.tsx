@@ -6,7 +6,7 @@ const ProductBestSale = () => {
     const Menu = menuItems;
 
     return (
-        <div className="p-4">
+        <div className="container mx-auto p-4">
             <div className="text-center mb-6">
                 <h1 className="text-2xl font-bold">Món ăn best sale</h1>
                 <span className="text-gray-600">Khám phá những món ăn ngon mỗi ngày</span>
