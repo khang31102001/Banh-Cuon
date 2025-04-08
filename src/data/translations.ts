@@ -74,9 +74,9 @@ type TranslationType = {
       contact: {
         title: 'Liên Hệ',
         subtitle: 'Chúng Tôi Luôn Sẵn Sàng Phục Vụ Bạn',
-        address: '123 Đường Lạc Long Quân, Tây Hồ, Hà Nội',
-        phone: '024 1234 5678',
-        hours: '7:00 - 21:00 (Thứ 2 - Chủ Nhật)',
+        address: '127 Đinh Tiên Hoàng - Đa Kao, Q 1, Tp.HCM',
+        phone: '028 3820 0584',
+        hours: '5:30 - 21:30 (Thứ 2 - Chủ Nhật)',
         orderOnline: 'Đặt Hàng Online',
         scanQR: 'Quét mã QR để đặt hàng qua ShopeeFood',
         messageUs: 'Gửi Tin Nhắn Cho Chúng Tôi',

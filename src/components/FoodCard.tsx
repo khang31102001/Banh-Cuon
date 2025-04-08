@@ -30,6 +30,15 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox }) => {
         toast.error("Không thể sao chép đường dẫn");
       });
   };
+  const handleOrder = () => {
+    const link = "https://shopeefood.vn/ho-chi-minh/banh-cuon-tay-ho-dinh-tien-hoang";
+
+    if (link.startsWith("https://shopeefood.vn/ho-chi-minh/banh-cuon-tay-ho-dinh-tien-hoang")) {
+      window.open(link, "_blank", "noopener,noreferrer");
+    } else {
+      console.log("Liên kết không hợp lệ.");
+    }
+  }
   
   const handleShareFacebook = (itemId: number, event: React.MouseEvent) => {
     event.preventDefault();
@@ -48,7 +57,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox }) => {
   };
   return (
     <div
-      className="food-card group bg-white dark:bg-card transition-all duration-300 hover:translate-y-[-5px]"
+      className="food-card group bg-white dark:bg-card transition-all duration-300 hover:translate-y-[-5px] fade-in-up h-full flex flex-col"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -97,7 +106,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox }) => {
       </div>
 
       <div className="p-4 space-y-3">
-        <div className="block w-full">
+        <div className=" w-full">
           <h3 className="text-xl font-semibold font-poppins text-banhcuon-800">{item.name[language]}</h3>
         </div>
         <p className="text-sm text-muted-foreground line-clamp-2">{item.description[language]}</p>
@@ -113,7 +122,8 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox }) => {
           <div className="font-semibold text-primary">
             {formatPrice(item.price)} {t('menu.currency')}
           </div>
-          <button className="cta-button text-sm py-2 px-4 flex items-center gap-2">
+          <button className="cta-button text-sm py-2 px-4 flex items-center gap-2"
+          onClick={handleOrder}>
             <span>{t('common.orderNow')}</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14"></path>

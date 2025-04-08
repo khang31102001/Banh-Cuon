@@ -1,25 +1,26 @@
 import { Media } from '@/assets/Media';
 import { useLanguage } from '@/Contexts/LanguageContext';
-import { ArrowRight, Play, Pause} from 'lucide-react';
+import { ArrowRight, Play, Pause } from 'lucide-react';
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import SectionTitle from '../SectionTitle';
 const SectionVideo = () => {
- const {t} = useLanguage();
-  const [isPlaying, setIsPlaying] = useState(false);
-   const videoRef = useRef<HTMLVideoElement>(null);
+    const { t } = useLanguage();
+    const [isPlaying, setIsPlaying] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
 
-     const toggleVideo = () => {
-       if (videoRef.current) {
-         if (isPlaying) {
-           videoRef.current.pause();
-         } else {
-           videoRef.current.play();
-         }
-         setIsPlaying(!isPlaying);
-       }
-     };
+    const toggleVideo = () => {
+        if (videoRef.current) {
+            if (isPlaying) {
+                videoRef.current.pause();
+            } else {
+                videoRef.current.play();
+            }
+            setIsPlaying(!isPlaying);
+        }
+    };
 
-    
+
     return (
         <div>
             {/* Welcome Section with Video */}
@@ -27,9 +28,21 @@ const SectionVideo = () => {
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6 animate-fade-in  delay-300 ">
-                            <h2 className="primary-heading">{t('home.welcomeTitle')}</h2>
-                            <p className="text-muted-foreground">
-                                {t('home.welcomeText')}
+                            <SectionTitle
+                                title="Về Bánh Cuốn Tây Hồ"
+                                centered={false}
+                                className="mb-6"
+                            />
+                            <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                                Từ năm 1972, Bánh Cuốn Tây Hồ đã bắt đầu hành trình mang hương vị
+                                truyền thống Việt Nam đến với mọi người. Chúng tôi tự hào về công thức
+                                gia truyền và quy trình làm bánh thủ công, tạo nên những chiếc bánh cuốn
+                                mỏng, mịn với nhân thơm ngon đặc trưng.
+                            </p>
+                            <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                                Ngày nay, Bánh Cuốn Tây Hồ đã trở thành một thương hiệu ẩm thực được yêu
+                                thích và tin tưởng bởi nhiều thế hệ người Việt Nam, cũng như du khách quốc tế
+                                khi đến thăm Hà Nội.
                             </p>
                             <div className="pt-4">
                                 <Link to="/menu" className="inline-flex items-center font-medium text-primary hover:text-primary/80 transition-colors">
@@ -41,7 +54,7 @@ const SectionVideo = () => {
                         <div className="relative rounded-xl overflow-hidden shadow-xl h-80 lg:h-96">
                             <video
                                 ref={videoRef}
-                                src={Media.vedieo_header_home}
+                                src="https://cdn.discordapp.com/attachments/1121234567890123456/video.mp4"
                                 className="absolute inset-0 w-full h-full object-cover"
                                 loop
                                 muted

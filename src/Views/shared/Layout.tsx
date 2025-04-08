@@ -3,10 +3,10 @@ import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-import SocialSidebar from "@/components/Layout/SocialSideBar";
+import SocialSidebar from "@/components/Layout/SocialSidebar";
 
 const setupSrollAnimated = () => {
-  const element = document.querySelectorAll(".animated-on-sroll");
+  const element = document.querySelectorAll(".fade-in-up");
   const observer = new IntersectionObserver((entries) =>
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -19,7 +19,7 @@ const setupSrollAnimated = () => {
           }, 150 * index);
         });
       }
-    }, { threshold: 0.1 })
+    }, { threshold: 0.15, rootMargin: "0px 0px -100px 0px" })
   );
 
   element.forEach((el) => observer.observe(el));
@@ -29,8 +29,9 @@ const Layout = () => {
 
   useEffect(() => {
 
-    window.scroll(0, 0);
+   
     setupSrollAnimated();
+    window.scroll(0, 0);
     
     const observer = new MutationObserver(() => {
       setupSrollAnimated();
