@@ -27,7 +27,7 @@ const SectionVideo = () => {
             <section className="section-padding bg-white dark:bg-background ">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div className="space-y-6 animate-fade-in  delay-300 ">
+                        <div className="space-y-6 fade-in-left ">
                             <SectionTitle
                                 title="Về Bánh Cuốn Tây Hồ"
                                 centered={false}

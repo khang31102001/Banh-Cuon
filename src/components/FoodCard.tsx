@@ -72,8 +72,14 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox }) => {
         <div className="absolute top-0 left-0 w-full p-3 flex justify-between items-center">
           <img src={Media.logo} alt="Tây Hồ Logo" className="h-12 object-contain" />
 
-          {item.category.name && (
+          {/* {item.category.name && (
             <Badge className="bg-green-500 text-white hover:bg-green-600">
+              {item.category.name}
+            </Badge>
+          )} */}
+
+          {item.category.name && (
+            <Badge className= {`text-xs text-white ${item.category.name === "Món Chay" ? "bg-green-500" : "bg-red-400"} `}>
               {item.category.name}
             </Badge>
           )}

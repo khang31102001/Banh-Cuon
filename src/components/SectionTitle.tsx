@@ -21,9 +21,11 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
 
   return (
     <div
-      className={`mb-12 ${centered ? "text-center" : ""} ${className} animate-on-scroll`}
+      className={`mb-12 ${centered ? "text-center" : ""} ${className} `}
+   
     >
-      <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${textColorClass} font-serif relative inline-block`}>
+      <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${textColorClass} font-roboto relative inline-block animate-[fade-in_1s_ease-out] opacity-0`}
+         style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
         {title}
         <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-banhcuon-500 to-leaf-400 rounded-full transform origin-left transition-transform duration-500 hover:scale-110"></span>
       </h2>

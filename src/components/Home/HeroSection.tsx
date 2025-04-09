@@ -53,7 +53,7 @@ const HeroSection = () => {
 
                 <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
 
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-on-scroll font-serif leading-tight">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in-up font-roboto leading-tight">
                         <span className="block mb-2 animate-[fade-in_1s_ease-out] opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
                             Bánh Cuốn Tây Hồ
                         </span>
