@@ -28,6 +28,7 @@ const Header: React.FC = () => {
   const menuItems = [
     { path: '/', label: t('common.home') },
     { path: '/menu', label: t('common.menu') },
+    { path: '/about', label: t('common.about') },
     { path: '/recruitment', label: t('common.recruitment') },
     { path: '/contact', label: t('common.contact') },
   ];

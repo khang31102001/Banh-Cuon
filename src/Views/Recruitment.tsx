@@ -4,6 +4,8 @@ import { Check, Calendar, Briefcase, Users, BookOpen } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import jobPositions from '@/data/jobPositions';
 import { Language, useLanguage } from '@/Contexts/LanguageContext';
+import SectionGallery from '@/components/Recruitment/SctionGallery';
+import SectionProcess from '@/components/Recruitment/SectionProcess';
 
 interface FormData {
   fullName: string;
@@ -154,42 +156,8 @@ const Recruitment: React.FC = () => {
           </div>
         </div>
 
-        {/* Open Positions */}
-        <div className="mb-16">
-          <h2 className="secondary-heading text-center mb-10">{t('recruitment.openPositions')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {jobPositions.map((job) => (
-              <div key={job.id} className="bg-white dark:bg-card p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold mb-2">{job.title[language as Language]}</h3>
-                <p className="text-muted-foreground mb-4">{job.description[language as Language]}</p>
-                
-                <h4 className="font-medium mb-2">Requirements:</h4>
-                <ul className="space-y-1 mb-4">
-                  {job.requirements[language as Language].map((req, index) => (
-                    <li key={index} className="flex items-start">
-                      <Check size={16} className="text-green-500 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{req}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="flex justify-between items-center mt-4">
-                  <span className="text-primary font-medium">{job.salary[language as Language]}</span>
-                  <button 
-                    className="cta-button py-2 px-4 text-sm"
-                    onClick={() => {
-                      setFormData(prev => ({ ...prev, position: job.title[language as Language] }));
-                      document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' });
-                      calculateProgress();
-                    }}
-                  >
-                    {t('common.apply')}
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+       <SectionGallery/>
+       <SectionProcess/>
 
         {/* Application Form */}
         <div id="application-form" className="max-w-2xl mx-auto bg-white dark:bg-card p-8 rounded-lg shadow-lg animate-slide-up">

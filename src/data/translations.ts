@@ -9,6 +9,7 @@ type TranslationType = {
       common: {
         home: 'Trang Chủ',
         menu: 'Thực Đơn',
+        about: 'Giới Thiệu',
         recruitment: 'Tuyển Dụng',
         contact: 'Liên Hệ',
         orderNow: 'Đặt Ngay',

@@ -3,6 +3,7 @@ import { MapPin, Phone, Clock, Send } from 'lucide-react';
 // import { useLanguage } from '../contexts/LanguageContext';
 import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/Contexts/LanguageContext';
+import SectionMap from '@/components/Contact/SectionMap';
 
 interface ContactFormData {
   name: string;
@@ -174,15 +175,10 @@ const Contact: React.FC = () => {
               </form>
             </div>
             
-            {/* Google Maps placeholder */}
-            <div className="mt-8 bg-white dark:bg-card p-4 rounded-lg shadow-lg h-72 flex items-center justify-center">
-              <div className="text-center text-muted-foreground">
-                <p>Google Map will be embedded here</p>
-                <p className="text-sm mt-2">({t('contact.address')})</p>
-              </div>
-            </div>
+           
           </div>
         </div>
+        <SectionMap/>
       </div>
     </div>
   );

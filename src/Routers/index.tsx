@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import NotFound from "@/Views/NotFound";
+import About from "@/Views/About";
 
 
 // lazy() giúp tối ưu hiệu suất bằng cách tải component khi cần.
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
         children:[
             {path: '/', element: <Home/>},
             {path: '/menu', element: <Menu/>},
+            {path: '/about', element: <About/>},
             {path: '/contact', element: <Contact/>},
             {path: 'recruitment', element: <Recruitment/>}
         ]  
