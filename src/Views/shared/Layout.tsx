@@ -55,7 +55,9 @@ const Layout = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <SocialSidebar/>
+      <div className="hidden sm:block lg:block">
+       <SocialSidebar/>
+      </div>
       <main className="flex-grow">
         <Outlet />
       </main>

@@ -1,13 +1,7 @@
 import React from "react";
 
-interface BreadcrumbItem {
-  label: string;
-  path: string;
-}
-
 interface SectionBannerProps {
   title: string;
-  breadcrumbs: BreadcrumbItem[];
   backgroundImage?: string;
   children?: React.ReactNode;
   className?: string;
@@ -15,7 +9,6 @@ interface SectionBannerProps {
 
 const SectionBanner: React.FC<SectionBannerProps> = ({
   title,
-  breadcrumbs,
   backgroundImage,
   children,
   className = "",
@@ -30,11 +23,11 @@ const SectionBanner: React.FC<SectionBannerProps> = ({
     : {};
 
   const textColorClass = backgroundImage ? "text-white" : "text-banhcuon-900";
-  const breadcrumbClass = backgroundImage ? "text-white/80" : "";
+ 
 
   return (
     <header
-      className={`py-24 ${backgroundImage ? "bg-banhcuon-900" : "bg-gradient-to-r from-banhcuon-50 to-leaf-50"} ${className} animate-on-scroll`}
+      className={`py-24 ${backgroundImage ? "bg-banhcuon-400" : "bg-gradient-to-r from-banhcuon-50 to-leaf-50"} ${className} animate-on-scroll`}
       style={bgStyle}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

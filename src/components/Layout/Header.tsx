@@ -4,6 +4,7 @@ import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Language, useLanguage } from '@/Contexts/LanguageContext';
 import { Media } from '@/assets/Media';
+import { set } from 'date-fns';
 // import { Button } from '../ui/button';
 
 
@@ -11,6 +12,7 @@ const Header: React.FC = () => {
   const { theme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mobile, setMobile] = useState(false);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -33,8 +35,24 @@ const Header: React.FC = () => {
     { path: '/contact', label: t('common.contact') },
   ];
 
+  useEffect(() => {
+    const CheckIsMObile = ()=>{
+     if(window.innerWidth <= 768) {
+        setMobile(true);
+      }
+      else {
+        setMobile(false);
+      }
+    }
+    CheckIsMObile();
+    window.addEventListener('resize', CheckIsMObile);
+    return () => {
+      window.removeEventListener('resize', CheckIsMObile);
+    };
+  },[]);
   // Handle scroll effect for navbar
   useEffect(() => {
+   
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setIsScrolled(true);
@@ -50,7 +68,9 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${ 
+      mobile
+        ? 'bg-background/95 ':
       isScrolled 
         ? 'bg-background/95 backdrop-blur-sm shadow-md'
         : 'bg-transparent'
@@ -126,7 +146,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden fixed inset-0 z-50 bg-background/95 backdrop-blur-sm transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`md:hidden fixed inset-0 z-50 bg-background/95 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
         >
           <div className="flex flex-col h-full p-6">
