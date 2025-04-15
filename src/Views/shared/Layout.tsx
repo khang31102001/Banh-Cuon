@@ -29,9 +29,9 @@ const Layout = () => {
 
   useEffect(() => {
 
-   
-    setupSrollAnimated();
     window.scroll(0, 0);
+    setupSrollAnimated();
+  
     
     const observer = new MutationObserver(() => {
       setupSrollAnimated();

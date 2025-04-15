@@ -62,7 +62,7 @@ type TranslationType = {
         position3: 'Thu Ngân',
         position4: 'Quản Lý Cửa Hàng',
         applyForm: 'Đơn Ứng Tuyển',
-        fullName: 'Họ và Tên',
+        name: 'Họ và Tên',
         email: 'Email',
         phone: 'Số Điện Thoại',
         position: 'Vị Trí Ứng Tuyển',

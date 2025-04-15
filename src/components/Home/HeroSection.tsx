@@ -3,14 +3,22 @@ import { Link } from 'react-router-dom';
 // import videoBanner from "@/assets/video/video_banner.mp4";
 import { useEffect, useRef } from 'react';
 import { useLanguage } from '@/Contexts/LanguageContext';
-import { Media } from '@/assets/Media';
+// import { Media } from '@/assets/Media';
+
 import { Clock, MapPin, Phone } from 'lucide-react';
 
 
 const HeroSection = () => {
     const { t } = useLanguage();
     const parallaxRef = useRef<HTMLDivElement>(null);
+    const videoRef = useRef<HTMLVideoElement>(null);
 
+    useEffect(()=>{
+       if(videoRef.current){
+        videoRef.current.playbackRate = 0.25; // Set the playback rate to 0.5x
+       }
+    },[])
+    
     useEffect(() => {
         const handleScroll = () => {
             if (!parallaxRef.current) return;
@@ -41,14 +49,16 @@ const HeroSection = () => {
             <div className="hero">
                 <div ref={parallaxRef} className="absolute inset-0 overflow-hidden">
                     <video
-                        src=""
-                        className="w-full h-full object-cover"
+                        className="w-full h-screen object-cover"
                         autoPlay
                         loop
                         muted
                         playsInline
-                    />
-                    <div className="absolute inset-0 bg-black/40" />
+                    >
+                        <source src="https://res.cloudinary.com/dwqqve7ja/video/upload/v1744521126/iwceikwopneotpjhoose.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    {/* <div className="absolute inset-0 bg-black/40" /> */}
                 </div>
 
                 <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
@@ -83,6 +93,7 @@ const HeroSection = () => {
                     </div>
 
                 </div>
+               
                 {/* Information bar at bottom of hero */}
                 <div className="absolute bottom-0 left-0 w-full bg-black/70 backdrop-blur-sm text-white py-4">
                     <div className="container mx-auto px-4">
