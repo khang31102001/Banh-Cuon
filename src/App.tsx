@@ -6,11 +6,12 @@ import { RouterProvider } from "react-router-dom";
 
 // Import router từ thư mục Routers/index, nơi định nghĩa tất cả các route
 import router from "./Routers";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 function App() {
   return (
     // Sử dụng Suspense để hiển thị fallback UI (Loading...) trong khi các component lazy load
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<LoadingSpinner/>}>
       {/* RouterProvider nhận router đã được tạo từ createBrowserRouter */}
       <RouterProvider router={router} />
     </Suspense>

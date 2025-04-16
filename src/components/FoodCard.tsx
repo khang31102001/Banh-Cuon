@@ -57,11 +57,12 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox }) => {
   };
   return (
     <div
-      className="food-card group bg-white dark:bg-card transition-all duration-300 hover:translate-y-[-5px] fade-in-up h-full flex flex-col"
+      className="food-card group bg-white dark:bg-card transition-all duration-300 hover:translate-y-[-5px] 
+      fade-in-up h-full flex flex-col w-full min-w-[300px] max-w-[90vw] overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative overflow-hidden rounded-t-lg" style={{ height: '240px' }}>
+      <div className="relative overflow-hidden rounded-t-lg min-w-[220px] max-w-[90vw] h-auto">
         <img
           src={item.image || 'https://placehold.co/400x300/e2d1c3/white?text=Bánh+Cuốn+Tây+Hồ'}
           alt={item.name[language]}
