@@ -46,7 +46,7 @@ const HeroSection = () => {
     return (
         <>
             {/* Hero Section with Parallax and Logo */}
-            <div className="hero">
+            <section className="hero">
                 <div ref={parallaxRef} className="absolute inset-0 overflow-hidden">
                     <video
                         className="w-full h-screen object-cover"
@@ -122,7 +122,7 @@ const HeroSection = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     );
 }

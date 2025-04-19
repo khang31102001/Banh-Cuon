@@ -91,6 +91,7 @@ type TranslationType = {
       common: {
         home: 'Home',
         menu: 'Menu',
+        about: 'About',
         recruitment: 'Recruitment',
         contact: 'Contact',
         orderNow: 'Order Now',

@@ -53,7 +53,7 @@ const ProductBestSale = () => {
       
 
     return (
-        <div className="container mx-auto p-4 my-12">
+        <section className="container mx-auto p-4 my-12">
 
             <div className="text-center mb-6">
                 <SectionTitle title="Món ăn Best Sale"
@@ -89,7 +89,7 @@ const ProductBestSale = () => {
          
             </div> */}
 
-        </div>
+        </section>
     );
 }
 

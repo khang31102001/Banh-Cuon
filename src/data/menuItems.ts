@@ -85,7 +85,7 @@ export type MenuItem = {
       price: 40000,
       category:{
         id: 3,
-        name: "Món Chay"
+        name: "Món chay"
       },
       ingredients: {
         vi: ['Bột gạo', 'Nấm hương', 'Nấm mèo', 'Đậu phụ', 'Hành khô', 'Nước tương', 'Hành lá', 'Rau thơm'],
@@ -133,7 +133,7 @@ export type MenuItem = {
       price: 55000,
       category:{
         id: 5,
-        name: "Món Chay"
+        name: "Món chay"
       },
       ingredients: {
         vi: ['Bột gạo', 'Thịt gà', 'Nấm mèo', 'Hành khô', 'Tiêu', 'Nước mắm', 'Hành lá', 'Rau thơm'],
@@ -301,7 +301,7 @@ export type MenuItem = {
       price: 45000,
       category:{
         id: 12,
-        name: "Món Chay"
+        name: "Món chay"
       },
       ingredients: {
         vi: ['Bột gạo', 'Nấm đông cô', 'Nấm mèo', 'Đậu phụ', 'Hành phi', 'Nước tương', 'Hành lá', 'Rau thơm'],
@@ -325,7 +325,7 @@ export type MenuItem = {
       price: 45000,
       category:{
         id: 13,
-        name: "Món Chay"
+        name: "Món chay"
       },
       ingredients: {
         vi: ['Bột gạo', 'Nấm đông cô', 'Nấm mèo', 'Đậu phụ', 'Hành phi', 'Nước tương', 'Hành lá', 'Rau thơm'],
@@ -397,7 +397,7 @@ export type MenuItem = {
       price: 45000,
       category:{
         id: 16,
-        name: "Món Chay"
+        name: "Món chay"
       },
       ingredients: {
         vi: ['Bột gạo', 'Nấm đông cô', 'Nấm mèo', 'Đậu phụ', 'Hành phi', 'Nước tương', 'Hành lá', 'Rau thơm'],
@@ -493,7 +493,7 @@ export type MenuItem = {
       price: 45000,
       category:{
         id: 20,
-        name: "Món Chay"
+        name: "Món chay"
       },
       ingredients: {
         vi: ['Bột gạo', 'Nấm đông cô', 'Nấm mèo', 'Đậu phụ', 'Hành phi', 'Nước tương', 'Hành lá', 'Rau thơm'],
@@ -517,7 +517,7 @@ export type MenuItem = {
       price: 45000,
       category:{
         id: 21,
-        name: "Món Chay"
+        name: "Món chay"
       },
       ingredients: {
         vi: ['Bột gạo', 'Nấm đông cô', 'Nấm mèo', 'Đậu phụ', 'Hành phi', 'Nước tương', 'Hành lá', 'Rau thơm'],

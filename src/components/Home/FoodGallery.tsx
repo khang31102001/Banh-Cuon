@@ -35,7 +35,7 @@ const FoodGallery = () => {
             {/* Food Gallery Carousel */}
             <section className="py-12 bg-banhcuon-50 dark:bg-banhcuon-950">
                 <div className="container mx-auto px-4">
-                    <h2 className="primary-heading text-center mb-8">{t('menu.title')}</h2>
+                    <h2 className="primary-heading text-center mb-8">Menu</h2>
 
                     <div className="relative max-w-4xl mx-auto">
                         <div className="overflow-hidden rounded-xl shadow-xl h-[300px] md:h-[400px]">

@@ -1,6 +1,7 @@
 {
-  "short_name": "Bánh Cuốn",
-  "name": "Tây Hồ",
+  "short_name": "banhcuontayho",
+  "name": "tayho",
+  "description": "Ẩm thực Việt Nam chính gốc với Bánh Cuốn Tây Hồ",
   "icons": [
     {
       "src": "favicon.ico",

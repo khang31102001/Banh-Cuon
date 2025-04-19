@@ -6,6 +6,9 @@ import HeroSection from '@/components/Home/HeroSection';
 import SectionVideo from '@/components/Home/SectionVideo';
 import CTASection from '@/components/Home/CTASection';
 import ProductBestSale from '@/components/Home/ProductBestSale';
+import FoodVegetarian from '@/components/Home/FoodVegetarian';
+import FoodNonVegetarian from '@/components/Home/FoodNonVegetarian';
+import Testimonials from '@/components/Home/Testimonials';
 
 
 const Home: React.FC = () => {
@@ -23,9 +26,14 @@ const Home: React.FC = () => {
       {/* Welcome Section with Video */}
       <SectionVideo/>
        
+       
       <ProductBestSale/>
+      <FoodNonVegetarian/>
+      <FoodVegetarian/>
+      
 
-      <CTASection/>
+      {/* <CTASection/> */}
+      <Testimonials/>
       
     </div>
   );

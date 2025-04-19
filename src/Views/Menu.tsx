@@ -29,7 +29,7 @@ const Menu: React.FC = () => {
   const handleSearch = (value: string) => {
    setFilter("search");
    if(value !== "") return setSearch(value);
-   console.log("search", search);
+  //  console.log("search", search);
     setSearch("");
     setFilter("all");
   }
@@ -40,7 +40,7 @@ const Menu: React.FC = () => {
     if (filter === 'vegetarian') return item.category.name === "Món Chay";
     if(filter === 'non-vegetarian') return item.category.name === "Món Mặn";
     if (filter === "search") {
-      console.log("search", search);
+      // console.log("search", search);
       const searchLower = search.toLowerCase();
       return (
         item.name.vi.toLowerCase().includes(searchLower) ||
