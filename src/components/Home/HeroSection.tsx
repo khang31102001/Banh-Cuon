@@ -25,6 +25,14 @@ const HeroSection = () => {
 
             const scrollPosition = window.scrollY;
             parallaxRef.current.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+
+            // const title = document.getElementById(".banner-title");
+            // const rect = title.getBoundingClientRect();
+            // if (rect.top < window.innerHeight - 10) {
+            //   title.classList.add("visible");
+            // } else {
+            //   title.classList.remove("visible");
+            // }
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -61,7 +69,7 @@ const HeroSection = () => {
                     {/* <div className="absolute inset-0 bg-black/40" /> */}
                 </div>
 
-                <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
+                <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white banner-title">
 
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in-up font-roboto leading-tight">
                         <span className="block mb-2 animate-[fade-in_1s_ease-out] opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>

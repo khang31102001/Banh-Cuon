@@ -12,12 +12,12 @@ const __dirname = path.dirname(__filename);
 const links = [
   { url: "/", changefreq: "weekly", priority: 1.0 },
   { url: "/menu", changefreq: "weekly", priority: 0.8 },
-  { url: "/gioi-thieu", changefreq: "monthly", priority: 0.6 },
-  { url: "/lien-he", changefreq: "monthly", priority: 0.5 },
+  { url: "/about", changefreq: "monthly", priority: 0.6 },
+  { url: "/contact", changefreq: "monthly", priority: 0.5 },
 ];
 
 async function generateSitemap() {
-  const sitemap = new SitemapStream({ hostname: "https://banhcuontayho.vn" });
+  const sitemap = new SitemapStream({ hostname: "https://tayho127.com" });
 
   const xml = await streamToPromise(
     links.reduce((acc, item) => {
