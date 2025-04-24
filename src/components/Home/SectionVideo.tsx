@@ -41,19 +41,19 @@ const SectionVideo = () => {
             <section className="section-padding bg-white dark:bg-background ">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div className="space-y-6 fade-in-left ">
+                        <div className="space-y-6">
                             <SectionTitle
                                 title="Về Bánh Cuốn Tây Hồ"
                                 centered={false}
-                                className="mb-6"
+                                className="mb-6  fade-in-left "
                             />
-                            <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                            <p className="text-gray-700 mb-6 text-lg leading-relaxed fade-in-up">
                                 Từ năm 1972, Bánh Cuốn Tây Hồ đã bắt đầu hành trình mang hương vị
                                 truyền thống Việt Nam đến với mọi người. Chúng tôi tự hào về công thức
                                 gia truyền và quy trình làm bánh thủ công, tạo nên những chiếc bánh cuốn
                                 mỏng, mịn với nhân thơm ngon đặc trưng.
                             </p>
-                            <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                            <p className="text-gray-700 mb-6 text-lg leading-relaxed fade-in-up">
                                 Ngày nay, Bánh Cuốn Tây Hồ đã trở thành một thương hiệu ẩm thực được yêu
                                 thích và tin tưởng bởi nhiều thế hệ người Việt Nam, cũng như du khách quốc tế
                                 khi đến thăm Hà Nội.

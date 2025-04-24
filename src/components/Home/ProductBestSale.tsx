@@ -53,7 +53,6 @@ const ProductBestSale = () => {
     },
   };
 
-
   return (
     <section className="container mx-auto p-4 my-12">
       <div className="text-center mb-6">

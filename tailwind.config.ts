@@ -119,6 +119,9 @@ export default {
 			fontFamily: {
 				'poppins': ['Poppins', 'sans-serif'],
 				'roboto': ['Roboto', 'sans-serif'],
+				vietnam: ['Be Vietnam Pro', 'sans-serif'],
+				quicksand: ['Quicksand', 'sans-serif'],
+				playfair: ['Playfair Display', 'serif'],
 			},
 		}
 	},
