@@ -37,8 +37,8 @@ const Menu: React.FC = () => {
   const filteredItems = menuItems.filter((item) => {
    
     if (filter === 'all') return true;
-    if (filter === 'vegetarian') return item.category.name === "Món Chay";
-    if(filter === 'non-vegetarian') return item.category.name === "Món Mặn";
+    if (filter === 'vegetarian') return item.category.name.toLowerCase() === ("Món Chay").toLowerCase();
+    if(filter === 'non-vegetarian') return item.category.name.toLowerCase() === ("Món Mặn").toLowerCase();
     if (filter === "search") {
       // console.log("search", search);
       const searchLower = search.toLowerCase();
@@ -110,9 +110,9 @@ const Menu: React.FC = () => {
         </div>
 
         {/* Food Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item) => (
-            <FoodCard key={item.id} item={item} openLightbox={openLightbox} />
+            <FoodCard key={item.id} item={item} openLightbox={openLightbox} className="" />
           ))}
         </div>
 

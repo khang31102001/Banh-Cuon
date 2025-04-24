@@ -10,6 +10,7 @@ import FoodVegetarian from '@/components/Home/FoodVegetarian';
 import FoodNonVegetarian from '@/components/Home/FoodNonVegetarian';
 // import Testimonials from '@/components/Home/Testimonials';
 import GoogleReviews from '@/components/Home/GoogleSection';
+import FoodMenu from '@/components/Home/FoodMenu';
 
 
 const Home: React.FC = () => {
@@ -27,8 +28,9 @@ const Home: React.FC = () => {
        
        
       <ProductBestSale/>
-      <FoodNonVegetarian/>
-      <FoodVegetarian/>
+      <FoodMenu/>
+      {/* <FoodNonVegetarian/>
+      <FoodVegetarian/> */}
       
 
       {/* <CTASection/> */}

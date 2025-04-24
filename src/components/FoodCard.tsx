@@ -8,10 +8,11 @@ import { Copy, Facebook, Linkedin } from 'lucide-react';
 
 interface FoodCardProps {
   item?: MenuItem;
+  className?: string; 
   openLightbox?: (image: string) => void;
 }
 
-const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox }) => {
+const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) => {
   const { language, t } = useLanguage();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -57,8 +58,8 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox }) => {
   };
   return (
     <div
-  className="food-card group bg-white dark:bg-card transition-all duration-300 hover:translate-y-[-5px] 
-  fade-in-up flex flex-col w-full min-w-[300px] max-w-[90vw] h-[500px] overflow-hidden"
+  className={`food-card group bg-white dark:bg-card transition-all duration-300 hover:translate-y-[-5px] 
+   flex flex-col w-full min-w-[300px] max-w-[90vw] h-[500px] overflow-hidden ${className}`}
   onMouseEnter={() => setIsHovered(true)}
   onMouseLeave={() => setIsHovered(false)}
 >
@@ -67,7 +68,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox }) => {
     <img
       src={item.image || 'https://placehold.co/400x300/e2d1c3/white?text=Bánh+Cuốn+Tây+Hồ'}
       alt={item.name[language]}
-      className={`food-card-image object-cover w-full h-full transition-all duration-500 ${isHovered ? 'scale-110' : ''}`}
+      className={`food-card-image object-cover w-full h-full transition-all duration-500 ${isHovered ? 'scale-110' : ''} `}
       onClick={() => openLightbox(item.image)}
     />
 
@@ -109,25 +110,25 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox }) => {
 
   {/* Content Container with Fixed Layout */}
   <div className="p-4 flex flex-col flex-grow">
-    <div className="mb-2 h-14 overflow-hidden">
+    <div className="mb-2 h-14 overflow-hidden fade-in-left">
       <h3 className="text-xl font-semibold font-poppins text-banhcuon-800 line-clamp-2">{item.name[language]}</h3>
     </div>
     
     {/* Description with fixed height and ellipsis */}
-    <div className="block mb-3 h-12 overflow-hidden">
-      <p className="text-sm text-muted-foreground line-clamp-2">{item.description[language]}</p>
+    <div className="block mb-3 h-12 overflow-hidden zoom-in ">
+      <p className="text-sm text-muted-foreground line-clamp-2" >{item.description[language]}</p>
     </div>
 
     {/* Ingredients with fixed height */}
-    <div className="mb-3 h-16 overflow-hidden">
-      <h4 className="text-sm font-medium">{t('menu.ingredients')}:</h4>
+    <div className="mb-3 h-16 overflow-hidden zoom-in ">
+      <h4  className="text-sm font-medium">{t('menu.ingredients')}:</h4>
       <p className="text-xs text-muted-foreground line-clamp-2">
         {item.ingredients[language].join(', ')}
       </p>
     </div>
 
     {/* Push price and button to bottom with margin-top: auto */}
-    <div className="mt-auto pt-2 flex items-center justify-between">
+    <div className="mt-auto pt-2 flex items-center justify-between ">
       <div className="font-semibold text-primary">
         {formatPrice(item.price)} {t('menu.currency')}
       </div>
@@ -143,7 +144,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox }) => {
       </button>
     </div>
   </div>
-</div>
+    </div>
   );
 };
 

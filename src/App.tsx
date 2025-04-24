@@ -1,5 +1,6 @@
 // Import thư viện React để sử dụng Suspense cho Lazy Loading
 import { Suspense } from "react";
+import './app.css';
 
 // Import RouterProvider từ react-router-dom để quản lý router
 import { RouterProvider } from "react-router-dom";

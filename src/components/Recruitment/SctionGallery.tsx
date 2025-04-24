@@ -12,7 +12,7 @@ const SectionGallery = () => {
                         subtitle="Khám phá không gian làm việc năng động và thân thiện tại Bánh Cuốn Tây Hồ"
                     />
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-on-scroll">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4  animation-element in-vew">
                         <div className="grid gap-4">
                             <div>
                                 <img

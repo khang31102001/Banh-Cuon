@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -199,7 +199,7 @@
   }
   .fade-in-down {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-40px);
     transition: all 0.6s ease-out;
   }
   .fade-in-down.show {
@@ -261,7 +261,21 @@
     opacity: 1;
     transform: translateY(0);
   }
-        
+
+  .animation-element {
+    opacity: 0;
+    transform: translateY(40px); /* Thêm dòng này */
+    transition: all 1s ease-out;
+    backface-visibility: hidden;
+  }
+  
+  .animation-element.show {
+    opacity: 1;
+    transform: translateY(0); /* Thêm dòng này */
+  }
+  
+
+      
 }
 
 @keyframes bounce-slow {
@@ -319,7 +333,7 @@
   letter-spacing: 2px;
 }
 
-.banner-title.visible {
+.banner-title.show {
   opacity: 1;
   transform: scaleY(1);
 }

@@ -6,7 +6,7 @@ import Footer from "@/components/Layout/Footer";
 import SocialSidebar from "@/components/Layout/SocialSidebar";
 
 const setupSrollAnimated = () => {
-  const element = document.querySelectorAll(".fade-in-up, .fade-in-left, .fade-in-right, .fade-in-down, .staggered-item ");
+  const element = document.querySelectorAll(".fade-in-up, .fade-in-left, .fade-in-right, .fade-in-down, .animation-element, .flip-in, .zoom-in, .banner-title  ");
   const observer = new IntersectionObserver((entries) =>
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
