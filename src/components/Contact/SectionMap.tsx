@@ -5,7 +5,7 @@ const SectionMap = () => {
         <div>
             {/* Map Section */}
             <section className="bg-white">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-40">
                     <SectionTitle
                         title="Vị Trí Cửa Hàng"
                         subtitle="Ghé thăm cửa hàng Bánh Cuốn Tây Hồ ở Hà Nội ngay hôm nay"

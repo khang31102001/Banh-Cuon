@@ -99,7 +99,7 @@
   }
   
   .food-card {
-    @apply overflow-hidden rounded-lg bg-white dark:bg-card shadow-md transition-all duration-300 hover:shadow-xl;
+    @apply overflow-hidden rounded-2xl bg-white dark:bg-card shadow-2xl transition-all duration-300 hover:shadow-xl;
   }
   
   .food-card-image {
@@ -151,6 +151,7 @@
     @apply opacity-100 ring-2 ring-primary;
   }
 }
+
 
 .lightbox {
   @apply fixed inset-0 z-50 flex items-center justify-center bg-black/80 opacity-0 pointer-events-none transition-opacity duration-300;
@@ -274,8 +275,6 @@
     transform: translateY(0); /* Thêm dòng này */
   }
   
-
-      
 }
 
 @keyframes bounce-slow {
@@ -333,7 +332,52 @@
   letter-spacing: 2px;
 }
 
-.banner-title.show {
+.banner-title.in-view {
   opacity: 1;
   transform: scaleY(1);
 }
+/* header {
+  display: block;
+  unicode-bidi: isolate;
+
+} */
+.header {
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: all .85s ease-in-out, background-color .3s ease-in-out, padding-right 0s ease-in-out, opacity .3s linear;
+  transform: translateY(0);
+ 
+
+}
+
+
+.header--unpinned,
+.header--hide {
+  /* top: -100%; */
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+ .btn-primary {
+    background-color: var(--red-brick);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #922B21;
+  }
+   
+   .section-chay {
+    background-color: var(--light-green);
+    border-radius: 12px;
+    padding: 16px;
+  }

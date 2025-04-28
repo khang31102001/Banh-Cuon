@@ -68,25 +68,32 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${ 
+    <header style={{ opacity: '1' }} className={`header ${ 
       mobile
-        ? 'bg-background/95 ':
+        ? 'bg-background/95':
+      isScrolled 
+        ? 'header--hide'
+        : 'bg-transparent'
+    }`}>
+
+    {/* <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${ 
+      mobile
+        ? 'bg-background/95  ':
       isScrolled 
         ? 'bg-background/95 backdrop-blur-sm shadow-md'
         : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto px-4 flex h-16 items-center justify-between">
+    }`}> */}
+    <div className={`${isScrolled ?  'bg-background/95 backdrop-blur-sm shadow-md': ''} `}>
+    <div className="container mx-auto px-4 py-4 flex h-16 items-center justify-between">
         <Link
           to="/"
-          className="flex items-center justify-center font-poppins font-bold text-2xl text-banhcuon-800"
-        >
-          <div className="">
+          className="relative overflow-hidden flex items-center justify-center top-auto font-poppins font-bold text-2xl text-banhcuon-800"
+        >        
             <img
               src={Media.logo}
               alt="Bánh Cuốn Tây Hồ Logo"
               className="w-48  object-cover"
-            />
-          </div>
+            />    
         </Link>
 
         {/* Desktop Navigation */}
@@ -213,6 +220,8 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
+    
      
     </header>
   );

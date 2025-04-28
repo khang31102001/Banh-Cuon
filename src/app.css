@@ -3,40 +3,64 @@
     --ivory: #FFF8E7;
     --light-green: #D5E8D4;
   }
+  
   /* body{
-    --wp--preset--color--black: #000000;
-    --wp--preset--color--cyan-bluish-gray: #abb8c3;
-    --wp--preset--color--white: #ffffff;
-    --wp--preset--color--pale-pink: #f78da7;
-    --wp--preset--color--vivid-red: #cf2e2e;
-    --wp--preset--color--luminous-vivid-orange: #ff6900;
-    --wp--preset--color--luminous-vivid-amber: #fcb900;
-    --wp--preset--color--light-green-cyan: #7bdcb5;
-    --wp--preset--color--vivid-green-cyan: #00d084;
-    --wp--preset--color--pale-cyan-blue: #8ed1fc;
-    --wp--preset--color--vivid-cyan-blue: #0693e3;
-    --wp--preset--color--vivid-purple: #9b51e0;
+    --black: #000000;
+    --white: #FFFFFF;
+    --blue-500: #0064ff;
+    --red-500: #ed1c25;
+    --brown-500: #A2958E;
+    --grey-50: #F1F1F1;
+    --grey-100: #E5E5E5;
+    --grey-200: #D8D8D8;
+    --grey-300: #C6C6C6;
+    --grey-400: #BBBBBB;
+    --grey-500: #AAAAAA;
+    --grey-600: #9B9B9B;
+    --grey-700: #797979;
+    --grey-800: #5E5E5E;
+    --grey-900: #474747;
+    --sand-50: #FAFAF9;
+    --sand-100: #F0EFEB;
+    --sand-200: #E8E7E2;
+    --sand-300: #DEDBD5;
+    --sand-400: #D8D5CD;
+    --sand-500: #CECAC0;
+    --sand-600: #BBB8AF;
+    --sand-700: #928F88;
+    --sand-800: #716F6A;
+    --sand-900: #575551;
+    --lightgray: #F7F7F7;
+    --lightgray-2: #E6E6E6;
+    --lightgray-3: #E3E3E3;
+    --lightgray-4: #DBDBDB;
+    --lightgray-5: #EEEEF0;
+    --lightgray-6: #D9D9D9;
+    --lightgray-7: #E0E0E0;
+    --green: #1D9F22;
+    --green-2: #7F9663;
+    --gray: #797979;
+    --gray-2: #969696;
+    --gray-3: #B4B4B4;
+    --gray-4: #AAAAAA;
+    --red-3: #ef3624;
+    --violet: #5c2d91;
+    --growth-country-purple: #7993B3;
+    --growth-country-blue: #94C0DA;
+    --growth-country-grey: #A7A9AC;
+    --growth-country-orange: #E0C6B7;
+    --growth-country-yellow: #D4CA99;
+    --darkgray: #0C0C0C;
+    --darkgray-2: #414141;
+    --darkgray-3: #231F20;
+    --darkgray-4: #323232;
+    --darkblue: #3C4B56;
   } */
+
   body {
     background-color: var(--ivory);
     color: #333;
   }
 
   
-  /* .btn-primary {
-    background-color: var(--red-brick);
-    color: white;
-    padding: 10px 16px;
-    border-radius: 8px;
-    transition: 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background-color: #922B21;
-  }
-   */
-  /* .section-chay {
-    background-color: var(--light-green);
-    border-radius: 12px;
-    padding: 16px;
-  } */
+ 

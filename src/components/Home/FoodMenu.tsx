@@ -6,56 +6,77 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 const FoodMenu = () => {
   const limitMenu = menuItems.slice(0,10);
 
+  // const swiperConfig = {
+  //   grabCursor: true,
+  //   spaceBetween: 16,
+  //   centeredSlides: true,
+  //   loop: true,
+  //   slidesPerView: 1,
+  //   // autoplay: {
+  //   //   delay: 2000,
+  //   //   disableOnInteraction: false,
+  //   // },
+  //   modules: [Autoplay],
+  //   className: 'row',
+  //   breakpoints: {
+  //     640: {
+  //       slidesPerView: 1,
+  //       spaceBetween: 16,
+  //     },
+  //     768: {
+  //       slidesPerView: 2,
+  //       spaceBetween: 16,
+  //     },
+  //     1024: {
+  //       slidesPerView: 3,
+  //       spaceBetween: 30,
+  //     },
+  //     1280: {
+  //       slidesPerView: 4,
+  //       spaceBetween: 40,
+  //     },
+  //   },
+  // };
   const swiperConfig = {
-
     grabCursor: true,
-
-    spaceBetween: 20,
+    effect: "coverflow",
     centeredSlides: true,
+    slidesPerView: 1,
     loop: true,
-    slidesPerView: 2,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 120,
+      modifier: 2.5,
+      slideShadows: false,
     },
-    modules: [Autoplay],
-    className: 'row',
+    navigation: true,
+    pagination: { clickable: true },
+    spaceBetween: 24,
+    modules: [EffectCoverflow, Navigation, Pagination],
     breakpoints: {
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      1280: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
+      640: { slidesPerView: 1, spaceBetween: 8 },
+      768: { slidesPerView: 2, spaceBetween: 16 },
+      1024: { slidesPerView: 3, spaceBetween: 30 },
+      1280: { slidesPerView: 4, spaceBetween: 40 },
     },
   };
-
   return (
     <section className="container mx-auto px-4 lg:p-8  my-16">
-      <div className="border border-gray-300 rounded-2xl shadow-lg p-6 bg-white/70 backdrop-blur-sm">
+      <div className="">
         <div className="text-center mb-6">
           <SectionTitle title="Menu" subtitle="" lightText={false} />
         </div>
 
-        <div className="  ">
+        <div className=" ">
           <div className="">
-            <Swiper {...swiperConfig} className="mx-4">
+            <Swiper {...swiperConfig} >
               {limitMenu?.map((item, index) => (
                 <SwiperSlide key={index}>
                   <Link to="/menu">

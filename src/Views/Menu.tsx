@@ -62,13 +62,13 @@ const Menu: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        <div className="relative flex-grow w-full mb-6 ">
+        <div className="relative flex-grow w-full mb-6 bg-white ">
           <Search className="absolute left-3 top-4 h-6 w-5 cursor-pointer" />
           <input
             
             value={search}
             onChange={(e) => handleSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full pl-10 pr-4 py-4 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             placeholder="Tìm kiếm món ăn..."
             type="text"
           />

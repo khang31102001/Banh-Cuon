@@ -28,7 +28,7 @@ const Home: React.FC = () => {
        
        
       <ProductBestSale/>
-      <FoodMenu/>
+      {/* <FoodMenu/> */}
       {/* <FoodNonVegetarian/>
       <FoodVegetarian/> */}
       
