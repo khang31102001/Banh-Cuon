@@ -38,7 +38,7 @@ const SocialSidebar = () => {
 
       {/* Zalo Button */}
       <a
-        href="https://zalo.me/0394093912"
+        href="https://zalo.me/"
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-110"
@@ -56,7 +56,7 @@ const SocialSidebar = () => {
 
       {/* Messenger Button */}
       <a
-        href="https://m.me/0394093912"
+        href="https://m.me/0777749669"
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-110"

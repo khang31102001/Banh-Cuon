@@ -17,30 +17,39 @@ const HeroSection = () => {
        if(videoRef.current){
         videoRef.current.playbackRate = 0.25; // Set the playback rate to 0.5x
        }
+
     },[])
     
     useEffect(() => {
         const handleScroll = () => {
             if (!parallaxRef.current) return;
-
             const scrollPosition = window.scrollY;
-            parallaxRef.current.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-
-            // const title = document.getElementById(".banner-title");
-            // const rect = title.getBoundingClientRect();
-            // if (rect.top < window.innerHeight - 10) {
-            //   title.classList.add("visible");
-            // } else {
-            //   title.classList.remove("visible");
-            // }
+            parallaxRef.current.style.transform = `translateY(${scrollPosition * 0.5}px)`;        
         };
-
         window.addEventListener('scroll', handleScroll);
-
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
+
     }, []);
+
+    useEffect(()=>{
+
+         const title = document.getElementById("banner-title");
+
+         if (!title) return;
+         const handleScroll  =() => {
+            const rect = title.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 30) {
+              title.classList.add("in-view");
+            } 
+         }
+
+         window.addEventListener('scroll', handleScroll );
+         return () =>{
+            window.removeEventListener('scroll', handleScroll);
+         }
+    },[])
 
     const handleOrder = () => {
         const link = "https://shopeefood.vn/ho-chi-minh/banh-cuon-tay-ho-dinh-tien-hoang";
@@ -69,7 +78,7 @@ const HeroSection = () => {
                     {/* <div className="absolute inset-0 bg-black/40" /> */}
                 </div>
 
-                <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white ">
+                <div id='banner-title' className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white banner-title ">
 
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in-up font-roboto leading-tight">
                         <span className="block mb-2 animate-[fade-in_1s_ease-out] opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
