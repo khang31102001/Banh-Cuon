@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 
-const ProductBestSale = () => {
+const FoodBestSale = () => {
   const Menu = menuItems.slice(0, 10);
 
   const swiperConfig = {
@@ -40,13 +40,13 @@ const ProductBestSale = () => {
   };
   return (
     <section className="container mx-auto p-4 my-12">
-      <div className="text-center mb-6">
-        s
-        <SectionTitle title="Món ăn Best Sale"
-          subtitle=" Đặt món ngay hôm nay hoặc truy cập vào trang Thực đơn để xem đầy đủ các lựa chọn hấp dẫn – chỉ một cú click là mang cả Hà Nội về bàn ăn của bạn!"
-          lightText={false} />
+         <div  className="text-center mb-6 cursor-pointer">
+            <NavLink to='/menu'>
+            <SectionTitle title="Món Ăn Bán Chạy"
+              subtitle="Khám phá các loại bánh cuốn đặc sắc của Tây Hồ – từ bánh cuốn chay đến nhân thịt thơm ngon." lightText={false} />
+            </NavLink>
 
-      </div>
+          </div>
       <div className='w-full max-w-[100%] overflow-hidden px-2 sm:px-4'>
         <div>
           <Swiper
@@ -63,9 +63,7 @@ const ProductBestSale = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="w-full flex justify-center mt-6">
-            <div className="h-1 w-3/4 md:w-1/2 bg-yellow-400 rounded-full shadow-sm"></div>
-          </div>
+        
         </div>
 
 
@@ -86,4 +84,4 @@ const ProductBestSale = () => {
   );
 }
 
-export default ProductBestSale;
+export default FoodBestSale;

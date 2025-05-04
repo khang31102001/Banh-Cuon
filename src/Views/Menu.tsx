@@ -4,9 +4,6 @@ import menuItems from '@/data/menuItems';
 import React, { useState } from 'react';
 import Lightbox from '@/components/Lightbox';
 import { Search } from 'lucide-react';
-import { getResizeHandleElementsForGroup } from 'react-resizable-panels';
-import { Handle } from 'vaul';
-import { set } from 'date-fns';
 
 type Filter = 'all' | 'vegetarian' | 'non-vegetarian' | 'search';
 
@@ -52,7 +49,7 @@ const Menu: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="bg-banhcuon-100 dark:bg-banhcuon-900 py-16 px-4 md:py-24">
+      <div className="bg-banhcuon-100 dark:bg-banhcuon-900 pt-[10rem] pb-[6rem] px-4 md:py-24">
         <div className="container mx-auto text-center">
           <h1 className="primary-heading">{t("menu.title")}</h1>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">

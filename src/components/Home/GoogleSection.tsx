@@ -116,8 +116,9 @@ const GoogleReviews = () => {
   const totalReviews = data?.user_ratings_total || 523;
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="relative py-20 bg-fixed w-fill bg-cover bg-center" style={{ backgroundImage: "url('https://r2.nucuoimekong.com/wp-content/uploads/cac-quan-an-ngon-o-sai-gon.jpg')" }}>
+      <div className="absolute inset-0 bg-black/60"></div>
+      <div className=" relative z-10 flex flex-col justify-center items-center text-white h-full px-4 text-center">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-restaurant-dark mb-4">
             Khách Hàng Nói Gì Về Chúng Tôi
@@ -131,7 +132,7 @@ const GoogleReviews = () => {
             <div className="flex items-center">
               <Star className="text-yellow-400 fill-current" size={24} />
               <span className="font-bold text-xl ml-1">{placeRating.toFixed(1)}</span>
-              <span className="text-gray-600 ml-2">({totalReviews} đánh giá)</span>
+              <span className="text-yellow-600 ml-2">({totalReviews} đánh giá)</span>
             </div>
           </div>
         </div>

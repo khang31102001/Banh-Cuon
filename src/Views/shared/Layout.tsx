@@ -5,7 +5,7 @@ import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import SocialSidebar from "@/components/Layout/SocialSidebar";
 
-const setupSrollAnimated = () => {
+const setupScrollAnimated = () => {
   const element = document.querySelectorAll(".fade-in-up, .fade-in-left, .fade-in-right, .fade-in-down, .animation-element, .flip-in, .zoom-in");
   const observer = new IntersectionObserver((entries) =>
     entries.forEach((entry) => {
@@ -25,6 +25,20 @@ const setupSrollAnimated = () => {
   element.forEach((el) => observer.observe(el));
 };
 
+const handleScroll = ()=>{
+  const socialBar = document.getElementById("social-bar");
+  if(window.scrollY > 50){
+    socialBar.classList.remove("hidden");
+    socialBar.classList.add("block");
+
+  }else{
+     socialBar.classList.remove("block");
+     socialBar.classList.add("hidden");
+     
+
+  }
+}
+
 
 const Layout = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -32,32 +46,34 @@ const Layout = () => {
   useEffect(() => {
 
     window.scroll(0, 0);
-    setupSrollAnimated();
-  
-    
+    setupScrollAnimated();
     const observer = new MutationObserver(() => {
-      setupSrollAnimated();
+      setupScrollAnimated();
     });
     observer.observe(document.body, {
       childList: true,
       subtree: true,
     });
-
     document.documentElement.style.scrollBehavior = "smooth";
 
     return () => {
       observer.disconnect();
-      document.documentElement.style.scrollBehavior = "";
+      document.documentElement.style.scrollBehavior = "smooth";
     };
   }, []);
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
+  useEffect(()=>{
+  window.addEventListener("scroll", handleScroll);
+  return() => window.removeEventListener("scroll", handleScroll);
+  },[])
+
   return (
     <div className="flex flex-col min-h-screen ">
       <Header />
-      <div className="hidden sm:block lg:block">
+      <div id = "social-bar" className="hidden">
        <SocialSidebar/>
       </div>
       <main className="flex-grow">

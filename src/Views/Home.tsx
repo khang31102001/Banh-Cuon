@@ -5,12 +5,15 @@ import { useLanguage } from '@/Contexts/LanguageContext';
 import HeroSection from '@/components/Home/HeroSection';
 import SectionVideo from '@/components/Home/SectionVideo';
 // import CTASection from '@/components/Home/CTASection';
-import ProductBestSale from '@/components/Home/ProductBestSale';
+import ProductBestSale from '@/components/Home/FoodBestSale';
 import FoodVegetarian from '@/components/Home/FoodVegetarian';
 import FoodNonVegetarian from '@/components/Home/FoodNonVegetarian';
 // import Testimonials from '@/components/Home/Testimonials';
 import GoogleReviews from '@/components/Home/GoogleSection';
 import FoodMenu from '@/components/Home/FoodMenu';
+import FoodBestSale from '@/components/Home/FoodBestSale';
+import FoodSwiper from '@/components/Home/FoodSwiper';
+import CTASection from '@/components/Home/CTASection';
 
 
 const Home: React.FC = () => {
@@ -27,15 +30,23 @@ const Home: React.FC = () => {
       <SectionVideo/>
        
        
-      <ProductBestSale/>
-      {/* <FoodMenu/> */}
+      <FoodBestSale/>
+      <GoogleReviews/>
+      <div className="hidden md:block">
+         <FoodMenu/>
+      </div>
+    
+      <div className="block md:hidden">
+        <FoodSwiper/>
+      </div>
+     
       {/* <FoodNonVegetarian/>
       <FoodVegetarian/> */}
       
 
-      {/* <CTASection/> */}
-      {/* <Testimonials/> */}
-      <GoogleReviews/>
+      <CTASection/>
+     
+    
       
     </div>
   );

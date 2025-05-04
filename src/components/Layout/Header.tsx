@@ -12,7 +12,6 @@ const Header: React.FC = () => {
   const { theme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [mobile, setMobile] = useState(false);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -35,194 +34,202 @@ const Header: React.FC = () => {
     { path: '/contact', label: t('common.contact') },
   ];
 
-  useEffect(() => {
-    const CheckIsMObile = ()=>{
-     if(window.innerWidth <= 768) {
-        setMobile(true);
-      }
-      else {
-        setMobile(false);
-      }
-    }
-    CheckIsMObile();
-    window.addEventListener('resize', CheckIsMObile);
-    return () => {
-      window.removeEventListener('resize', CheckIsMObile);
-    };
-  },[]);
-  // Handle scroll effect for navbar
-  useEffect(() => {
-   
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+  useEffect(()=>{
+   const header = document.getElementById("site-header");
+   let lastScroll = 0;
+   const handleScroll = () =>{
+      const currentScroll = window.scrollY;
+      if (!header) return;
+      if(currentScroll > 50){
+         header.classList.add('bg-background/95');
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+         // lúc có scroll thì xoá padding trái phải
+         header.classList.remove('py-4')
+      }else{
+        header.classList.remove('bg-background/95');
+          // lúc chưa scroll thì có padding trái phải
+        header.classList.add('py-4')
+      }
+      if(currentScroll > lastScroll && currentScroll > 100){
+        header.classList.add('header--hide');
+      }else{
+        header.classList.remove('header--hide');
+      }
+     lastScroll = currentScroll;
+   }
+   window.addEventListener('scroll', handleScroll);
+   return ()=>{
+    window.removeEventListener('scroll', handleScroll);
+   }
+  },[])
+ 
   return (
-    <header style={{ opacity: '1' }} className={`header ${ 
-      mobile
-        ? 'bg-background/95':
-      isScrolled 
-        ? 'header--hide'
-        : 'bg-transparent'
-    }`}>
 
-    {/* <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${ 
-      mobile
-        ? 'bg-background/95  ':
-      isScrolled 
-        ? 'bg-background/95 backdrop-blur-sm shadow-md'
-        : 'bg-transparent'
-    }`}> */}
-    <div className={`${isScrolled ?  'bg-background/95 backdrop-blur-sm shadow-md': ''} `}>
-    <div className="container mx-auto px-4 py-4 flex h-16 items-center justify-between">
-        <Link
-          to="/"
-          className="relative overflow-hidden flex items-center justify-center top-auto font-poppins font-bold text-2xl text-banhcuon-800"
-        >        
-            <img
-              src={Media.logo}
-              alt="Bánh Cuốn Tây Hồ Logo"
-              className="w-48  object-cover"
-            />    
-        </Link>
+    <header id="site-header" className= "header-is-mobile header-custom ">
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {menuItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`font-poppins font-medium text-base transition-colors hover:text-primary ${isActive(item.path) ? 'text-cta' : 'text-foreground'
-                }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+    {/* //    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${ 
+    //   mobile
+    //     ? 'bg-white shadow-md'
+    //     :isScrolled 
+    //     ? 'bg-background/95 backdrop-blur-sm shadow-md'
+    //     : 'bg-transparent'
+    // }`}>   */}
 
-        {/* Desktop Actions */}
-        <div className="hidden md:flex items-center space-x-4">
-          <div className="language-switcher">
-            <button
-              className={`language-option ${language === 'vi' ? 'active' : ''}`}
-              onClick={() => handleLanguageChange('vi')}
-            >
-              🇻🇳
-            </button>
-            <button
-              className={`language-option ${language === 'en' ? 'active' : ''}`}
-              onClick={() => handleLanguageChange('en')}
-            >
-              🇬🇧
-            </button>
-            <button
-              className={`language-option ${language === 'jp' ? 'active' : ''}`}
-              onClick={() => handleLanguageChange('jp')}
-            >
-              🇯🇵
-            </button>
-          </div>
+    
+        <div className="container mx-auto px-4 py-4 flex h-16 items-center justify-between">
+          <Link
+            to="/"
+            className="relative overflow-hidden flex items-center justify-center top-auto font-poppins font-bold text-2xl text-banhcuon-800"
+          >        
+              <img
+                src={Media.logo}
+                alt="Bánh Cuốn Tây Hồ Logo"
+                className="w-48  object-cover"
+              />    
+          </Link>
 
-          <button
-            // onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-accent transition-colors"
-            aria-label={theme === 'dark' ? t('common.lightMode') : t('common.darkMode')}
-          >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 rounded-md hover:bg-accent"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-
-        {/* Mobile Menu */}
-        <div
-          className={`md:hidden fixed inset-0 z-50 bg-background/95 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-            }`}
-        >
-          <div className="flex flex-col h-full p-6">
-            <div className="flex justify-between items-center mb-8">
-              <Link to="/" className="font-poppins font-bold text-2xl text-banhcuon-800 " 
-                 onClick={() => setIsMenuOpen(false)}>
-                Bánh Cuốn <span className="text-cta ml-1 ">Tây Hồ</span>
-              </Link>
-              <button
-                className="p-2 rounded-md hover:bg-accent"
-                onClick={toggleMenu}
-                aria-label="Close menu"
+          {/* Desktop Navigation */}
+          {/* <nav className="hidden md:flex items-center space-x-8">
+            {menuItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`font-poppins font-medium text-base transition-colors hover:text-primary ${isActive(item.path) ? 'text-cta' : 'text-foreground'
+                  }`}
               >
-                <X size={24} />
+                {item.label}
+              </Link>
+            ))}
+          </nav> */}
+
+
+          <nav className="hidden md:flex items-center space-x-8">
+            {menuItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`group relative font-poppins font-medium text-base transition-colors hover:text-primary 
+                  ${isActive(item.path) ? 'text-cta' 
+                    : 'text-foreground'
+                  }`}
+              >
+                {item.label}
+                <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-gradient-to-r from-red-400 to-red-500 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            ))}
+          </nav>
+
+          {/* Desktop Actions */}
+          <div className="hidden md:flex items-center space-x-4">
+            <div className="language-switcher">
+              <button
+                className={`language-option ${language === 'vi' ? 'active' : ''}`}
+                onClick={() => handleLanguageChange('vi')}
+              >
+                🇻🇳
+              </button>
+              <button
+                className={`language-option ${language === 'en' ? 'active' : ''}`}
+                onClick={() => handleLanguageChange('en')}
+              >
+                🇬🇧
+              </button>
+              <button
+                className={`language-option ${language === 'jp' ? 'active' : ''}`}
+                onClick={() => handleLanguageChange('jp')}
+              >
+                🇯🇵
               </button>
             </div>
 
-            <nav className="flex flex-col space-y-6 mb-8">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`font-poppins text-xl transition-colors hover:text-primary ${isActive(item.path) ? 'text-cta' : 'text-foreground'
-                    }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
+            <button
+              // onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-accent transition-colors"
+              aria-label={theme === 'dark' ? t('common.lightMode') : t('common.darkMode')}
+            >
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+          </div>
 
-            <div className="mt-auto">
-              <div className="flex items-center justify-between mb-4">
-                <div className="language-switcher">
-                  <button
-                    className={`language-option ${language === 'vi' ? 'active' : ''}`}
-                    onClick={() => handleLanguageChange('vi')}
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 rounded-md hover:bg-accent"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          {/* Mobile Menu */}
+          <div
+            className={`md:hidden fixed inset-0 z-50 bg-background/95 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? ' translate-x-0' : 'translate-x-full'
+              }`}
+          >
+            <div className="flex flex-col h-full p-6">
+              <div className="flex justify-between items-center mb-8">
+                <Link to="/" className="font-poppins font-bold text-2xl text-banhcuon-800 " 
+                  onClick={() => setIsMenuOpen(false)}>
+                  Bánh Cuốn <span className="text-cta ml-1 ">Tây Hồ</span>
+                </Link>
+                <button
+                  className="p-2 rounded-md hover:bg-accent"
+                  onClick={toggleMenu}
+                  aria-label="Close menu"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+
+              <nav className="flex flex-col space-y-6 mb-8">
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className={`font-poppins text-xl transition-colors hover:text-primary ${isActive(item.path) ? 'text-cta' : 'text-foreground'
+                      }`}
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    🇻🇳
-                  </button>
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+
+              <div className="mt-auto">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="language-switcher">
+                    <button
+                      className={`language-option ${language === 'vi' ? 'active' : ''}`}
+                      onClick={() => handleLanguageChange('vi')}
+                    >
+                      🇻🇳
+                    </button>
+                    <button
+                      className={`language-option ${language === 'en' ? 'active' : ''}`}
+                      onClick={() => handleLanguageChange('en')}
+                    >
+                      🇬🇧
+                    </button>
+                    <button
+                      className={`language-option ${language === 'jp' ? 'active' : ''}`}
+                      onClick={() => handleLanguageChange('jp')}
+                    >
+                      🇯🇵
+                    </button>
+                  </div>
+
                   <button
-                    className={`language-option ${language === 'en' ? 'active' : ''}`}
-                    onClick={() => handleLanguageChange('en')}
+                    //   onClick={toggleTheme}
+                    className="p-2 rounded-full hover:bg-accent transition-colors"
+                    aria-label={theme === 'dark' ? t('common.lightMode') : t('common.darkMode')}
                   >
-                    🇬🇧
-                  </button>
-                  <button
-                    className={`language-option ${language === 'jp' ? 'active' : ''}`}
-                    onClick={() => handleLanguageChange('jp')}
-                  >
-                    🇯🇵
+                    {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
                   </button>
                 </div>
-
-                <button
-                  //   onClick={toggleTheme}
-                  className="p-2 rounded-full hover:bg-accent transition-colors"
-                  aria-label={theme === 'dark' ? t('common.lightMode') : t('common.darkMode')}
-                >
-                  {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    
-     
+   
     </header>
   );
 };

@@ -27,9 +27,9 @@ type TranslationType = {
       },
       home: {
         heroTitle: 'Bánh Cuốn Tây Hồ',
-        heroSubtitle: 'Hương Vị Truyền Thống Hơn 30 Năm',
+        heroSubtitle: 'Hương Vị Truyền Thống Hơn 60 Năm',
         welcomeTitle: 'Chào Mừng Đến Với Bánh Cuốn Tây Hồ',
-        welcomeText: 'Bánh cuốn Tây Hồ tự hào mang đến hương vị truyền thống Hà Nội với công thức gia truyền hơn 30 năm. Mỗi chiếc bánh được làm thủ công, tráng mỏng mịn và cuốn với nhân thơm ngon từ thịt, nấm, hành phi và gia vị đặc biệt.',
+        welcomeText: 'Bánh cuốn Tây Hồ tự hào mang đến hương vị truyền thống Hà Nội với công thức gia truyền hơn 60 năm. Mỗi chiếc bánh được làm thủ công, tráng mỏng mịn và cuốn với nhân thơm ngon từ thịt, nấm, hành phi và gia vị đặc biệt.',
         processTitle: 'Quy Trình Làm Bánh',
         testimonialTitle: 'Khách Hàng Nói Gì',
         testimonial1Name: 'Nguyễn Văn A',
@@ -109,9 +109,9 @@ type TranslationType = {
       },
       home: {
         heroTitle: 'Banh Cuon Tay Ho',
-        heroSubtitle: 'Traditional Flavor For Over 30 Years',
+        heroSubtitle: 'Traditional Flavor For Over 60 Years',
         welcomeTitle: 'Welcome to Banh Cuon Tay Ho',
-        welcomeText: 'Banh Cuon Tay Ho proudly brings you traditional Hanoi flavors with family recipes that have been perfected for over 30 years. Each rice roll is handmade, thinly steamed, and filled with delicious ingredients including meat, mushrooms, fried shallots, and special spices.',
+        welcomeText: 'Banh Cuon Tay Ho proudly brings you traditional Hanoi flavors with family recipes that have been perfected for over 60 years. Each rice roll is handmade, thinly steamed, and filled with delicious ingredients including meat, mushrooms, fried shallots, and special spices.',
         processTitle: 'Our Making Process',
         testimonialTitle: 'What Customers Say',
         testimonial1Name: 'Nguyen Van A',
@@ -190,7 +190,7 @@ type TranslationType = {
       },
       home: {
         heroTitle: 'バインクオン・タイホー',
-        heroSubtitle: '30年以上の伝統の味',
+        heroSubtitle: '60年以上の伝統の味',
         welcomeTitle: 'バインクオン・タイホーへようこそ',
         welcomeText: 'バインクオン・タイホーは、30年以上受け継がれてきた家族のレシピで、伝統的なハノイの味を誇りを持ってお届けします。各ライスロールは手作りで、薄く蒸され、肉、きのこ、揚げたエシャロット、特製スパイスなどのおいしい具材が詰められています。',
         processTitle: '製造プロセス',

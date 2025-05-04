@@ -22,12 +22,14 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   return (
     <div
       className={`mb-12 ${centered ? "text-center" : ""} ${className} `}
-   
+
     >
-      <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${textColorClass} font-roboto relative inline-block animate-[fade-in_1s_ease-out] opacity-0`}
-         style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
+      <h2
+        className={`group text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${textColorClass} font-roboto relative inline-block animate-[fade-in_1s_ease-out] opacity-0`}
+        style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
+      >
         {title}
-        <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-banhcuon-500 to-leaf-400 rounded-full transform origin-left transition-transform duration-500 hover:scale-110"></span>
+        <span className="absolute -bottom-2 left-0 h-1 w-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full transition-all duration-500 group-hover:w-full"></span>
       </h2>
       {subtitle && (
         <p className={`text-lg md:text-xl ${subtitleColorClass} max-w-3xl mx-auto mt-4 leading-relaxed`}>

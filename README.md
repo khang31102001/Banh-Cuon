@@ -94,3 +94,4 @@ Cấu trúc component tách biệt, dễ mở rộng
 UI được xây dựng dựa trên shadcn/ui (Radix + Tailwind)
 
 Bạn có thể thêm component mới bằng npx shadcn-ui@latest ad# Banh-Cuon
+scss Sass 3.0.0.
