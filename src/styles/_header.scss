@@ -1,0 +1,39 @@
+
+.header-custom {
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    transition: all .85s ease-in-out, padding-right 0s ease-in-out, opacity .3s linear;
+    // transform: translateY(0);
+     
+    @media screen and (min-width: 769px) {
+      transform: translateY(0);
+    }
+   
+  
+  }
+  .header--hide {
+    //  top: -100%;  
+    @media screen and (min-width: 769px) {
+      -webkit-transform: translateY(-100%);
+      background: white;
+      transform: translateY(-100%);
+    }
+  }
+
+
+    
+  
+  @media screen and (max-width: 768px) {
+    .header-is-mobile{
+      background: white;
+      transform: translate3d(10);
+  
+    }
+  }
+  

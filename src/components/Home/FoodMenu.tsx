@@ -10,94 +10,50 @@ import { Autoplay, EffectCoverflow, Navigation, Pagination } from "swiper/module
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 const FoodMenu = () => {
-  const limitMenu = menuItems.slice(0,10);
+  const limitMenu = menuItems.slice(0, 9);
 
-  // const swiperConfig = {
-  //   grabCursor: true,
-  //   spaceBetween: 16,
-  //   centeredSlides: true,
-  //   loop: true,
-  //   slidesPerView: 1,
-  //   // autoplay: {
-  //   //   delay: 2000,
-  //   //   disableOnInteraction: false,
-  //   // },
-  //   modules: [Autoplay],
-  //   className: 'row',
-  //   breakpoints: {
-  //     640: {
-  //       slidesPerView: 1,
-  //       spaceBetween: 16,
-  //     },
-  //     768: {
-  //       slidesPerView: 2,
-  //       spaceBetween: 16,
-  //     },
-  //     1024: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 30,
-  //     },
-  //     1280: {
-  //       slidesPerView: 4,
-  //       spaceBetween: 40,
-  //     },
-  //   },
-  // };
-  const swiperConfig = {
-    grabCursor: true,
-    effect: "coverflow",
-    centeredSlides: true,
-    slidesPerView: 1,
-    loop: true,
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 120,
-      modifier: 2.5,
-      slideShadows: false,
-    },
-    navigation: true,
-    pagination: { clickable: true },
-    spaceBetween: 24,
-    modules: [EffectCoverflow, Navigation, Pagination],
-    breakpoints: {
-      640: { slidesPerView: 1, spaceBetween: 8 },
-      768: { slidesPerView: 2, spaceBetween: 16 },
-      1024: { slidesPerView: 3, spaceBetween: 30 },
-      1280: { slidesPerView: 4, spaceBetween: 40 },
-    },
-  };
+
+
+
   return (
-    <section className="container mx-auto px-4 lg:p-8  my-16">
-      <div className="">
-        <div className="text-center mb-6">
-          <SectionTitle title="Menu" subtitle="" lightText={false} />
-        </div>
-
-        <div className=" ">
-          <div className="">
-            <Swiper {...swiperConfig} >
-              {limitMenu?.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <Link to="/menu">
-                    <FoodCard item={item} />
-                  </Link>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+    <section className = 'w-full max-w-screen-xl mx-auto px-4 my-16'>
+      <div className="container mx-auto px-4 py-12">
+           
+          <div  className="text-center mb-6 cursor-pointer">
+            <NavLink to='/menu'>
+            <SectionTitle title="Menu"
+              subtitle="Khám phá các loại bánh cuốn đặc sắc của Tây Hồ – từ bánh cuốn chay đến nhân thịt thơm ngon." lightText={false} />
+            </NavLink>
 
           </div>
+
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {limitMenu.map((items, index) => {
+              return (
+                <Link to="/menu">
+                  <div className=''>
+                    <FoodCard key={index} item={items} />
+                  </div>
+                </Link>
+
+              );
+            })}
+
+          </div>
+
           <div className="text-center mt-12 reveal">
             <Button asChild className="">
               <NavLink to="/menu" className="inline-flex items-center">
                 Xem Toàn Bộ Thực Đơn <ArrowRight size={16} className="ml-2" />
               </NavLink>
             </Button>
-          </div>
         </div>
-      </div>
 
+
+      </div>
     </section>
+
   );
 };
 

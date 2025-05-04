@@ -66,6 +66,13 @@ export default {
 					900: '#5b432e',
 					950: '#302218'
 				},
+				banh: {
+					red: '#B83B3A',
+					green: '#4D9D74',
+					beige: '#F5F2EA',
+					cream: '#FFF9E8',
+					brown: '#8A6552'
+				},
 				cta: {
 					DEFAULT: '#E74C3C',
 					hover: '#c0392b'

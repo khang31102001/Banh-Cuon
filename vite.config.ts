@@ -12,9 +12,21 @@ export default defineConfig(() => ({
   plugins: [
     react(),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+        additionalData: `
+        @use "@/styles/variables" as *;
+        @use "@/styles/mixins" as * ;
+      `
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      
     },
   },
 }));

@@ -1,0 +1,42 @@
+@use './mixins' as *;
+@use './variables' as *;
+.banner-title {
+    width: 100%;
+    opacity: 0;
+    transform: scaleY(0.1);
+    transform-origin: bottom center;
+    transition: all 0.7s cubic-bezier(.16,1.01,.56,1.01);
+    // font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.25);
+    padding: 16px 48px;
+    border-radius: 16px;
+    letter-spacing: 2px;
+
+    .banner-content {
+        margin-bottom: 6rem;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        // align-content: center;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+  //   @include respond-to("sm"){
+  //       font-size: 1rem;
+  //   }
+  //   @include respond-to("md"){
+  //     font-size: 3rem;
+  // }
+
+  }
+  
+  .banner-title.in-view {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  
