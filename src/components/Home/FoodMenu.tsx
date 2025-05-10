@@ -21,7 +21,9 @@ const FoodMenu = () => {
            
           <div  className="text-center mb-6 cursor-pointer">
             <NavLink to='/menu'>
-            <SectionTitle title="Menu"
+            <SectionTitle 
+              title1=""
+              title2=""
               subtitle="Khám phá các loại bánh cuốn đặc sắc của Tây Hồ – từ bánh cuốn chay đến nhân thịt thơm ngon." lightText={false} />
             </NavLink>
 

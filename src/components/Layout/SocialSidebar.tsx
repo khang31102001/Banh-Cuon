@@ -37,7 +37,7 @@ const SocialSidebar = () => {
 
       {/* Zalo Button */}
       <a
-        href="https://zalo.me/"
+        href="https://zalo.me/0777749668"
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-110"

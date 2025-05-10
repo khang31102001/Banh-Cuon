@@ -9,11 +9,11 @@ const Footer: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-banhcuon-100 dark:bg-banhcuon-950 text-foreground pt-12 pb-6">
-      <div className="container mx-auto px-4">
+    <footer className="bg-[#E9F5E1] text-[#2E7D32] pt-12 pb-6 shadow-inner rounded-t-3xl">
+      <div className="container mx-auto px-4 ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Info */}
-          <div className="space-y-4">
+          <div className="flex flex-col items-center space-y-4">
             <Link to="/" className="inline-block">
             <img src={Media.logo || ""} className="w-48 h-48 object-contain "/>
               {/* <h3 className="font-poppins font-bold text-2xl text-banhcuon-800 dark:text-banhcuon-200">
@@ -40,12 +40,12 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/recruitment" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/recruitment" className="text-muted-foreground hover:text-primary selection:transition-colors">
                   {t('common.recruitment')}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="text-muted-foreground hover:text-primary  transition-colors">
                   {t('common.contact')}
                 </Link>
               </li>

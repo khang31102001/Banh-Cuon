@@ -1,113 +1,78 @@
-import { Media } from '@/assets/Media';
-import { useLanguage } from '@/Contexts/LanguageContext';
-import { ArrowRight, Play, Pause } from 'lucide-react';
-import { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
-import SectionTitle from '../SectionTitle';
+import { useLanguage } from "@/Contexts/LanguageContext";
+import { Pause, Play, X } from "lucide-react";
+import { useState } from "react";
+import SectionTitle from "../SectionTitle";
+
 const SectionVideo = () => {
     const { t } = useLanguage();
-    const [isPlaying, setIsPlaying] = useState(false);
-    const videoRef = useRef<HTMLVideoElement>(null);
-
-    // const toggleVideo = () => {
-    //     if (videoRef.current) {
-    //         if (isPlaying) {
-    //             videoRef.current.pause();
-    //         } else {
-    //             videoRef.current.play();
-    //         }
-    //         setIsPlaying(!isPlaying);
-    //     }
-    // };
-
-    const toggleVideo = () => {
-        const video = videoRef.current;
-        if (video) {
-            if (video.paused) {
-                video.play();
-                setIsPlaying(true);
-            } else {
-                video.pause();
-                setIsPlaying(false);
-            }
-        }
-    };
-    
-
-
+ const [isPlaying, setIsPlaying] = useState(false);
     return (
-        <div>
-            {/* Welcome Section with Video */}
-            <section className="section-padding bg-white dark:bg-background ">
-                <div className="container mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div className="space-y-6">
-                            <SectionTitle
-                                title="Về Bánh Cuốn Tây Hồ"
-                                centered={false}
-                                className="mb-6  fade-in-left "
-                            />
-                            <p className="text-gray-700 mb-6 text-lg leading-relaxed fade-in-up">
-                                Từ năm 1972, Bánh Cuốn Tây Hồ đã bắt đầu hành trình mang hương vị
-                                truyền thống Việt Nam đến với mọi người. Chúng tôi tự hào về công thức
-                                gia truyền và quy trình làm bánh thủ công, tạo nên những chiếc bánh cuốn
-                                mỏng, mịn với nhân thơm ngon đặc trưng.
-                            </p>
-                            <p className="text-gray-700 mb-6 text-lg leading-relaxed fade-in-up">
-                                Ngày nay, Bánh Cuốn Tây Hồ đã trở thành một thương hiệu ẩm thực được yêu
-                                thích và tin tưởng bởi nhiều thế hệ người Việt Nam, cũng như du khách quốc tế
-                                khi đến thăm Hà Nội.
-                            </p>
-                            <div className="pt-4">
-                                <Link to="/menu" className="inline-flex items-center font-medium text-primary hover:text-primary/80 transition-colors">
-                                    {t('common.viewMenu')} <ArrowRight className="ml-1 h-4 w-4" />
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className="relative rounded-xl overflow-hidden shadow-xl h-80 lg:h-96">
-                            <video
-                                ref={videoRef}
-                                src="https://res.cloudinary.com/dwqqve7ja/video/upload/v1745419906/o5wjjvglpclr5dze9cp0.mp4"
-                                className="absolute inset-0 w-full h-full object-cover"
-                                loop
-                                muted
-                                playsInline
-                                onError={(e) => console.error("Video failed to load", e)}
-                            />
-
-
-                                {/* <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                                    <div className="text-center">
-                                        <p className="text-lg font-medium mb-2 text-white">{t('home.processTitle')}</p>
-                                        <button
-                                            onClick={toggleVideo}
-                                            className="w-16 h-16 rounded-full bg-cta flex items-center justify-center mx-auto cursor-pointer hover:bg-cta-hover transition-colors"
-                                        >
-                                            {isPlaying ? <Pause className="h-8 w-8 text-red" /> : <Play className="h-8 w-8 text-white" />}
-                                        </button>
-                                    </div>
-                                </div> */}
-                           
-                            {!isPlaying && (
-                                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                                    <div className="text-center">
-                                        <p className="text-lg font-medium mb-2 text-white">{t('home.processTitle')}</p>
-                                        <button
-                                            onClick={toggleVideo}
-                                            className="w-16 h-16 rounded-full bg-cta flex items-center justify-center mx-auto cursor-pointer hover:bg-cta-hover transition-colors"
-                                        >
-                                            {isPlaying ? <Pause className="h-8 w-8 text-red" /> : <Play className="h-8 w-8 text-white" />}
-                                        </button>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <section className="container mx-auto py-12 px-4">
+        {/* Title + Subtitle */}
+        <div className="text-center max-w-2xl mx-auto mb-10">
+            <SectionTitle
+                title1="Quy Trình "
+                title2="Làm Bánh"
+                title3="Cuốn"
+                underline={false}
+                lightText={true}
+                centered={true}
+                subtitle="Khám phá quy trình thủ công tỉ mỉ để tạo nên những chiếc bánh cuốn mỏng mịn, đậm đà hương vị truyền thống – một đặc sản nổi tiếng hơn 60 năm của Hà Nội."
+                className="text-banhcuon-700 mb-6"
+            />
         </div>
-    );
+  
+        {/* Video Thumbnail Section */}
+        <div className="relative group overflow-hidden shadow-xl rounded-lg w-full max-w-4xl mx-auto h-[22rem] md:h-[26rem] lg:h-[30rem]]">
+          <div className="p-8">
+          <video
+            src="https://res.cloudinary.com/dwqqve7ja/video/upload/v1745419906/o5wjjvglpclr5dze9cp0.mp4"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            playsInline
+            muted
+            preload="metadata"
+          />
+  
+          {/* Overlay Layer */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent z-10 flex flex-col justify-center items-center text-white px-4">
+         
+            <p className="text-xl font-semibold mb-4 drop-shadow-md">
+                {t("home.processTitle") || "Quy Trình Làm Bánh"}
+                </p>
+                <button
+                onClick={() => setIsPlaying(true)}
+                className="w-16 h-16 rounded-full bg-[#EF3F36] hover:bg-[#d12f2f] shadow-lg flex items-center justify-center transition-all z-20"
+                aria-label="Play video"
+                >
+                <Play className="h-8 w-8 text-white animate-pulse" />
+                </button>
+            
+           </div>
+          </div>
+        </div>
+  
+        {/* Fullscreen Video Modal */}
+        {isPlaying && (
+          <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center">
+            <div className="relative w-full max-w-5xl aspect-video">
+              <video
+                src="https://res.cloudinary.com/dwqqve7ja/video/upload/v1745419906/o5wjjvglpclr5dze9cp0.mp4"
+                controls
+                autoPlay
+                className="w-full h-full object-contain rounded-lg shadow-lg"
+              />
+              <button
+                onClick={() => setIsPlaying(false)}
+                className="absolute top-2 right-2 text-white bg-black/60 hover:bg-black/80 rounded-full p-2 transition"
+                aria-label="Close video"
+              >
+                <X className="h-6 w-6 text-white" />
+              </button>
+            </div>
+          </div>
+        )}
+      </section>
+    )
 }
 
 export default SectionVideo;

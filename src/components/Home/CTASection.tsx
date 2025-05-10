@@ -1,28 +1,23 @@
 import { Button } from "@/components/ui/button"
-import { Phone, MessageCircle } from "lucide-react"
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
 const CTASection = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-[hsl(35,40%,95%)]">
       <div className="container mx-auto px-4 text-center">
-        <div className="max-w-3xl mx-auto reveal">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-banhcuon-700 mb-6">
-            Tận Hưởng Hương Vị Truyền Thống
+        <div className="max-w-3xl mx-auto animate-fade-up">
+          <h2 className="text-4xl md:text-5xl font-playfair text-banhcuon-900 font-bold mb-4 tracking-wide drop-shadow-sm">
+          Tự hào giữ gìn hương vị truyền thống hơn 60 năm
           </h2>
-          <p className="mb-8 text-lg">
-            Đến với Bánh Cuốn Tây Hồ để thưởng thức những món ăn truyền thống được chế biến với tình yêu và sự tỉ mỉ.
+          <p className="mb-8 text-lg text-gray-700 leading-relaxed">
+          Bánh cuốn Tây Hồ không chỉ là món ăn, mà là ký ức, là tinh hoa ẩm thực Việt được trao truyền qua bao thế hệ.
           </p>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-            <Button asChild className="cta-button text-sm py-2 px-4 flex items-center gap-2">
-              <NavLink to="/contact">
-                Đặt Bàn Ngay
-              </NavLink>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button asChild className="bg-[#F4A259] hover:bg-[#E07B39] text-white text-sm px-6 py-3 rounded-lg font-medium shadow-md transition-all duration-300">
+              <NavLink to="/contact">Đặt Bàn Ngay</NavLink>
             </Button>
-            <Button asChild className="cta-button text-sm py-2 px-4 flex items-center gap-2">
-              <NavLink to="/menu">
-                Xem Thực Đơn
-              </NavLink>
+            <Button asChild className="bg-white border border-[#F4A259] hover:bg-[#F4A259] hover:text-white text-[#F4A259] text-sm px-6 py-3 rounded-lg font-medium shadow-sm transition-all duration-300">
+              <NavLink to="/menu">Xem Thực Đơn</NavLink>
             </Button>
           </div>
         </div>

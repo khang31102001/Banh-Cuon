@@ -21,10 +21,10 @@ const FoodSwiper = ({ Menu }: Props) => {
     centeredSlides: true,
     loop: true,
     slidesPerView: 1,
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
     modules: [Autoplay],
     className: 'row',
     breakpoints: {
@@ -55,7 +55,9 @@ const FoodSwiper = ({ Menu }: Props) => {
 
         <div className="text-center mb-6 cursor-pointer">
           <NavLink to='/menu'>
-            <SectionTitle title="Menu"
+            <SectionTitle 
+              title1=""
+              title2=""
               subtitle="Khám phá các loại bánh cuốn đặc sắc của Tây Hồ – từ bánh cuốn chay đến nhân thịt thơm ngon." lightText={false} />
           </NavLink>
 

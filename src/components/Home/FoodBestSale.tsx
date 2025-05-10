@@ -27,10 +27,14 @@ const FoodBestSale = () => {
       modifier: 2.5,
       slideShadows: false,
     },
-    navigation: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: false,
     pagination: { clickable: true },
     spaceBetween: 24,
-    modules: [EffectCoverflow, Navigation, Pagination],
+    modules: [EffectCoverflow, Navigation,Pagination, Autoplay],
     breakpoints: {
       640: { slidesPerView: 1, spaceBetween: 8 },
       768: { slidesPerView: 2, spaceBetween: 16 },
@@ -40,10 +44,17 @@ const FoodBestSale = () => {
   };
   return (
     <section className="container mx-auto p-4 my-12">
-         <div  className="text-center mb-6 cursor-pointer">
+         <div  className="text-center mb-6 cursor-pointer fade-in-up">
             <NavLink to='/menu'>
-            <SectionTitle title="Món Ăn Bán Chạy"
-              subtitle="Khám phá các loại bánh cuốn đặc sắc của Tây Hồ – từ bánh cuốn chay đến nhân thịt thơm ngon." lightText={false} />
+            <SectionTitle
+              underline={false}
+              title1="Món"
+              title2="Đặc trưng"
+              subtitle="Khám phá các loại bánh cuốn đặc sắc của Tây Hồ – từ bánh cuốn chay đến nhân thịt thơm ngon." 
+              lightText={true}
+              className="text-banhcuon-700" 
+              
+              />
             </NavLink>
 
           </div>
