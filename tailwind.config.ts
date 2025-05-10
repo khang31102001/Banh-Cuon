@@ -68,11 +68,26 @@ export default {
 				},
 				banh: {
 					red: '#B83B3A',
-					green: '#4D9D74',
+					green: "#2ECC71",
+					blue: "#3498DB",
+					teal: "#43E8E4",
+					purple: "#274AF2",
+					"bright-red": "#E83845",
 					beige: '#F5F2EA',
 					cream: '#FFF9E8',
-					brown: '#8A6552'
+					brown: '#8A6552',
+					primary: '#F9C784',
+					'primary-dark': '#F4A261',
+					coffee: '#4A2F17',
+
 				},
+				'tay-ho': {
+					coralRed: '#FF5959' ,
+					sunflower: '#FAD05A',
+					mintTeal: '#49BEB6',
+					deepGreen: '#075F63',
+				},
+
 				cta: {
 					DEFAULT: '#E74C3C',
 					hover: '#c0392b'
@@ -126,9 +141,9 @@ export default {
 			fontFamily: {
 				'poppins': ['Poppins', 'sans-serif'],
 				'roboto': ['Roboto', 'sans-serif'],
-				vietnam: ['Be Vietnam Pro', 'sans-serif'],
-				quicksand: ['Quicksand', 'sans-serif'],
-				playfair: ['Playfair Display', 'serif'],
+				'vietnam': ['Be Vietnam Pro', 'sans-serif'],
+				'quicksand': ['Quicksand', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
 			},
 		}
 	},

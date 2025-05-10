@@ -6,7 +6,8 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
+    /* --background: 40 33% 98%; */
+    --background: 0 0% 98%;;
     --foreground: 30 10% 15%;
 
     --card: 0 0% 100%;
@@ -73,16 +74,17 @@
     @apply border-border;
   }
   
+  
   body {
-    @apply bg-background text-foreground font-roboto;
+    @apply bg-background text-foreground font-vietnam;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins font-semibold;
+    @apply font-vietnam font-quicksand;
   }
   
   button, .button {
-    @apply font-poppins;
+    @apply font-vietnam;
   }
   
 }
@@ -90,7 +92,8 @@
 @layer components {
   .hero {
     @apply relative overflow-hidden;
-    height: calc(100vh - 4rem);
+    /* height: calc(100vh - 4rem); */
+    height: 100vh;
   }
   
   .hero-image {

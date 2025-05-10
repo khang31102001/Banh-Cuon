@@ -58,8 +58,8 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
   };
   return (
     <div
-  className={`food-card mx-auto group bg-white dark:bg-card transition-all duration-300 hover:translate-y-[-5px] 
-    min-w-[280px] max-w-[480px] w-full
+     className={`food-card mx-auto group bg-white dark:bg-card transition-all duration-300 hover:translate-y-[-5px] 
+     min-w-[280px] max-w-[480px] w-full
   
    overflow-hidden ${className}`}
   onMouseEnter={() => setIsHovered(true)}
@@ -81,7 +81,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
       <img src={Media.logo} alt="Tây Hồ Logo" className="h-12 object-contain" />
 
       {item.category.name && (
-        <Badge className={`text-xs text-white ${item.category.name === "Món chay" ? "bg-green-500" : "bg-red-400"}`}>
+        <Badge className={`text-xs text-white ${item.category.name === "Món chay" ? "bg-banh-green" : "bg-red-400"}`}>
           {item.category.name}
         </Badge>
       )}
