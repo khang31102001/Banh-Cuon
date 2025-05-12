@@ -100,7 +100,7 @@ const HeroSection = () => {
                                 Từ bàn tay khéo léo đến hương vị trọn vẹn, mỗi phần bánh cuốn là một câu chuyện Việt.
                             </p>
                         </h1>
-                        <div className="flex flex-col sm:flex-row gap-4 fade-in-down">
+                        <div className="flex flex-col sm:flex-row gap-4 mb-4 sm:mb-0 fade-in-down">
                             <a
                                 
                                 target="_blank"
@@ -115,9 +115,6 @@ const HeroSection = () => {
                             </Link>
 
                         </div> 
-
-
-
     
                     </div>
 

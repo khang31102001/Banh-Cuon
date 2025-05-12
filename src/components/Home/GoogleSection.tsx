@@ -120,8 +120,8 @@ const GoogleReviews = () => {
       <div className="absolute inset-0 bg-black/60"></div>
       <div className=" relative z-10 flex flex-col justify-center items-center text-white h-full px-4 text-center">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-restaurant-dark mb-4">
-            Khách Hàng Nói Gì Về Chúng Tôi
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-restaurant-dark mb-4 fade-in-up">
+            Khách Hàng <span className="text-banh-blue">Nói Gì</span> Về Chúng Tôi
           </h2>
           <div className="flex items-center justify-center gap-2 mb-4">
             <img 
@@ -130,9 +130,9 @@ const GoogleReviews = () => {
               className="h-8 object-contain"
             />
             <div className="flex items-center">
-              <Star className="text-yellow-400 fill-current" size={24} />
+              <Star className="text-tay-ho-sunflower fill-current" size={24} />
               <span className="font-bold text-xl ml-1">{placeRating.toFixed(1)}</span>
-              <span className="text-yellow-600 ml-2">({totalReviews} đánh giá)</span>
+              <span className="text-tay-ho-sunflower ml-2">({totalReviews} đánh giá)</span>
             </div>
           </div>
         </div>

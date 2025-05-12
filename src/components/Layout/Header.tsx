@@ -80,7 +80,7 @@ const Header: React.FC = () => {
           className="relative overflow-hidden flex items-center justify-center top-auto font-poppins font-bold text-2xl text-banhcuon-600"
         >
           <img
-            src={Media.logo}
+            src={Media.logo_gift}
             alt="Bánh Cuốn Tây Hồ Logo"
             className="w-48  object-cover"
           />
