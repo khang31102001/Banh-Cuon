@@ -120,7 +120,7 @@ const GoogleReviews = () => {
       <div className="absolute inset-0 bg-black/60"></div>
       <div className=" relative z-10 flex flex-col justify-center items-center text-white h-full px-4 text-center">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-restaurant-dark mb-4 fade-in-up">
+          <h2 className="text-3xl md:text-4xl font-vietnam font-bold text-restaurant-dark mb-4 fade-in-up">
             Khách Hàng <span className="text-banh-blue">Nói Gì</span> Về Chúng Tôi
           </h2>
           <div className="flex items-center justify-center gap-2 mb-4">

@@ -63,14 +63,13 @@ const SectionVideo = () => {
                     <SectionTitle
                         title1="Quy Trình "
                         title2="Làm Bánh"
-                        title3="Cuốn"
                         underline={false}
                         lightText={true}
                         centered={true}
                         subtitle="Khám phá quy trình thủ công tỉ mỉ để tạo nên những chiếc bánh cuốn mỏng mịn, đậm đà hương vị truyền thống – một đặc sản nổi tiếng hơn 60 năm của Hà Nội."
                         className="text-banhcuon-700 mb-6 fade-in-up"
                     />
-                    <p>
+                    <p className="text-gray-700 text-lg leading-relaxed font-playfair fade-in-up">
                       Bánh cuốn được làm từ bột gạo xay nhuyễn hoà với nước theo tỉ lệ chuẩn, 
                       sau đó tráng mỏng trên lớp vải căng đặt trên nồi nước sôi. 
                       Lớp bánh mỏng tang vừa chín tới sẽ được nhẹ nhàng lấy ra, 

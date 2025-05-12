@@ -39,7 +39,7 @@ const FoodBestSale = () => {
       640: { slidesPerView: 1, spaceBetween: 8 },
       768: { slidesPerView: 2, spaceBetween: 16 },
       1024: { slidesPerView: 3, spaceBetween: 30 },
-      1280: { slidesPerView: 4, spaceBetween: 40 },
+      1280: { slidesPerView: 3, spaceBetween: 40 },
     },
   };
   return (
