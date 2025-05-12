@@ -8,7 +8,7 @@ const SectionVideo = () => {
  const [isPlaying, setIsPlaying] = useState(false);
     return (
         <section className="container mx-auto py-12 px-4">
-            <div className="gird gird-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Video Thumbnail Section */}
                 <div className="relative group overflow-hidden shadow-xl rounded-lg w-full  mx-auto h-[22rem] md:h-[26rem] lg:h-[30rem]]">
                   <div className="p-8">

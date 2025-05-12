@@ -76,7 +76,7 @@ const FoodBestSale = () => {
           </Swiper>
 
         </div>
-        <div className="text-center mt-12 reveal">
+        {/* <div className="text-center mt-12 reveal">
           <Button
             className="bg-white text-grey-600 text-sm px-6 py-3 border border-banh-green rounded-lg font-medium shadow-md transition-all duration-300 
               bg-gradient-to-r from-banh-green to-banh-green 
@@ -88,7 +88,7 @@ const FoodBestSale = () => {
             </Link>
           </Button>
 
-        </div>
+        </div> */}
 
       </div>
       {/* <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
