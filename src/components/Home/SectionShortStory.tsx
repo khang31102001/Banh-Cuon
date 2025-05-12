@@ -17,9 +17,8 @@ const SectionShortStory = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6 text-gray-800">
                             <SectionTitle
-                                title1='Về'
-                                title2='Bánh Cuốn'
-                                title3='Tây Hồ'
+                                title1='Bánh Cuốn'
+                                title2='Tây Hồ'
                                 lightText={true}
                                 centered={false}
                                 className="mb-6 fade-in-left text-3xl font-extrabold text-[#4A2F17]"
@@ -88,4 +87,4 @@ const SectionShortStory = () => {
 );
 }
 
-                export default SectionShortStory;
+export default SectionShortStory;

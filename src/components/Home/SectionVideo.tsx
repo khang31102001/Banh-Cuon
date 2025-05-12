@@ -63,7 +63,6 @@ const SectionVideo = () => {
                     <SectionTitle
                         title1="Quy Trình "
                         title2="Làm Bánh"
-                        title3="Cuốn"
                         underline={false}
                         lightText={true}
                         centered={true}

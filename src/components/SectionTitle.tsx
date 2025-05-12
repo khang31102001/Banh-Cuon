@@ -24,8 +24,8 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   underline = false,
   subtitleColorClass = "",
 }) => {
-  const textColorClass1 = lightText ? "text-black" : "text-[#F4A259]";
-  const textColorClass2 = lightText ? "text-banh-green" : "text-black";
+  const textColorClass1 = lightText ? "text-banh-green" : "text-[#F4A259]";
+  const textColorClass2 = lightText ? "text-black" : "text-black";
   const textColorClass3 = lightText ? "text-black" : "text-white";
 
   return (
