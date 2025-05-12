@@ -26,7 +26,7 @@ const SocialSidebar = () => {
             visibility: isHover ? 'visible' : 'hidden'
           }}
         >
-          <div className="flex items-center">
+          <div className="flex items-center justify-center flex-grow"> 
             <Phone size={14} className="text-yellow-500 mr-2" />
             <span className="text-gray-700 text-sm whitespace-nowrap font-medium">
               (028) 3820 0584

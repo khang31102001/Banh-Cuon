@@ -6,8 +6,8 @@ const CTASection = () => {
     <section className="py-20 bg-[hsl(35,40%,95%)]">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-3xl mx-auto animate-fade-up">
-          <h2 className="text-4xl md:text-5xl font-vietnam text-banhcuon-900 font-bold mb-4 tracking-wide drop-shadow-sm fade-in-up">
-              Tự hào giữ gìn hương vị truyền thống hơn 60 năm
+          <h2 className="text-4xl md:text-5xl font-montserrat text-banhcuon-900 font-bold mb-4 tracking-wide drop-shadow-sm fade-in-up">
+              60 Năm Vẹn Nguyên, Hương Vị Việt
           </h2>
           <p className="mb-8 text-lg text-gray-700 leading-relaxed font-quicksand fade-in-up">
               Bánh cuốn Tây Hồ không chỉ là món ăn, mà là ký ức, là tinh hoa ẩm thực Việt được trao truyền qua bao thế hệ.

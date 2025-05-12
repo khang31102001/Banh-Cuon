@@ -4,7 +4,7 @@ import Message from "@/assets/Images/icon_messager.png";
 import LogoGift from "./gifts/logo-gif.gif";
 import logoSvg from "./svg/logo.svg"
 import bgHomeSectionStory from "./Images/bg-section-sory-home.png";
-import bgHomeSectionMenu from "./Images/home.png";
+import bgHomeSectionMenu from "./Images/bg-section-menu.png";
 import banhcuon1 from "./Images/banhcuon1 .png"
 import banhcuon2 from "./Images/banhcuon2.png"
 import banhcuon3 from "./Images/banhcuon3.png"

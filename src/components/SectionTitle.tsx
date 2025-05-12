@@ -25,7 +25,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   subtitleColorClass = "",
 }) => {
   const textColorClass1 = lightText ? "text-banh-green" : "text-[#F4A259]";
-  const textColorClass2 = lightText ? "text-black" : "text-black";
+  const textColorClass2 = lightText ? "text-cta" : "text-black";
   const textColorClass3 = lightText ? "text-black" : "text-white";
 
   return (
@@ -43,7 +43,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
                 && (<span className="absolute -bottom-2 left-0 h-1 w-full bg-banh-green rounded-full "></span>)}
       </h2>
       {subtitle && (
-        <p className={`text-lg font-quicksand md:text-xl ${subtitleColorClass} max-w-3xl mx-auto mt-4 leading-relaxed`}>
+        <p className={`text-[1.2rem] font-quicksand md:text-xl ${subtitleColorClass} max-w-3xl mx-auto mt-4 leading-relaxed`}>
           {subtitle}
         </p>
       )}
