@@ -12,7 +12,7 @@ const SectionShortStory = () => {
     return (
         <div>
             {/* Welcome Section with Video */}
-            <section className="section-padding bg-white dark:bg-background ">
+            <section className="section-padding ">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6 text-gray-800">
@@ -77,15 +77,15 @@ const SectionShortStory = () => {
                                         
                                        </div>
                                     </div>
-                                </div>
+                        </div>
                              
 
                          
-                         </div>
-                        </div>
-                    </section>
+                    </div>
                 </div>
-                );
+            </section>
+        </div>
+);
 }
 
                 export default SectionShortStory;

@@ -11,18 +11,46 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#E9F5E1] text-[#2E7D32] pt-12 pb-6 shadow-inner rounded-t-3xl">
       <div className="container mx-auto px-4 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand & Info */}
-          <div className="flex flex-col items-center space-y-4">
-            <Link to="/" className="inline-block">
-            <img src={Media.logo || ""} className="w-48 h-48 object-contain "/>
-              {/* <h3 className="font-poppins font-bold text-2xl text-banhcuon-800 dark:text-banhcuon-200">
-                Bánh Cuốn <span className="text-cta">Tây Hồ</span>
-              </h3> */}
-            </Link>
-            <p className="text-muted-foreground">
-              {t('home.welcomeText').substring(0, 120)}...
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {/* Social Media */}
+          <div className="space-y-4 ">
+            <div className='flex flex-col justify-center items-center'>
+              <h4 className="font-poppins font-semibold text-lg">{t('common.follow')}</h4>
+              <div className="flex mt-2 space-x-4">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook size={20} />
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={20} />
+                </a>
+                <a
+                  href="https://website.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  aria-label="Website"
+                >
+                  <Globe size={20} />
+                </a>
+
+              </div>
+              <div className='mt-2'>
+                <img src={Media.logo_svg} className="w-[12rem] h-[6rem] object-contain " />
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -69,50 +97,6 @@ const Footer: React.FC = () => {
                 <span className="text-muted-foreground">{t('contact.hours')}</span>
               </li>
             </ul>
-          </div>
-
-          {/* Social Media */}
-          <div className="space-y-4">
-            <h4 className="font-poppins font-semibold text-lg">{t('common.follow')}</h4>
-            <div className="flex space-x-4">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://website.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Website"
-              >
-                <Globe size={20} />
-              </a>
-            </div>
-            <div className="pt-2">
-              <a
-                href="https://shopeefood.vn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cta-button inline-flex items-center text-sm"
-              >
-                {t('common.orderNow')}
-              </a>
-            </div>
           </div>
         </div>
 
