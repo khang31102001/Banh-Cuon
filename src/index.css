@@ -268,7 +268,7 @@
 
   .animation-element {
     opacity: 0;
-    transform: translateY(40px); /* Thêm dòng này */
+    transform: translateY(100px); /* Thêm dòng này */
     transition: all 1s ease-out;
     backface-visibility: hidden;
   }
