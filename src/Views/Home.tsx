@@ -37,13 +37,15 @@ const Home: React.FC = () => {
       <SectionVideo/>
        
        
-     <div className=" relative z-0 h-screen bg-cover bg-center" style={{ backgroundImage: `url(${Media.bg_home_section_menu})` }}>
-     <div className="absolute z-1 inset-0 bg-black bg-opacity-50"></div>
-        <div className='relative z-10'>
+     <div className=" relative z-0  bg-cover bg-center" style={{ backgroundImage: `url(${Media.bg_home_section_menu})` }}>
+        <div className="absolute z-1 inset-0 bg-black bg-opacity-50"></div>
+        <div className='relative z-10 py-8'>
           <FoodBestSale/>
         </div>
      </div>
-      <GoogleReviews/>
+     <div className="py-4">
+        <CTASection/>     
+     </div>
       {/* <div className="hidden md:block">
          <FoodMenu/>
       </div>
@@ -56,7 +58,7 @@ const Home: React.FC = () => {
       <FoodVegetarian/> */}
       
 
-      <CTASection/>
+      <GoogleReviews/>
      
     
       
