@@ -49,7 +49,8 @@ const FoodBestSale = () => {
           <SectionTitle
             underline={false}
             title1="Món Đặc Trưng"
-            subtitle="Khám phá các loại bánh cuốn đặc sắc của Tây Hồ – từ bánh cuốn chay đến nhân thịt thơm ngon."
+            subtitle="Chúng tôi phục vụ - Từ món chay tới mặn, 
+            làm từ các nguyên liệu tươi ngon nhất"
             className=" fade-in-up"
             subtitleColorClass="text-white drop-shadow-md"
             

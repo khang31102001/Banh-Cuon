@@ -84,23 +84,23 @@ const HeroSection = () => {
 
                     <div className='flex flex-col justify-center items-center text-base  '>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in-up font-roboto leading-tight">
-                            <span className=" text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] block mb-2 animate-[fade-in_1s_ease-out] opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
+                            <span className=" text-green-400 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] block mb-2 animate-[fade-in_1s_ease-out] opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
                                 Bánh Cuốn <span className="text-cta">Tây Hồ</span>
                             </span>
-                            <span
-                                className="text-2xl md:text-3xl lg:text-4xl block font-semibold text-[#F4A259] drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] animate-[fade-in_1s_ease-out] opacity-0"
-                                style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}
+                            {/* <span
+                                className="text-2xl md:text-3xl lg:text-4xl block font-semibold text-banh-green drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] animate-[fade-in_1s_ease-out] opacity-0"
+                                style={{ fontStyle: 'italic', animationDelay: '0.6s', animationFillMode: 'forwards' }}
                             >
-                                Bánh cuốn truyền thống – Gói trọn tinh hoa Việt
-                            </span>
+                                Gói trọn tinh hoa Việt
+                            </span> */}
                             <p
-                                className="text-lg md:text-xl text-white/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] mb-8 max-w-3xl mx-auto animate-[fade-in_1s_ease-out] opacity-0"
-                                style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}
+                                className="text-lg md:text-[1.4rem] text-white/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] mb-8 max-w-3xl mx-auto animate-[fade-in_1s_ease-out] opacity-0"
+                                style={{ fontStyle: 'italic', animationDelay: '0.9s', animationFillMode: 'forwards' }}
                             >
-                                Từ bàn tay khéo léo đến hương vị trọn vẹn, mỗi phần bánh cuốn là một câu chuyện Việt.
+                                "Từ bàn tay khéo léo, mỗi phần bánh là một câu chuyện Việt"
                             </p>
                         </h1>
-                        <div className="flex flex-col sm:flex-row gap-4 mb-4 sm:mb-0 fade-in-down">
+                        <div className="flex flex-col sm:flex-row gap-4 mb-8 mt-0 sm:mb-0  fade-in-down">
                             <a
                                 
                                 target="_blank"
@@ -124,7 +124,7 @@ const HeroSection = () => {
                 {/* Information bar at bottom of hero */}
                 <div className="absolute bottom-0 left-0 w-full bg-black/70 backdrop-blur-sm text-white py-4">
                     <div className="container mx-auto px-4">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center sm:justify-items-center">
                             <div className="flex items-center">
                                 <Clock className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>

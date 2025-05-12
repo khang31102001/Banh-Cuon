@@ -144,6 +144,7 @@ export default {
 				'vietnam': ['Be Vietnam Pro', 'sans-serif'],
 				'quicksand': ['Quicksand', 'sans-serif'],
 				'playfair': ['Playfair Display', 'serif'],
+				 montserrat: ['Montserrat', 'sans-serif'],
 			},
 		}
 	},
