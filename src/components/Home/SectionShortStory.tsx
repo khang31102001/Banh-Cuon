@@ -49,29 +49,29 @@ const SectionShortStory = () => {
                         <div className="grid grid-cols-2 gap-4 relative order-1 md:order-2 animate-on-scroll">
                                     <div className="space-y-4">
                                     <img
-                                        src="https://images.unsplash.com/photo-1615729947596-a598e5de0ab3"
+                                        src={Media.banhcuon1}
                                         alt="Bánh Cuốn Tây Hồ"
-                                        className="rounded-lg shadow-md h-auto max-w-full transition-all duration-300 hover:scale-105"
+                                        className="rounded-lg h-auto max-w-full transition-all duration-300 hover:scale-105 animation-element"
                                     />
                                     <img
-                                        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                                        src={Media.banhcuon2}
                                         alt="Bánh Cuốn Tây Hồ"
-                                        className="rounded-lg shadow-md h-auto max-w-full transition-all duration-300 hover:scale-105"
-                                    />
+                                        className="rounded-lg h-auto max-w-full transition-all duration-300 hover:scale-105 animation-element"
+                                    />  
                                     </div>
                                     <div className="pt-8">
                                     <img
-                                        src="https://images.unsplash.com/photo-1501854140801-50d01698950b"
+                                        src={Media.banhcuon3}
                                         alt="Bánh Cuốn Tây Hồ"
-                                        className="rounded-lg shadow-md h-auto max-w-full transition-all duration-300 hover:scale-105"
+                                        className="rounded-lg  h-auto max-w-full transition-all duration-300 hover:scale-105 animation-element"
                                     />
                                     
                                     {/* Video thumbnail with play button */}
                                     <div className="relative mt-4 rounded-lg overflow-hidden group">
                                         <img
-                                        src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1"
+                                         src={Media.banhcuon4}
                                         alt="Xem video về Bánh Cuốn Tây Hồ"
-                                        className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
+                                        className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105 animation-element"
                                         />
                                         
                                        </div>

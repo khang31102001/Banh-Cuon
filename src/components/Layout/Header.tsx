@@ -130,9 +130,9 @@ const Header: React.FC = () => {
               key={item.path}
               to={item.path}
               className={`group relative font-playfair font-semibold text-base 
-        transition-colors duration-300
-        ${isActive(item.path) ? 'text-cta' : isScrolled ? ' text-black hover:text-cta ' : 'text-white hover:text-[#F44336]'}
-      `}
+                          transition-colors duration-300
+                          ${isActive(item.path) ? 'text-cta' : isScrolled ? ' text-black hover:text-cta ' : 'text-white hover:text-[#F44336]'}
+                        `}
             >
               {item.label}
               <span
@@ -183,7 +183,7 @@ const Header: React.FC = () => {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {!isMenuOpen && (<Menu size={24} className="text-grey-600 drop-shadow-md" />)}
         </button>
 
         {/* Mobile Menu */}
