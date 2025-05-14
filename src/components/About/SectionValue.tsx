@@ -92,7 +92,7 @@ const SectionValue = () => {
               <section className="section-padding bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionTitle
-                        title="Giá Trị Cốt Lõi"
+                        title1="Giá Trị Cốt Lõi"
                         subtitle="Những nguyên tắc và giá trị định hướng mọi hoạt động của chúng tôi"
                     />
 
@@ -103,10 +103,10 @@ const SectionValue = () => {
                                 className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center animate-on-scroll"
                             >
                                 <div className="flex justify-center mb-4">{value.icon}</div>
-                                <h3 className="text-xl font-bold mb-3 text-banhcuon-900 font-serif">
+                                <h3 className="text-xl font-bold mb-3 text-banhcuon-900 font-vietnam">
                                     {value.title}
                                 </h3>
-                                <p className="text-gray-600">{value.description}</p>
+                                <p className="text-gray-600 font-playfair">{value.description}</p>
                             </div>
                         ))}
                     </div>

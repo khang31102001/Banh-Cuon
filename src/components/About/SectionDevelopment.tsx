@@ -1,6 +1,20 @@
 import SectionTitle from "../SectionTitle";
+import { useEffect, useRef } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const SectionDevelopment = () => {
+    const timelineRef = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: timelineRef,
+        offset: ["start end", "end end"]
+    });
+
+    const scaleY = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
+
     const timelineEvents = [
         {
             year: "1972",
@@ -18,7 +32,7 @@ const SectionDevelopment = () => {
         },
         {
             year: "1998",
-            title: "Phát Triển Thương Hiệu",
+            title: "Phát Triển Thương Hiệu", 
             description:
                 "Bánh Cuốn Tây Hồ trở thành thương hiệu được bảo hộ chính thức và bắt đầu mở rộng các chuỗi cửa hàng tại Hà Nội.",
             image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
@@ -45,77 +59,96 @@ const SectionDevelopment = () => {
             image: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
         },
     ];
+
     return(
         <div>
-           
-           <div>
             <section className="section-padding bg-banhcuon-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionTitle
-                        title="Hành Trình Phát Triển"
+                        title1="Hành Trình Phát Triển"
                         subtitle="Những cột mốc quan trọng trong lịch sử phát triển của Bánh Cuốn Tây Hồ"
+                        className="text-banhcuon-900"
                     />
                     
-                    {/* Timeline container với line ở giữa */}
-                    <div className="max-w-4xl mx-auto relative">
-                        {/* Đường dọc timeline */}
-                        <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-banhcuon-300 transform md:translate-x-[-2px] z-0"></div>
+                    <div ref={timelineRef} className="max-w-6xl mx-auto relative">
+                        <motion.div 
+                            className="absolute left-4 md:left-1/2 top-0 h-full w-1 bg-banhcuon-300 origin-top"
+                            style={{ scaleY }}
+                        >
+                            <motion.div 
+                                className="absolute left-0 top-0 w-full bg-banhcuon-600 h-full"
+                                style={{ scaleY }}
+                            />
+                        </motion.div>
                         
                         {timelineEvents.map((event, index) => (
-                            <div
+                            <motion.div
                                 key={index}
-                                className={`timeline-item relative z-10 mb-16 fade-in-up ${
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.5, delay: index * 0.2 }}
+                                className={`timeline-item relative z-10 mb-20 ${
                                     index % 2 === 0 ? "text-left" : "text-left md:text-right"
                                 }`}
                             >
-                                {/* Điểm tròn trên timeline */}
-                                <div className="timeline-dot absolute left-4 md:left-1/2 top-8 h-4 w-4 bg-banhcuon-600 rounded-full border-4 border-banhcuon-100 transform md:translate-x-[-8px] translate-x-[-8px] z-20"></div>
+                                <motion.div 
+                                    className="timeline-dot absolute left-4 md:left-1/2 top-8 h-6 w-6 bg-banhcuon-600 rounded-full border-4 border-banhcuon-100 transform md:translate-x-[-12px] translate-x-[-12px] z-20 flex items-center justify-center"
+                                    whileHover={{ scale: 1.2 }}
+                                >
+                                    <span className="text-white text-xs font-bold">{index + 1}</span>
+                                </motion.div>
                                 
-                                <div className="md:grid md:grid-cols-5 md:gap-8 items-center pl-10 md:pl-0">
-                                    <div
-                                        className={`hidden md:block md:col-span-2 ${
+                                <motion.div 
+                                    className="md:grid md:grid-cols-5 md:gap-12 items-center pl-12 md:pl-0"
+                                    whileHover={{ scale: 1.02 }}
+                                    transition={{ type: "spring", stiffness: 300 }}
+                                >
+                                    <motion.div
+                                        className={`hidden md:block md:col-span-2 overflow-hidden rounded-xl ${
                                             index % 2 === 0 ? "order-1" : "order-2"
                                         }`}
+                                        whileHover={{ scale: 1.05 }}
                                     >
                                         <img
                                             src={event.image}
                                             alt={event.title}
-                                            className="rounded-lg shadow-md"
+                                            className="w-full h-64 object-cover rounded-xl shadow-lg transform transition-transform duration-300"
                                         />
-                                    </div>
-                                    <div
+                                    </motion.div>
+                                    <motion.div
                                         className={`md:col-span-3 ${
-                                            index % 2 === 0 ? "order-2 md:pl-8" : "order-1 md:pr-8"
-                                        } bg-white p-6 rounded-lg shadow-md`}
+                                            index % 2 === 0 ? "order-2 md:pl-12" : "order-1 md:pr-12"
+                                        } bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300`}
                                     >
-                                        <span className="inline-block px-3 py-1 rounded-full bg-banhcuon-600 text-white text-sm font-semibold mb-2">
+                                        <span className="inline-block px-4 py-2 rounded-full bg-banhcuon-600 text-white text-sm font-semibold mb-4">
                                             {event.year}
                                         </span>
-                                        <h3 className="text-xl font-bold mb-2 text-banhcuon-900 font-roboto">
+                                        <h3 className="text-2xl font-bold mb-4 text-banhcuon-900 font-roboto">
                                             {event.title}
                                         </h3>
-                                        <p className="text-gray-600">{event.description}</p>
-                                    </div>
-                                    <div
-                                        className={`block md:hidden mt-4 ${
+                                        <p className="text-gray-600 leading-relaxed">{event.description}</p>
+                                    </motion.div>
+                                    <motion.div
+                                        className={`block md:hidden mt-6 overflow-hidden rounded-xl ${
                                             index % 2 === 0 ? "order-3" : "order-3"
                                         }`}
+                                        whileHover={{ scale: 1.05 }}
                                     >
                                         <img
                                             src={event.image}
                                             alt={event.title}
-                                            className="rounded-lg shadow-md"
+                                            className="w-full h-48 object-cover rounded-xl shadow-lg"
                                         />
-                                    </div>
-                                </div>
-                            </div>
+                                    </motion.div>
+                                </motion.div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
         </div>
-        </div>
     );
-    
-    }
+}
+
 export default SectionDevelopment;

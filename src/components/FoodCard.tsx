@@ -116,7 +116,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
   {/* Content Container with Fixed Layout */}
   <div className="p-4 flex flex-col flex-grow">
     <div className="mb-2 h-14 overflow-hidden fade-in-left">
-      <h3 className="text-xl font-semibold font-poppins text-banhcuon-800 line-clamp-2">{item.name[language]}</h3>
+      <h3 className="text-xl font-semibold font-vietnam text-banhcuon-800 line-clamp-2">{item.name[language]}</h3>
     </div>
     
     {/* Description with fixed height and ellipsis */}
@@ -126,7 +126,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
 
     {/* Ingredients with fixed height */}
     <div className="mb-3 h-16 overflow-hidden zoom-in ">
-      <h4  className="text-sm font-medium">{t('menu.ingredients')}:</h4>
+      <h4  className="text-sm font-medium ">{t('menu.ingredients')}:</h4>
       <p className="text-xs text-muted-foreground line-clamp-2">
         {item.ingredients[language].join(', ')}
       </p>
