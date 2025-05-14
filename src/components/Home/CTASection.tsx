@@ -7,7 +7,8 @@ const CTASection = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-3xl mx-auto animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-montserrat text-banhcuon-900 font-bold mb-4 tracking-wide drop-shadow-sm fade-in-up">
-              60 Năm Vẹn Nguyên, Hương Vị Việt
+              60 Năm Vẹn Nguyên, <span>
+                Hương Vị Việt</span>
           </h2>
           <p className="mb-8 text-lg text-gray-700 leading-relaxed font-quicksand fade-in-up">
               Bánh cuốn Tây Hồ không chỉ là món ăn, mà là ký ức, là tinh hoa ẩm thực Việt được trao truyền qua bao thế hệ.

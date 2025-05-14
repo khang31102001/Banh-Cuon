@@ -29,4 +29,4 @@ const fetchGoogleReviews = async (): Promise<GooglePlaceResult> => {
     const data = await response.json();
     return data.result;
   };
-  
+export default fetchGoogleReviews;
