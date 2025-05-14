@@ -15,7 +15,7 @@ const SectionShortStory = () => {
             <section className="section-padding ">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div className="space-y-6 text-gray-800">
+                        <div className="space-y-6 py-12 text-gray-800">
                             <SectionTitle
                                 title1='Bánh Cuốn'
                                 title2='Tây Hồ'
@@ -24,16 +24,18 @@ const SectionShortStory = () => {
                                 className="mb-6 fade-in-left text-3xl font-extrabold text-[#4A2F17]"
                             />
 
-                            <p className="text-gray-700 text-lg leading-relaxed font-quicksand fade-in-up">
-                                Bắt đầu từ năm <strong className="text-banh-green">1972</strong>, Bánh Cuốn <strong className="text-[#EF3F36]">Tây Hồ</strong> đã bắt đầu hành trình lan tỏa hương vị truyền thống Việt.
-                                Chúng tôi tự hào giữ gìn công thức gia truyền và quy trình thủ công, tạo nên những chiếc bánh cuốn
-                                <span className="italic"> mỏng mịn, thơm ngon, mang đậm hồn dân tộc</span>.
-                            </p>
+                           <div className='"mt-8'>
+                            <p className="text-gray-700 text-lg leading-[3] font-quicksand fade-in-up">
+                                    Bắt đầu từ năm <strong className="text-banh-green">1972</strong>, Bánh Cuốn <strong className="text-[#EF3F36]">Tây Hồ</strong> đã bắt đầu hành trình lan tỏa hương vị truyền thống Việt.
+                                    Chúng tôi tự hào giữ gìn công thức gia truyền và quy trình thủ công, tạo nên những chiếc bánh cuốn
+                                    <span className="italic"> mỏng mịn, thơm ngon, mang đậm hồn dân tộc</span>.
+                                </p>
 
-                            <p className="text-gray-700 text-lg leading-relaxed font-quicksand fade-in-up">
-                                Trải qua hơn <strong className="text-banh-green">60 năm</strong>, thương hiệu đã trở thành một phần quen thuộc trong ký ức của người Việt, và là một điểm dừng chân không thể bỏ lỡ với du khách mỗi khi đến <strong>Hà Nội</strong>.
-                                Với từng phần bánh là một câu chuyện, chúng tôi mang đến trải nghiệm ẩm thực <span className="font-medium text-[#4A2F17]">đúng chất Việt Nam</span>.
-                            </p>
+                                <p className="text-gray-700 text-lg leading-[3] font-quicksand fade-in-up">
+                                    Trải qua hơn <strong className="text-banh-green">60 năm</strong>, thương hiệu đã trở thành một phần quen thuộc trong ký ức của người Việt, và là một điểm dừng chân không thể bỏ lỡ với du khách mỗi khi đến <strong>Hà Nội</strong>.
+                                    Với từng phần bánh là một câu chuyện, chúng tôi mang đến trải nghiệm ẩm thực <span className="font-medium text-[#4A2F17]">đúng chất Việt Nam</span>.
+                                </p>
+                           </div>
                             <div className="pt-4">
                             <Link
                                 to="/menu"

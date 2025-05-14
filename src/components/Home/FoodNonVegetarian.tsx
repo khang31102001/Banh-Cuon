@@ -52,7 +52,7 @@ const FoodNonVegetarian = () => {
     <section className="container mx-auto px-4 lg:px-8 my-12">
       <div className="border border-gray-300 rounded-2xl shadow-lg p-6 bg-white/70 backdrop-blur-sm">
         <div className="text-center mb-6">
-          <SectionTitle title="Món Mặn" subtitle="" lightText={false} />
+          <SectionTitle title1="Món Mặn" subtitle="" lightText={false} />
         </div>
 
         <div className="">

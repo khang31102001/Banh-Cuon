@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-[#E9F5E1] text-[#2E7D32] pt-12 pb-6 shadow-inner rounded-t-3xl">
+    <footer className="bg-[#FFF8F2] text-black/90 pt-12 pb-6 shadow-inner rounded-t-3xl">
       <div className="container mx-auto px-4 ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-cta hover:text-primary-foreground transition-colors"
                   aria-label="Facebook"
                 >
                   <Facebook size={20} />
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-cta hover:text-primary-foreground transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram size={20} />
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                   href="https://website.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="p-2 rounded-full bg-banhcuon-200 dark:bg-banhcuon-800 text-foreground hover:bg-cta hover:text-primary-foreground transition-colors"
                   aria-label="Website"
                 >
                   <Globe size={20} />
@@ -58,22 +58,22 @@ const Footer: React.FC = () => {
             <h4 className="font-poppins font-semibold text-lg">{t('common.home')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-muted-foreground hover:text-cta transition-colors">
                   {t('common.home')}
                 </Link>
               </li>
               <li>
-                <Link to="/menu" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/menu" className="text-muted-foreground hover:text-cta transition-colors">
                   {t('common.menu')}
                 </Link>
               </li>
               <li>
-                <Link to="/recruitment" className="text-muted-foreground hover:text-primary selection:transition-colors">
+                <Link to="/recruitment" className="text-muted-foreground hover:text-cta selection:transition-colors">
                   {t('common.recruitment')}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary  transition-colors">
+                <Link to="/contact" className="text-muted-foreground hover:text-cta  transition-colors">
                   {t('common.contact')}
                 </Link>
               </li>
@@ -85,15 +85,15 @@ const Footer: React.FC = () => {
             <h4 className="font-poppins font-semibold text-lg">{t('common.contact')}</h4>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <MapPin className="mr-2 h-5 w-5 text-primary" />
+                <MapPin className="mr-2 h-5 w-5 text-cta" />
                 <span className="text-muted-foreground">{t('contact.address')}</span>
               </li>
               <li className="flex items-center">
-                <Phone className="mr-2 h-5 w-5 text-primary" />
+                <Phone className="mr-2 h-5 w-5 text-cta" />
                 <span className="text-muted-foreground">{t('contact.phone')}</span>
               </li>
               <li className="flex items-center">
-                <Clock className="mr-2 h-5 w-5 text-primary" />
+                <Clock className="mr-2 h-5 w-5 text-cta" />
                 <span className="text-muted-foreground">{t('contact.hours')}</span>
               </li>
             </ul>
