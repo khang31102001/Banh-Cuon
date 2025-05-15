@@ -14,7 +14,7 @@ const About = () => {
         <div >
             <SectionBanner
                 title="Giới Thiệu"
-                backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                backgroundImage=""
             >
                 <p className="text-white/90 max-w-3xl mx-auto text-center mt-4">
                     Tìm hiểu câu chuyện, giá trị cốt lõi và hành trình phát triển của Bánh Cuốn Tây Hồ

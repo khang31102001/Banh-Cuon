@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import  { type MenuItem } from '../data/menuItems';
+import  { type MenuItem } from '@/data/menuItems';
 import { Badge } from './ui/badge';
 import { useLanguage } from '@/Contexts/LanguageContext';
 import { Media } from '@/assets/Media';
@@ -81,8 +81,8 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
       <img src={Media.logo} alt="Tây Hồ Logo" className="h-12 object-contain" />
 
       {item.category.name && (
-        <Badge className={`text-xs text-white ${item.category.name === "Món chay" ? "bg-banh-green" : "bg-red-400"}`}>
-          {item.category.name}
+        <Badge className={`text-xs text-white ${item.category.name.vi === "Món chay" ? "bg-banh-green" : "bg-red-400"}`}>
+          {item.category.name.vi}
         </Badge>
       )}
     </div>
@@ -128,7 +128,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
     <div className="mb-3 h-16 overflow-hidden zoom-in ">
       <h4  className="text-sm font-medium ">{t('menu.ingredients')}:</h4>
       <p className="text-xs text-muted-foreground line-clamp-2">
-        {item.ingredients[language].join(', ')}
+        {item.ingredients[language]}
       </p>
     </div>
 
