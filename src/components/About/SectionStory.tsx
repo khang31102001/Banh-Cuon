@@ -1,3 +1,4 @@
+import { Media } from "@/assets/Media";
 import SectionTitle from "../SectionTitle";
 
 const SectionStory = () => {
@@ -31,12 +32,12 @@ return(
                         </div>
                         <div className="relative animation-element">
                             <img
-                                src="https://images.unsplash.com/photo-1615729947596-a598e5de0ab3"
+                                src={Media.img1_section_about}
                                 alt="Bánh Cuốn Tây Hồ"
                                 className="rounded-lg shadow-lg w-full object-cover"
                             />
                             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg w-48">
-                                <p className="text-banhcuon-900 font-bold text-lg">Hơn 50 năm</p>
+                                <p className="text-banhcuon-900 font-bold text-lg">Hơn 60 năm</p>
                                 <p className="text-gray-600">gìn giữ hương vị truyền thống</p>
                             </div>
                         </div>

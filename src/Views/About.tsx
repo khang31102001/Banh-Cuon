@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "../components/SectionTitle";
-import SectionBanner from "@/components/About/SectionBanner";
+import SectionBanner from "@/components/SectionBanner";
 import SectionStory from "@/components/About/SectionStory";
 import SectionDevelopment from "@/components/About/SectionDevelopment";
 import SectionValue from "@/components/About/SectionValue";

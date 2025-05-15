@@ -27,7 +27,7 @@ const SectionBanner: React.FC<SectionBannerProps> = ({
 
   return (
     <header
-      className={`py-24 ${backgroundImage ? "bg-banhcuon-400" : "bg-gradient-to-r from-banhcuon-50 to-leaf-50"} ${className} animate-on-scroll`}
+      className={`py-24 ${backgroundImage ? "bg-banhcuon-400" : "bg-gradient-to-r from-banhcuon-50 to-leaf-50"} ${className} fade-in-up`}
       style={bgStyle}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,9 +36,7 @@ const SectionBanner: React.FC<SectionBannerProps> = ({
         >
           {title}
         </h1>
-        
-       
-        
+         
         {children && <div className="mt-8">{children}</div>}
       </div>
     </header>

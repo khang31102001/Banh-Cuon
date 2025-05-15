@@ -86,15 +86,28 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 text-cta" />
-                <span className="text-muted-foreground">{t('contact.address')}</span>
+                <span className="text-muted-foreground">
+                  <a href="/contact#map" className=' cursor-pointer hover:text-cta transition-colors'>
+                    {t('contact.address')}
+                  </a>
+                </span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-cta" />
-                <span className="text-muted-foreground">{t('contact.phone')}</span>
+                <span className="relative text-muted-foreground">
+                  <a href="tel:02838200584" className="cursor-pointer hover:text-cta transition-colors ">
+                    02838200584
+                  </a>
+                 
+                </span>
               </li>
               <li className="flex items-center">
                 <Clock className="mr-2 h-5 w-5 text-cta" />
-                <span className="text-muted-foreground">{t('contact.hours')}</span>
+                <span className="text-muted-foreground">
+                  <a href="https://maps.app.goo.gl/4EmD2FWB31qbgfbj9" className="cursor-pointer hover:text-cta transition-colors">
+                    {t('contact.hours')}
+                  </a>
+                  </span>
               </li>
             </ul>
           </div>

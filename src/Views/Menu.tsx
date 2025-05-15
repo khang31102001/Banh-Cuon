@@ -4,6 +4,8 @@ import menuItems from '@/data/menuItems';
 import React, { useState } from 'react';
 import Lightbox from '@/components/Lightbox';
 import { Search } from 'lucide-react';
+import SectionBanner from '@/components/SectionBanner';
+import { Media } from '@/assets/Media';
 
 type Filter = 'all' | 'vegetarian' | 'non-vegetarian' | 'search';
 
@@ -49,14 +51,20 @@ const Menu: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="bg-banhcuon-100 dark:bg-banhcuon-900 pt-[10rem] pb-[6rem] px-4 md:py-24">
+      {/* <div className="bg-banhcuon-100 dark:bg-banhcuon-900 pt-[10rem] pb-[6rem] px-4 md:py-24">
         <div className="container mx-auto text-center">
           <h1 className="primary-heading">{t("menu.title")}</h1>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
             {t("menu.subtitle")}
           </p>
         </div>
-      </div>
+      </div> */}
+      <SectionBanner title="Menu"  backgroundImage= {Media.bg_menu} >
+        <p className="text-white/90 max-w-3xl mx-auto text-center mt-4">
+          Tìm hiểu thực đơn đa dạng của chúng tôi, từ món chay thanh đạm đến món mặn
+         </p>
+      </SectionBanner>
+
 
       <div className="container mx-auto px-4 py-12">
         <div className="relative flex-grow w-full mb-6 bg-white ">
@@ -107,7 +115,7 @@ const Menu: React.FC = () => {
         </div>
 
         {/* Food Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in-up">
           {filteredItems.map((item) => (
             <FoodCard key={item.id} item={item} openLightbox={openLightbox} className="" />
           ))}

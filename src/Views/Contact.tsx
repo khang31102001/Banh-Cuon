@@ -4,6 +4,7 @@ import { MapPin, Phone, Clock, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/Contexts/LanguageContext';
 import SectionMap from '@/components/Contact/SectionMap';
+import { get } from 'http';
 
 interface ContactFormData {
   name: string;
@@ -64,15 +65,35 @@ const Contact: React.FC = () => {
               <div className="space-y-4">
                 <div className="contact-info-item">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span>{t('contact.address')}</span>
+                  <span className="cursor-pointers">
+                    <a onClick={()=>{
+                      const scrollToMap= document.getElementById('map');
+                      if(scrollToMap){
+                        scrollToMap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }}
+                    className="cursor-pointer"
+                    >
+                      {t('contact.address')}
+                    </a>
+                  </span>
                 </div>
                 <div className="contact-info-item">
                   <Phone className="h-5 w-5 text-primary" />
-                  <span>{t('contact.phone')}</span>
+                  <span className="cursor-pointers">
+                    <a href="tel:028 3820 0584 " >
+                      +84 028 3820 0584 
+                    </a>
+
+                  </span>
                 </div>
                 <div className="contact-info-item">
                   <Clock className="h-5 w-5 text-primary" />
-                  <span>{t('contact.hours')}</span>
+                  <span className="cursor-pointers">
+                    <a href="https://maps.app.goo.gl/oeAyzjwaQS7A3kTv9" target="_blank" rel="noopener noreferrer">
+                    {t('contact.hours')}
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>

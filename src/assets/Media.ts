@@ -8,7 +8,9 @@ import bgHomeSectionMenu from "./Images/bg-section-menu.png";
 import banhcuon1 from "./Images/banhcuon1 .png"
 import banhcuon2 from "./Images/banhcuon2.png"
 import banhcuon3 from "./Images/banhcuon3.png"
-import banhcuon4 from "./Images/banhcuon4.png"
+import banhcuon4 from "./Images/banhcuon4.png";
+import bgMenu from "./Images/bg-menu-banhcuon1.jpg"
+import img1SectionAbout from "./Images/img-banh-cuon-section-about.jpg"
 
 // import vedieo_header_home from "@/assets/video/video_banner.mp4"
 
@@ -24,6 +26,8 @@ export const Media = {
   banhcuon2: banhcuon2 || "",
   banhcuon3: banhcuon3 || "",
   banhcuon4: banhcuon4 || "",
+  bg_menu: bgMenu || "",
+  img1_section_about: img1SectionAbout || "",
 
   
 }
