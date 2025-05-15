@@ -36,8 +36,8 @@ const Menu: React.FC = () => {
   const filteredItems = menuItems.filter((item) => {
    
     if (filter === 'all') return true;
-    if (filter === 'vegetarian') return item.category.name.toLowerCase() === ("Món Chay").toLowerCase();
-    if(filter === 'non-vegetarian') return item.category.name.toLowerCase() === ("Món Mặn").toLowerCase();
+    if (filter === 'vegetarian') return item.category.name.vi.toLowerCase() === ("Món Chay").toLowerCase();
+    if(filter === 'non-vegetarian') return item.category.name.vi.toLowerCase() === ("Món Mặn").toLowerCase();
     if (filter === "search") {
       // console.log("search", search);
       const searchLower = search.toLowerCase();

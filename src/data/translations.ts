@@ -171,6 +171,7 @@ type TranslationType = {
       common: {
         home: 'ホーム',
         menu: 'メニュー',
+        about: 'アバウト・アス',
         recruitment: '採用情報',
         contact: 'お問い合わせ',
         orderNow: '注文する',
@@ -190,7 +191,6 @@ type TranslationType = {
         heroTitle: 'バインクオン・タイホー',
         heroSubtitle: '60年以上の伝統の味',
         welcomeTitle: 'バインクオン・タイホーへようこそ',
-       
         processTitle: '製造プロセス',
         testimonialTitle: 'お客様の声',
         testimonial1Name: 'グエン・ヴァン・A',
