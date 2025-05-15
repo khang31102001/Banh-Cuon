@@ -76,7 +76,7 @@ const SectionDevelopment = () => {
                             style={{ scaleY }}
                         >
                             <motion.div 
-                                className="absolute left-0 top-0 w-full bg-banhcuon-600 h-full"
+                                className="absolute left-0 top-0 w-full bg-tay-ho-sunflower h-full"
                                 style={{ scaleY }}
                             />
                         </motion.div>

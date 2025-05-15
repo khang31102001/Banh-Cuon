@@ -7,7 +7,7 @@ const LoadingSpinner = () => {
 //   const { t } = useLanguage();
   
   return (
-    <div className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex flex-col items-center justify-center">
+    <div className="fixed inset-0 bg-background/20 backdrop-blur-sm z-50 flex flex-col items-center justify-center">
       <Loader className="h-12 w-12 text-primary animate-spin" />
       <p className="mt-4 text-foreground font-medium">
         loading...
