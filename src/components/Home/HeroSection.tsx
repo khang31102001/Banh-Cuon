@@ -85,7 +85,7 @@ const HeroSection = () => {
                     <div className='flex flex-col justify-center items-center text-base  '>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in-up font-roboto leading-tight">
                             <span className=" text-green-400 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] block mb-2 animate-[fade-in_1s_ease-out] opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
-                                Bánh Cuốn <span className="text-cta">Tây Hồ</span>
+                                {t("home.heroTitle")}<span className="text-cta">{t("home.heroBrand")}</span>
                             </span>
                             {/* <span
                                 className="text-2xl md:text-3xl lg:text-4xl block font-semibold text-banh-green drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] animate-[fade-in_1s_ease-out] opacity-0"
@@ -97,7 +97,7 @@ const HeroSection = () => {
                                 className="text-lg md:text-[1.4rem] text-white/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] mb-8 max-w-3xl mx-auto animate-[fade-in_1s_ease-out] opacity-0"
                                 style={{ fontStyle: 'italic', animationDelay: '0.9s', animationFillMode: 'forwards' }}
                             >
-                                "Từ bàn tay khéo léo, mỗi phần bánh là một câu chuyện Việt"
+                                "{t("home.heroSubtitle")}"
                             </p>
                         </h1>
                         <div className="flex flex-col sm:flex-row gap-4 mb-8 mt-0 sm:mb-0  fade-in-down">
@@ -128,21 +128,21 @@ const HeroSection = () => {
                             <div className="flex items-center">
                                 <Clock className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>
-                                    <p className="text-sm font-medium">Mở cửa hàng ngày</p>
+                                    <p className="text-sm font-medium">{t("home.heroOpenTime")}</p>
                                     <p className="text-xs text-gray-300">5:30 - 21:30</p>
                                 </div>
                             </div>
                             <div className="flex items-center">
                                 <MapPin className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>
-                                    <p className="text-sm font-medium">Địa chỉ chính</p>
-                                    <p className="text-xs text-gray-300">127 Đinh Tên Hoàng - Đa Kao, Quận 1, TP. HCM</p>
+                                    <p className="text-sm font-medium">{t("home.heroAddress")}</p>
+                                    <p className="text-xs text-gray-300">{t("home.heroLocation")}</p>
                                 </div>
                             </div>
                             <div className="flex items-center">
                                 <Phone className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>
-                                    <p className="text-sm font-medium">Đặt bàn</p>
+                                    <p className="text-sm font-medium">{t("home.heroOrder")}</p>
                                     <p className="text-xs text-gray-300">+84 28 38200 584</p>
                                 </div>
                             </div>

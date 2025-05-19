@@ -26,8 +26,13 @@ type TranslationType = {
         all: 'Tất Cả',
       },
       home: {
-        heroTitle: 'Bánh Cuốn Tây Hồ',
-        heroSubtitle: 'Hương Vị Truyền Thống Hơn 60 Năm',
+        heroTitle: 'Bánh Cuốn',
+        heroBrand: 'Tây Hồ',
+        heroSubtitle: 'Từ bàn tay khéo léo, mỗi phần bánh là một câu chuyện Việt',
+        heroOpenTime: 'Mở cửa hàng ngày',
+        heroAddress:'Địa chỉ chính',
+        heroLocation:'127 Đinh Tên Hoàng - Đa Kao, Quận 1, TP. HCM',
+        heroOrder: 'Đặt bàn',
         welcomeTitle: 'Chào Mừng Đến Với Bánh Cuốn Tây Hồ',
         processTitle: 'Quy Trình Làm Bánh',
         testimonialTitle: 'Khách Hàng Nói Gì',
@@ -86,6 +91,8 @@ type TranslationType = {
         send: 'Gửi',
       },
     },
+
+    //english
     en: {
       common: {
         home: 'Home',
@@ -107,8 +114,15 @@ type TranslationType = {
         all: 'All',
       },
       home: {
-        heroTitle: 'Banh Cuon Tay Ho',
-        heroSubtitle: 'Traditional Flavor For Over 60 Years',
+        heroTitle: 'Banh Cuon',
+        heroBrand: 'Tay Ho',
+        heroSubtitle: "Crafted by skillful hands, each roll tells a story of Vietnam",
+        heroOpenTime: 'Open daily',
+        heroAddress:'Main Address',
+        heroLocation: "127 Dinh Tien Hoang Street, Da Kao Ward, District 1, Ho Chi Minh City",
+        
+        heroOrder: "Reserve a Table",
+
         welcomeTitle: 'Welcome to Banh Cuon Tay Ho',
         processTitle: 'Our Making Process',
         testimonialTitle: 'What Customers Say',
@@ -167,6 +181,8 @@ type TranslationType = {
         send: 'Send',
       },
     },
+
+    //japan
     jp: {
       common: {
         home: 'ホーム',
@@ -188,8 +204,13 @@ type TranslationType = {
         all: 'すべて',
       },
       home: {
-        heroTitle: 'バインクオン・タイホー',
-        heroSubtitle: '60年以上の伝統の味',
+        heroTitle: 'バインクオン',
+        heroBrand: 'タイホー',
+        heroSubtitle: "巧みな手から生まれた一つひとつのバインクオンに、ベトナムの物語が込められている",
+        heroOpenTime: "毎日営業",
+        heroAddress:'本店住所',
+        heroLocation: "ホーチミン市1区ダカオ区ディン・ティエン・ホアン通り127番地",
+        heroOrder: "席を予約する",
         welcomeTitle: 'バインクオン・タイホーへようこそ',
         processTitle: '製造プロセス',
         testimonialTitle: 'お客様の声',

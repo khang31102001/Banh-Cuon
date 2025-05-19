@@ -9,6 +9,7 @@ export default defineConfig(() => ({
     host: "localhost",
     port: 5050,
   },
+  base: '/',
   plugins: [
     react(),
   ],
