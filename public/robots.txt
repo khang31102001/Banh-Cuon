@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://banhcuontayho.vn/sitemap.xml
+Sitemap: https://tayho127.com/sitemap.xml
