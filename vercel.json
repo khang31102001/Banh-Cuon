@@ -1,17 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://tayho127.com/$1",
-      "has": [
-        {
-          "type": "host",
-          "value": "tayho127.com"
-        }
-      ],
-      "statusCode": 301
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
