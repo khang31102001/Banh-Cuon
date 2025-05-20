@@ -6,9 +6,7 @@ import { Link } from 'react-router-dom';
 import SectionTitle from '../SectionTitle';
 const SectionShortStory = () => {
     const { t } = useLanguage();
-    const [isPlaying, setIsPlaying] = useState(false);
-
-
+  
     return (
         <div>
             {/* Welcome Section with Video */}
@@ -17,16 +15,16 @@ const SectionShortStory = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6 py-12 text-gray-800">
                             <SectionTitle
-                                title1='Bánh Cuốn'
-                                title2='Tây Hồ'
+                                title1={t("home.heroTitle")}
+                                title2={t("home.heroBrand")}
                                 lightText={true}
                                 centered={false}
                                 className="mb-6 fade-in-left text-3xl font-extrabold text-[#4A2F17]"
                             />
 
                            <div className='"mt-8'>
-                            <p className="text-gray-700 text-lg leading-[3] font-quicksand fade-in-up">
-                                    Bắt đầu từ năm <strong className="text-banh-green">1972</strong>, Bánh Cuốn <strong className="text-[#EF3F36]">Tây Hồ</strong> đã bắt đầu hành trình lan tỏa hương vị truyền thống Việt.
+                                <p className="text-gray-700 text-lg leading-[3] font-quicksand fade-in-up">
+                                    Bắt đầu từ năm <strong className="text-banh-green">1972</strong>, {t("home.heroTitle")} <strong className="text-[#EF3F36]">{t("home.heroBrand")}</strong> đã bắt đầu hành trình lan tỏa hương vị truyền thống Việt.
                                     Chúng tôi tự hào giữ gìn công thức gia truyền và quy trình thủ công, tạo nên những chiếc bánh cuốn
                                     <span className="italic"> mỏng mịn, thơm ngon, mang đậm hồn dân tộc</span>.
                                 </p>
