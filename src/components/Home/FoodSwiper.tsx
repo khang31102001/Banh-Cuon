@@ -58,7 +58,8 @@ const FoodSwiper = ({ Menu }: Props) => {
             <SectionTitle 
               title1=""
               title2=""
-              subtitle="Khám phá các loại bánh cuốn đặc sắc của Tây Hồ – từ bánh cuốn chay đến nhân thịt thơm ngon." lightText={false} />
+              subtitle="Khám phá các loại bánh cuốn đặc sắc của Tây Hồ – từ bánh cuốn chay đến nhân thịt thơm ngon." 
+              lightText={false} />
           </NavLink>
 
         </div>

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { useToast } from "@/hooks/use-toast";
 import { useQuery } from '@tanstack/react-query';
+import { useLanguage } from '@/Contexts/LanguageContext';
 
 interface Review {
   id: string;
@@ -26,21 +27,7 @@ interface GooglePlaceResult {
   user_ratings_total: number;
 }
 
-const fetchGoogleReviews = async (): Promise<GooglePlaceResult> => {
-  // For Bánh Cuốn Tây Hồ 127
-  const placeId = 'ChIJW1-z_1UrNTERnrQQoOQB2BA';
-  const apiKey = 'YOUR_GOOGLE_API_KEY'; // Replace with your actual API key
-  
-  // In a production environment, this should be handled by a backend service
-  const response = await fetch(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews,rating,user_ratings_total&key=${apiKey}`);
-  
-  if (!response.ok) {
-    throw new Error('Failed to fetch reviews');
-  }
-  
-  const data = await response.json();
-  return data.result;
-};
+
 
 // Mock data to use while setting up the real API integration
 const mockReviews: Review[] = [
@@ -87,8 +74,8 @@ const mockReviews: Review[] = [
 ];
 
 const GoogleReviews = () => {
+  const {t} = useLanguage();
   const { toast } = useToast();
-  
   const { data, isLoading, error } = useQuery({
     queryKey: ['googleReviews'],
     queryFn: async () => {
@@ -110,7 +97,24 @@ const GoogleReviews = () => {
     refetchOnWindowFocus: false,
     staleTime: 1000 * 60 * 60, // 1 hour
   });
-
+  useEffect(()=>{
+    fetchGoogleReviews();
+  },[])
+  const fetchGoogleReviews = async (): Promise<GooglePlaceResult> => {
+    // For Bánh Cuốn Tây Hồ 127
+    const address = '127 Dinh Tien Hoang, District 1, Ho Chi Minh, Vietnam';
+    const url = `http://localhost:4000/api/place?address=${address}`;
+    // In a production environment, this should be handled by a backend service
+    // const response = await fetch(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews,rating,user_ratings_total&key=${apiKey}`);
+    const response = await fetch(`${url}`);
+    console.log("khang test fetch google api:", response);
+    if (!response.ok) {
+      throw new Error('Failed to fetch reviews');
+    }
+    
+    const data = await response.json();
+    return data.result;
+  };
   const reviews = data?.reviews || [];
   const placeRating = data?.rating || 4.7;
   const totalReviews = data?.user_ratings_total || 523;
@@ -121,7 +125,7 @@ const GoogleReviews = () => {
       <div className=" relative z-10 flex flex-col justify-center items-center text-white h-full px-4 text-center">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-vietnam font-bold text-restaurant-dark mb-4 fade-in-up">
-            Khách Hàng <span className="text-banh-blue">Nói Gì</span> Về Chúng Tôi
+           {t('home.customer')} <span className="text-banh-blue">{t('home.speak')}</span> {t('home.aboutUs')}
           </h2>
           <div className="flex items-center justify-center gap-2 mb-4">
             <img 
@@ -132,7 +136,7 @@ const GoogleReviews = () => {
             <div className="flex items-center">
               <Star className="text-tay-ho-sunflower fill-current" size={24} />
               <span className="font-bold text-xl ml-1">{placeRating.toFixed(1)}</span>
-              <span className="text-tay-ho-sunflower ml-2">({totalReviews} đánh giá)</span>
+              <span className="text-tay-ho-sunflower ml-2">({totalReviews} {t('home.reviews')})</span>
             </div>
           </div>
         </div>

@@ -188,7 +188,7 @@ export default function NotFound() {
           >
             <div className="absolute top-0 left-0 w-full h-full bg-white/20 transform -translate-x-full group-hover:translate-x-0 transition-transform"></div>
             <Home className="mr-2 h-4 w-4" />
-            <span className="relative z-10">Quay về trang chủ</span>
+        
           </Button>
           
           <Button 

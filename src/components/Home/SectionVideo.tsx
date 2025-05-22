@@ -61,24 +61,16 @@ const SectionVideo = () => {
                 {/* Title + Subtitle */}
                 <div className="space-y-6 text-gray-800 mt-4">
                     <SectionTitle
-                        title1="Quy Trình "
-                        title2="Làm Bánh"
+                        title1={t('home.videoTitle1')}
+                        title2={t('home.videoTitle2')}
                         underline={false}
                         lightText={true}
                         centered={true}
-                        subtitle="Khám phá quy trình thủ công tỉ mỉ để tạo nên những chiếc bánh cuốn mỏng mịn, đậm đà hương vị truyền thống – một đặc sản nổi tiếng hơn 60 năm của Hà Nội."
+                        subtitle={t('home.videoSubtitle')}
                         className="text-banhcuon-700 mb-6 fade-in-up"
                     />
-                    <p className="text-gray-700 text-lg leading-relaxed font-playfair fade-in-up">
-                      Bánh cuốn được làm từ bột gạo xay nhuyễn hoà với nước theo tỉ lệ chuẩn, 
-                      sau đó tráng mỏng trên lớp vải căng đặt trên nồi nước sôi. 
-                      Lớp bánh mỏng tang vừa chín tới sẽ được nhẹ nhàng lấy ra, 
-                      cuốn cùng nhân thịt băm, mộc nhĩ thơm lừng hoặc để chay tuỳ khẩu vị. 
-                      Cuối cùng, bánh được rắc thêm hành phi vàng ruộm và thưởng thức cùng nước mắm pha đậm đà.
-                    </p>
+                    <p className="text-gray-700 text-lg leading-relaxed font-playfair fade-in-up">{t('home.videoDescription')}</p>
                 </div>
-      
-              
             </div>
         </section>
     )
