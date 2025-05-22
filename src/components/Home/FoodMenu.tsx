@@ -9,10 +9,11 @@ import "swiper/css/navigation";
 import { Autoplay, EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/Contexts/LanguageContext";
 const FoodMenu = () => {
   const limitMenu = menuItems.slice(0, 9);
 
-
+  const {t} = useLanguage();
 
 
   return (
@@ -24,7 +25,8 @@ const FoodMenu = () => {
             <SectionTitle 
               title1=""
               title2=""
-              subtitle="Khám phá các loại bánh cuốn đặc sắc của Tây Hồ – từ bánh cuốn chay đến nhân thịt thơm ngon." lightText={false} />
+              subtitle={t('home.foodSubtitle')} 
+              lightText={false} />
             </NavLink>
 
           </div>
@@ -47,7 +49,7 @@ const FoodMenu = () => {
           <div className="text-center mt-12 reveal">
             <Button asChild className="">
               <NavLink to="/menu" className="inline-flex items-center">
-                Xem Toàn Bộ Thực Đơn <ArrowRight size={16} className="ml-2" />
+                {t('common.seeAllMenu')} <ArrowRight size={16} className="ml-2" />
               </NavLink>
             </Button>
         </div>

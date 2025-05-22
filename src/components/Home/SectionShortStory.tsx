@@ -24,14 +24,14 @@ const SectionShortStory = () => {
 
                            <div className='"mt-8'>
                                 <p className="text-gray-700 text-lg leading-[3] font-quicksand fade-in-up">
-                                    Bắt đầu từ năm <strong className="text-banh-green">1972</strong>, {t("home.heroTitle")} <strong className="text-[#EF3F36]">{t("home.heroBrand")}</strong> đã bắt đầu hành trình lan tỏa hương vị truyền thống Việt.
-                                    Chúng tôi tự hào giữ gìn công thức gia truyền và quy trình thủ công, tạo nên những chiếc bánh cuốn
-                                    <span className="italic"> mỏng mịn, thơm ngon, mang đậm hồn dân tộc</span>.
+                                    {t('home.storyFirst')} <strong className="text-banh-green">1972</strong>, {t("home.heroTitle")} <strong className="text-[#EF3F36]">{t("home.heroBrand")}</strong> 
+                                     {t('home.storySecond')}
+                                    <span className="italic">{t('home.storyThird')}</span>.
                                 </p>
 
                                 <p className="text-gray-700 text-lg leading-[3] font-quicksand fade-in-up">
-                                    Trải qua hơn <strong className="text-banh-green">60 năm</strong>, thương hiệu đã trở thành một phần quen thuộc trong ký ức của người Việt, và là một điểm dừng chân không thể bỏ lỡ với du khách mỗi khi đến <strong>Hà Nội</strong>.
-                                    Với từng phần bánh là một câu chuyện, chúng tôi mang đến trải nghiệm ẩm thực <span className="font-medium text-[#4A2F17]">đúng chất Việt Nam</span>.
+                                    {t('home.storyFour')} <strong className="text-banh-green">60 {t('common.year')}</strong>, {t('home.storyFive')} <strong>Hà Nội</strong>.
+                                    {t('home.storySix')} <span className="font-medium text-[#4A2F17]">{t('home.storySeven')}</span>.
                                 </p>
                            </div>
                             <div className="pt-4">
@@ -86,7 +86,7 @@ const SectionShortStory = () => {
                                         <span style={ {animationDelay: '1.5s', animationFillMode: 'forwards' } }>
                                             <img
                                             src={Media.banhcuon4}
-                                            alt="Xem video về Bánh Cuốn Tây Hồ"
+                                            alt="Bánh Cuốn Tây Hồ"
                                             className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105 animation-element"
                                             />
                                         </span>

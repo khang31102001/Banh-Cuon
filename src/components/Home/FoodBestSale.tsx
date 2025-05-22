@@ -10,9 +10,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/Contexts/LanguageContext";
 
 const FoodBestSale = () => {
   const Menu = menuItems.slice(0, 20);
+  const {t} = useLanguage();
 
   const swiperConfig = {
     grabCursor: true,
@@ -48,9 +50,8 @@ const FoodBestSale = () => {
         <NavLink to='/menu'>
           <SectionTitle
             underline={false}
-            title1="Món Đặc Trưng"
-            subtitle="Chúng tôi phục vụ - Từ món chay tới mặn, 
-            làm từ các nguyên liệu tươi ngon nhất"
+            title1={t('home.foodTitle1')}
+            subtitle={t('home.foodSubtitle1')}
             className=" fade-in-up"
             subtitleColorClass="text-white drop-shadow-md"
             
