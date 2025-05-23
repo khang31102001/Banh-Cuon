@@ -92,6 +92,8 @@ type TranslationType = {
         submit: 'Gửi Đơn',
         requiredField: 'Trường bắt buộc',
         successMessage: 'Đơn ứng tuyển đã được gửi thành công!',
+        processTitle: 'Quy Trình Ứng Tuyển',
+        processSubtitle: 'Tìm hiểu các bước trong quy trình tuyển dụng của Bánh Cuốn Tây Hồ',
       },
       contact: {
         title: 'Liên Hệ',
@@ -107,6 +109,19 @@ type TranslationType = {
         message: 'Tin nhắn',
         send: 'Gửi',
       },
+      about: {
+        storyTitle: 'Câu Chuyện Của Chúng Tôi',
+        storyDescription1:' Bánh Cuốn Tây Hồ bắt đầu từ một cửa hàng nhỏ tại phố cổ Hà Nội vào năm 1972. Với công thức gia truyền độc đáo và tình yêu dành cho ẩm thực truyền thống Việt Nam,chúng tôi đã dần xây dựng được thương hiệu uy tín và được yêu mến trong lòng người dân Hà Nội.',
+        storyDescription2:' Trải qua hơn 5 thập kỷ, Bánh Cuốn Tây Hồ vẫn giữ nguyên hương vị truyền thống với bột gạo tươi được làm thủ công mỗi ngày, nhân thịt thơm ngon, và nước chấm đặc trưng theo công thức bí truyền.',
+        storyDescription3: ' Ngày nay, Bánh Cuốn Tây Hồ đã phát triển thành chuỗi nhà hàng trên khắp Việt Nam, nhưng chúng tôi vẫn luôn giữ vững triết lý kinh doanh: tôn trọng truyền thống, đảm bảo chất lượng, và không ngừng đổi mới để mang đến trải nghiệm tốt nhất cho khách hàng.',
+        storyImgtitle1: 'Hơn 60 năm',
+        storyImgtitle2:'gìn giữ hương vị truyền thống', 
+        timelineTitle: 'Hành Trình Phát Triển',
+        timeSubtitle: 'Những cột mốc quan trọng trong lịch sử phát triển của Bánh Cuốn Tây Hồ', 
+        valueTitle: 'Giá Trị Cốt Lõi',
+        valueSubtitle: 'Những nguyên tắc và giá trị định hướng mọi hoạt động của chúng tôi' ,
+        
+      }
      
     },
 
@@ -157,11 +172,9 @@ type TranslationType = {
         videoSubtitle: 'Discover the meticulous handmade process behind each delicate rice roll – a traditional delicacy with over 60 years of heritage from Hanoi.',
         videoDescription: 'Banh cuon is made by mixing finely ground rice flour with water in a precise ratio, then spreading it thinly on a tightly stretched cloth over boiling water. Once gently steamed, the delicate rice sheet is removed and rolled with aromatic minced pork and wood ear mushrooms, or kept vegetarian depending on taste. Finally, it is topped with golden fried shallots and enjoyed with rich, flavorful fish sauce.',
         foodSubtitle: 'Discover the signature varieties from flavorful vegetarian rolls to savory meat-filled delights.',
-       
         foodTitle1: 'Signature Dishes',
         foodSubtitle1: 'Discover the signature varieties of Tay Ho’s bánh cuốn – from flavorful vegetarian rolls to savory meat-filled delights.',
-
-        testimonialTitle: 'What Customers Say',
+        customer: 'What Customers Say',
         ctaTitle: '60 Years of Authentic Vietnamese Flavor',
         ctaSubTitle: 'Tay Ho’s banh cuon is not just food — it’s a memory, a culinary treasure passed down through generations.',
         speak: 'Say',
@@ -202,6 +215,9 @@ type TranslationType = {
         submit: 'Submit Application',
         requiredField: 'Required field',
         successMessage: 'Your application has been successfully submitted!',
+        processTitle: 'Application Process',
+        processSubtitle: 'Learn about the steps in Bánh Cuốn Tây Hồ’s recruitment process',
+
       },
       contact: {
         title: 'Contact Us',
@@ -218,6 +234,18 @@ type TranslationType = {
         send: 'Send',
 
       },
+      about: {
+        storyTitle: 'Our Story',
+        storyDescription1: 'Banh Cuon Tay Ho began as a small shop in Hanoi’s Old Quarter in 1972. With a unique family recipe and a deep love for traditional Vietnamese cuisine, we gradually built a trusted and beloved brand in the hearts of Hanoians.',
+        storyDescription2: 'For over five decades, Bánh Cuốn Tây Hồ has preserved its authentic flavor—featuring freshly handmade rice batter daily, savory meat fillings, and a signature dipping sauce based on a secret recipe.',
+        storyDescription3: 'Today, Bánh Cuốn Tây Hồ has grown into a restaurant chain across Vietnam, but we remain committed to our core philosophy: honoring tradition, ensuring quality, and continuously innovating to deliver the best experience to our customers.',
+        storyImgtitle1: 'Over 60 Years',
+        storyImgtitle2: 'of Preserving Traditional Flavor',
+        timelineTitle: 'Our Development Journey',
+        timeSubtitle: 'Key milestones in the history of Banh Cuon Tay Ho’s growth',
+        valueTitle: 'Core Values',
+        valueSubtitle: 'The principles and values that guide all of our actions',
+      }
 
     },
 
@@ -312,6 +340,9 @@ type TranslationType = {
         submit: '応募を送信',
         requiredField: '必須項目',
         successMessage: 'あなたの応募は正常に送信されました！',
+        processTitle: '応募プロセス',
+        processSubtitle: 'バインクオン・タイホーの採用プロセスの各ステップをご紹介します',
+
       },
       contact: {
         title: 'お問い合わせ',
@@ -328,6 +359,21 @@ type TranslationType = {
         send: '送信',
 
       },
+      about: {
+        storyTitle: '私たちの物語',
+        storyDescription1: 'バインクオン・タイホーは、1972年にハノイ旧市街の小さな店舗から始まりました。ユニークな家伝レシピとベトナム伝統料理への深い愛情により、私たちは次第にハノイの人々に愛され、信頼されるブランドを築き上げてきました。',
+        storyDescription2: '50年以上の歳月を経ても、バインクオン・タイホーは毎日手作りされる新鮮な米粉生地、香ばしい肉の具材、そして秘伝のタレで伝統の味を守り続けています。',
+        storyDescription3: '現在、バインクオン・タイホーはベトナム全土に店舗を展開するチェーンへと成長しましたが、私たちは「伝統を大切に、品質を守り、常に革新を続ける」という理念を貫き、お客様に最高の体験をお届けしています。',
+        storyImgtitle1: '60年以上',
+        storyImgtitle2: '伝統の味を守り続ける',
+        timelineTitle: '発展の歩み',
+        timeSubtitle: 'バインクオン・タイホーの歴史における重要な節目',
+        valueTitle: 'コアバリュー（核心的価値）',
+        valueSubtitle: '私たちのすべての行動を導く理念と価値観',
+
+
+
+      }
     },
   };
   

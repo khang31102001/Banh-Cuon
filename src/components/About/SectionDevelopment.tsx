@@ -1,9 +1,12 @@
 import SectionTitle from "../SectionTitle";
 import { useEffect, useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { useLanguage } from "@/Contexts/LanguageContext";
+import { timelineDevelop } from "@/data/timelineDevelopment";
 
 const SectionDevelopment = () => {
     const timelineRef = useRef<HTMLDivElement>(null);
+    const {language, t} = useLanguage();
     const { scrollYProgress } = useScroll({
         target: timelineRef,
         offset: ["start end", "end end"]
@@ -14,59 +17,13 @@ const SectionDevelopment = () => {
         damping: 30,
         restDelta: 0.001
     });
-
-    const timelineEvents = [
-        {
-            year: "1972",
-            title: "Khởi Đầu Truyền Thống",
-            description:
-                "Bánh Cuốn Tây Hồ được thành lập tại một cửa hàng nhỏ ở phố cổ Hà Nội với công thức gia truyền độc đáo.",
-            image: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
-        },
-        {
-            year: "1985",
-            title: "Mở Rộng Cơ Sở Đầu Tiên",
-            description:
-                "Sau hơn một thập kỷ thành công, chúng tôi đã mở rộng cơ sở đầu tiên tại Quận Tây Hồ, Hà Nội.",
-            image: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
-        },
-        {
-            year: "1998",
-            title: "Phát Triển Thương Hiệu", 
-            description:
-                "Bánh Cuốn Tây Hồ trở thành thương hiệu được bảo hộ chính thức và bắt đầu mở rộng các chuỗi cửa hàng tại Hà Nội.",
-            image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-        },
-        {
-            year: "2005",
-            title: "Vươn Ra Thị Trường Quốc Tế",
-            description:
-                "Lần đầu tiên giới thiệu hương vị Bánh Cuốn Tây Hồ ra thị trường quốc tế thông qua các lễ hội ẩm thực và sự kiện văn hoá.",
-            image: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3",
-        },
-        {
-            year: "2015",
-            title: "Đổi Mới và Phát Triển",
-            description:
-                "Cải tiến không gian và trải nghiệm khách hàng, đồng thời giữ nguyên hương vị truyền thống độc đáo.",
-            image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
-        },
-        {
-            year: "2023",
-            title: "Tầm Nhìn Mới",
-            description:
-                "Mở rộng hệ thống cửa hàng trên toàn quốc và phát triển kênh bán hàng trực tuyến, mang hương vị truyền thống đến gần hơn với mọi người.",
-            image: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
-        },
-    ];
-
     return(
         <div>
             <section className="section-padding bg-banhcuon-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionTitle
-                        title1="Hành Trình Phát Triển"
-                        subtitle="Những cột mốc quan trọng trong lịch sử phát triển của Bánh Cuốn Tây Hồ"
+                        title1={t('about.timelineTitle')}
+                        subtitle={t('about.timeSubtitle')}
                         className="text-banhcuon-900"
                     />
                     
@@ -81,7 +38,7 @@ const SectionDevelopment = () => {
                             />
                         </motion.div>
                         
-                        {timelineEvents.map((event, index) => (
+                        {timelineDevelop.map((event, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 50 }}
@@ -112,7 +69,7 @@ const SectionDevelopment = () => {
                                     >
                                         <img
                                             src={event.image}
-                                            alt={event.title}
+                                            alt={event.title[language]}
                                             className="w-full h-64 object-cover rounded-xl shadow-lg transform transition-transform duration-300"
                                         />
                                     </motion.div>
@@ -122,12 +79,12 @@ const SectionDevelopment = () => {
                                         } bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300`}
                                     >
                                         <span className="inline-block px-4 py-2 rounded-full bg-banhcuon-600 text-white text-sm font-semibold mb-4">
-                                            {event.year}
+                                            {event.year[language]}
                                         </span>
                                         <h3 className="text-2xl font-bold mb-4 text-banhcuon-900 font-roboto">
-                                            {event.title}
+                                            {event.title[language]}
                                         </h3>
-                                        <p className="text-gray-600 leading-relaxed">{event.description}</p>
+                                        <p className="text-gray-600 leading-relaxed">{event.description[language]}</p>
                                     </motion.div>
                                     <motion.div
                                         className={`block md:hidden mt-6 overflow-hidden rounded-xl ${
@@ -137,7 +94,7 @@ const SectionDevelopment = () => {
                                     >
                                         <img
                                             src={event.image}
-                                            alt={event.title}
+                                            alt={event.title[language]}
                                             className="w-full h-48 object-cover rounded-xl shadow-lg"
                                         />
                                     </motion.div>
