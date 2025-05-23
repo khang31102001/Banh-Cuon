@@ -1,6 +1,8 @@
+import { useLanguage } from "@/Contexts/LanguageContext";
 import SectionTitle from "../SectionTitle";
 
 const SectionValue = () => {
+    const {language,t} = useLanguage();
     const values = [
         {
             icon: (
@@ -19,9 +21,17 @@ const SectionValue = () => {
                     />
                 </svg>
             ),
-            title: "Truyền Thống",
-            description:
-                "Chúng tôi tôn trọng và gìn giữ công thức truyền thống, đảm bảo hương vị đích thực của bánh cuốn Tây Hồ.",
+            title: {
+                vi: "Truyền Thống",
+                en: "Tradition",
+                jp: "伝統"
+            },
+            description: {
+                vi: "Truyền Thống",
+                en: "Tradition",
+                jp: "伝統"
+            },
+            
         },
         {
             icon: (
@@ -40,9 +50,17 @@ const SectionValue = () => {
                     />
                 </svg>
             ),
-            title: "Chất Lượng",
-            description:
-                "Chúng tôi chỉ sử dụng những nguyên liệu tươi ngon nhất và quy trình nghiêm ngặt để đảm bảo chất lượng vượt trội.",
+            title: {
+                vi: "Chất Lượng",
+                en: "Quality",
+                jp: "品質"
+            },
+            description: {
+                vi: "Chúng tôi chỉ sử dụng những nguyên liệu tươi ngon nhất và quy trình nghiêm ngặt để đảm bảo chất lượng vượt trội.",
+                en: "We use only the freshest ingredients and follow strict processes to ensure exceptional quality.",
+                jp: "私たちは最高に新鮮な食材のみを使用し、厳格な工程を守ることで卓越した品質を実現しています。"
+            },
+            
         },
         {
             icon: (
@@ -61,9 +79,17 @@ const SectionValue = () => {
                     />
                 </svg>
             ),
-            title: "Giá Trị",
-            description:
-                "Chúng tôi cam kết mang đến trải nghiệm ẩm thực giá trị nhất cho khách hàng với giá cả hợp lý.",
+            title: {
+                vi: "Giá Trị",
+                en: "Value",
+                jp: "価値"
+            },
+            description: {
+                vi: "Chúng tôi cam kết mang đến trải nghiệm ẩm thực giá trị nhất cho khách hàng với giá cả hợp lý.",
+                en: "We are committed to delivering the most valuable dining experience to our customers at a reasonable price.",
+                jp: "お客様にとって最も価値のある食体験を、手頃な価格で提供することをお約束します。"
+            },
+            
         },
         {
             icon: (
@@ -82,9 +108,17 @@ const SectionValue = () => {
                     />
                 </svg>
             ),
-            title: "Cộng Đồng",
-            description:
-                "Chúng tôi tự hào là một phần của cộng đồng và luôn hỗ trợ các hoạt động văn hóa, xã hội địa phương.",
+            title: {
+                vi: "Cộng Đồng",
+                en: "Community",
+                jp: "コミュニティ"
+            },
+            description: {
+                vi: "Chúng tôi tự hào là một phần của cộng đồng và luôn hỗ trợ các hoạt động văn hóa, xã hội địa phương.",
+                en: "We are proud to be part of the community and actively support local cultural and social activities.",
+                jp: "私たちは地域社会の一員であることを誇りに思い、地域の文化的・社会的活動を積極的に支援しています。"
+            },
+            
         },
     ];
     return(
@@ -92,10 +126,9 @@ const SectionValue = () => {
               <section className="section-padding bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionTitle
-                        title1="Giá Trị Cốt Lõi"
-                        subtitle="Những nguyên tắc và giá trị định hướng mọi hoạt động của chúng tôi"
+                        title1={t('about.valueTitle')}
+                        subtitle={t('about.valueSubtitle')}
                     />
-
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {values.map((value, index) => (
                             <div
@@ -104,9 +137,9 @@ const SectionValue = () => {
                             >
                                 <div className="flex justify-center mb-4">{value.icon}</div>
                                 <h3 className="text-xl font-bold mb-3 text-banhcuon-900 font-vietnam">
-                                    {value.title}
+                                    {value.title[language]}
                                 </h3>
-                                <p className="text-gray-600 font-playfair">{value.description}</p>
+                                <p className="text-gray-600 font-playfair">{value.description[language]}</p>
                             </div>
                         ))}
                     </div>
