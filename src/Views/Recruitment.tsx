@@ -4,6 +4,7 @@ import { Calendar, Briefcase, Users, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/Contexts/LanguageContext';
 import SectionGallery from '@/components/Recruitment/SctionGallery';
 import SectionProcess from '@/components/Recruitment/SectionProcess';
+import FormRecruitment from '@/components/Recruitment/FormRecruitment';
 
 
 const Recruitment: React.FC = () => {
@@ -56,7 +57,7 @@ const Recruitment: React.FC = () => {
         <SectionProcess />
 
         {/* Application Form */}
-        {/* <FormRecruitment/> */}
+        <FormRecruitment/>
         {/* <ContactForm/> */}
       </div>
     </div>

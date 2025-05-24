@@ -4,8 +4,8 @@ import emailjs from '@emailjs/browser';
 import { useLanguage, Language } from '@/Contexts/LanguageContext';
 
 interface FormData {
-    name: string;
-    email: string;
+    from_name: string;
+    from_email: string;
     phone: string;
     position: string;
     experience: string;
@@ -13,15 +13,15 @@ interface FormData {
 }
 
 interface FormErrors {
-    name?: string;
-    email?: string;
+    from_name?: string;
+    from_email?: string;
     phone?: string;
     position?: string;
 }
 
 const initialFormData: FormData = {
-    name: '',
-    email: '',
+    from_name: '',
+    from_email: '',
     phone: '',
     position: '',
     experience: '',
@@ -62,13 +62,16 @@ const FormRecruitment = () => {
     const [formData, setFormData] = useState<FormData>(initialFormData);
     const [errors, setErrors] = useState<FormErrors>({});
     const [formProgress, setFormProgress] = useState(0);
+    const serviceId = 'service_k52q99s';
+    const templateId = 'template_5g34lzb';
+    const userId = 'a3Wq8WGDg50mE54Tg'; //public key
     const { toast } = useToast();
     const { language, t } = useLanguage();
     const form = useRef<HTMLFormElement>(null);
 
-    // Tính toán tiến trình điền form
+    // Tính toán tiến trình điền form   
     const calculateProgress = () => {
-        const fields = ['ame', 'email', 'phone', 'position'];
+        const fields = ['from_name', 'from_email', 'phone', 'position'];
         const filledFields = fields.filter(field => formData[field as keyof FormData]?.trim()).length;
         const progress = Math.round((filledFields / fields.length) * 100);
         setFormProgress(progress);
@@ -78,16 +81,16 @@ const FormRecruitment = () => {
         const newErrors: FormErrors = {};
         let isValid = true;
 
-        if (!formData.name.trim()) {
-            newErrors.name = t('recruitment.requiredField');
+        if (!formData.from_name.trim()) {
+            newErrors.from_name = t('recruitment.requiredField');
             isValid = false;
         }
 
-        if (!formData.email.trim()) {
-            newErrors.email = t('recruitment.requiredField');
+        if (!formData.from_email.trim()) {
+            newErrors.from_email = t('recruitment.requiredField');
             isValid = false;
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            newErrors.email = 'Invalid email format';
+        } else if (!/\S+@\S+\.\S+/.test(formData.from_email)) {
+            newErrors.from_email = 'Invalid email format';
             isValid = false;
         }
 
@@ -108,7 +111,6 @@ const FormRecruitment = () => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>): void => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
-
         // Clear error when user types
         if (errors[name as keyof FormErrors]) {
             setErrors(prev => ({ ...prev, [name]: undefined }));
@@ -126,13 +128,13 @@ const FormRecruitment = () => {
         }
 
         setIsSubmitting(true);
-
+        console.log("khang test send mail", form.current);
         // Sử dụng EmailJS để gửi form
         emailjs.sendForm(
-            'service_jdkkgml', // Thay thế bằng service ID của bạn
-            'template_jrzr3gj', // Thay thế bằng template ID của bạn
-            form.current!,
-            '0vDbr_MQNjCZWNO56' // Thay thế bằng public key của bạn
+            serviceId, // Thay thế bằng service ID của bạn
+            templateId, // Thay thế bằng template ID của bạn
+            form.current, // data
+            userId // Thay thế bằng public key của bạn
         )
             .then((result) => {
                 console.log('Email sent successfully:', result.text);
@@ -140,20 +142,20 @@ const FormRecruitment = () => {
                 setFormData(initialFormData);
                 setFormProgress(0);
 
-                toast({
-                    title: t('recruitment.successMessage'),
-                    description: `${formData.name}, ${t('recruitment.emailSentSuccess')}`,
-                });
+                // toast({
+                //     title: t('recruitment.successMessage'),
+                //     description: `${formData.name}, ${t('recruitment.emailSentSuccess')}`,
+                // });
             })
             .catch((error) => {
                 console.error('Failed to send email:', error.text);
                 setIsSubmitting(false);
 
-                toast({
-                    title: t('recruitment.errorMessage'),
-                    description: t('recruitment.emailSentError'),
-                    variant: 'destructive',
-                });
+                // toast({
+                //     title: t('recruitment.errorMessage'),
+                //     description: t('recruitment.emailSentError'),
+                //     variant: 'destructive',
+                // });
             });
     };
 
@@ -173,38 +175,43 @@ const FormRecruitment = () => {
                     </div>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form ref={form} onSubmit={handleSubmit} className="space-y-4 bg-wgit">
                     <div>
-                        <label htmlFor="name" className="block text-sm font-medium mb-1">
+                            <input type="hidden" name="subject" value={`Ứng tuyển - ${formData.position}`} />
+                            <input type="hidden" name="current_time" value={new Date().toLocaleString()} />
+                            <input type="hidden" name="company" value="Bánh Cuốn TayHo127" />
+                    </div>
+                    <div>
+                        <label htmlFor="from_name" className="block text-sm font-medium mb-1">
                             {t('recruitment.name')} <span className="text-red-500">*</span>
                         </label>
                         <input
                             type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
+                            id="from_name"
+                            name="from_name"
+                            value={formData.from_name}
                             onChange={handleChange}
-                            className={`w-full p-3 border rounded-md dark:bg-banhcuon-800 ${errors.name ? 'border-red-500' : 'border-input'
+                            className={`bg-white w-full p-3 border rounded-md dark:bg-banhcuon-800 ${errors.from_name ? 'border-red-500' : 'border-input'
                                 }`}
                         />
-                        {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
+                        {errors.from_name && <p className="mt-1 text-sm text-red-500">{errors.from_name}</p>}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium mb-1">
+                            <label htmlFor="from_email" className="block text-sm font-medium mb-1">
                                 {t('recruitment.email')} <span className="text-red-500">*</span>
                             </label>
                             <input
                                 type="email"
-                                id="email"
-                                name="email"
-                                value={formData.email}
+                                id="from_email"
+                                name="from_email"
+                                value={formData.from_email}
                                 onChange={handleChange}
-                                className={`w-full p-3 border rounded-md dark:bg-banhcuon-800 ${errors.email ? 'border-red-500' : 'border-input'
+                                className={`bg-white w-full p-3 border rounded-md dark:bg-banhcuon-800 ${errors.from_email ? 'border-red-500' : 'border-input'
                                     }`}
                             />
-                            {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
+                            {errors.from_email && <p className="mt-1 text-sm text-red-500">{errors.from_email}</p>}
                         </div>
 
                         <div>
@@ -217,7 +224,7 @@ const FormRecruitment = () => {
                                 name="phone"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                className={`w-full p-3 border rounded-md dark:bg-banhcuon-800 ${errors.phone ? 'border-red-500' : 'border-input'
+                                className={`bg-white w-full p-3 border rounded-md dark:bg-banhcuon-800 ${errors.phone ? 'border-red-500' : 'border-input'
                                     }`}
                             />
                             {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone}</p>}
@@ -233,7 +240,7 @@ const FormRecruitment = () => {
                             name="position"
                             value={formData.position}
                             onChange={handleChange}
-                            className={`w-full p-3 border rounded-md dark:bg-banhcuon-800 ${errors.position ? 'border-red-500' : 'border-input'
+                            className={`bg-white w-full p-3 border rounded-md dark:bg-banhcuon-800 ${errors.position ? 'border-red-500' : 'border-input'
                                 }`}
                         >
                             <option value="">{t('recruitment.position')}</option>
@@ -256,7 +263,7 @@ const FormRecruitment = () => {
                             name="experience"
                             value={formData.experience}
                             onChange={handleChange}
-                            className="w-full p-3 border border-input rounded-md dark:bg-banhcuon-800"
+                            className="bg-white w-full p-3 border border-input rounded-md dark:bg-banhcuon-800"
                         />
                     </div>
 
@@ -270,7 +277,7 @@ const FormRecruitment = () => {
                             rows={4}
                             value={formData.message}
                             onChange={handleChange}
-                            className="w-full p-3 border border-input rounded-md dark:bg-banhcuon-800"
+                            className="bg-white w-full p-3 border border-input rounded-md dark:bg-banhcuon-800"
                         ></textarea>
                     </div>
 
