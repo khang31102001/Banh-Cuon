@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes';
 import { Language, useLanguage } from '@/Contexts/LanguageContext';
 import { Media } from '@/assets/Media';
 import { set } from 'date-fns';
+import { preloadAbout, preloadContact, preloadHome, preloadMenu, preloadRecruitment } from '@/Routers';
 // import { Button } from '../ui/button';
 
 
@@ -27,11 +28,11 @@ const Header: React.FC = () => {
   };
 
   const menuItems = [
-    { path: '/', label: t('common.home') },
-    { path: '/menu', label: t('common.menu') },
-    { path: '/about', label: t('common.about') },
-    { path: '/recruitment', label: t('common.recruitment') },
-    { path: '/contact', label: t('common.contact') },
+    { path: '/', label: t('common.home'), preload: preloadHome },
+    { path: '/menu', label: t('common.menu'), preload: preloadMenu },
+    { path: '/about', label: t('common.about'), preload: preloadAbout },
+    { path: '/recruitment', label: t('common.recruitment'), preload: preloadRecruitment},
+    { path: '/contact', label: t('common.contact'), preload: preloadContact },
   ];
 
   useEffect(() => {
@@ -65,15 +66,6 @@ const Header: React.FC = () => {
 
     <header id="scroll-header" className="header-custom">
 
-      {/* //    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${ 
-    //   mobile
-    //     ? 'bg-white shadow-md'
-    //     :isScrolled 
-    //     ? 'bg-background/95 backdrop-blur-sm shadow-md'
-    //     : 'bg-transparent'
-    // }`}>   */}
-
-
       <div className="container mx-auto px-4 py-4 flex h-16 items-center justify-between">
         <Link
           to="/"
@@ -87,48 +79,15 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        {/* <nav className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`font-poppins font-medium text-base transition-colors hover:text-primary ${isActive(item.path) ? 'text-cta' : 'text-foreground'
-                  }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav> */}
-
+      
         <nav className="hidden md:flex items-center space-x-8">
           {menuItems.map((item) => (
-            // <Link
-            //   key={item.path}
-            //   to={item.path}
-            //   className={`group relative font-poppins font-semibold text-base 
-            //     ${isActive(item.path) ? 'text-red-500' : 'text-white'} 
-            //     transition-colors duration-300 hover:text-red-400`}
-            // >
-            //   {item.label}
-            //   <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-gradient-to-r from-red-400 to-red-600 transition-all duration-300 group-hover:w-full"></span>
-            // </Link>
-            // <Link
-            //   key={item.path}
-            //   to={item.path}
-            //   className={`group relative font-poppins font-semibold text-base
-            //     ${isActive(item.path) ? 'text-red-600' : 'text-white'}
-            //     transition-colors duration-300 hover:text-yellow-400`}
-            // >
-            //   {item.label}
-            //   <span className={`absolute left-0 -bottom-1 h-0.5 w-0 transition-all duration-300
-            //     ${isActive(item.path)
-            //       ? 'w-full bg-yellow-400'
-            //       : 'bg-gradient-to-r from-yellow-300 to-yellow-500 group-hover:w-full'}
-            //   `}></span>
-            // </Link>
+     
+       
             <Link
               key={item.path}
               to={item.path}
+              onMouseEnter={item.preload}
               className={`group relative font-playfair font-semibold text-base 
                           transition-colors duration-300
                           ${isActive(item.path) ? 'text-cta' : isScrolled ? ' text-black hover:text-cta ' : 'text-white hover:text-[#F44336]'}
@@ -141,8 +100,6 @@ const Header: React.FC = () => {
             </Link>
           ))}
         </nav>
-
-
 
 
         {/* Desktop Actions */}
@@ -211,6 +168,7 @@ const Header: React.FC = () => {
                 <Link
                   key={item.path}
                   to={item.path}
+                  onMouseEnter={item.preload}
                   className={`font-poppins text-xl transition-colors hover:text-primary ${isActive(item.path) ? 'text-cta' : 'text-foreground'
                     }`}
                   onClick={() => setIsMenuOpen(false)}
