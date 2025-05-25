@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import SocialSidebar from "@/components/Layout/SocialSidebar";
+import { Toaster } from 'sonner'
 
 const setupScrollAnimated = () => {
   const element = document.querySelectorAll(".fade-in-up, .fade-in-left, .fade-in-right, .fade-in-down, .animation-element, .flip-in, .zoom-in");
@@ -77,6 +78,7 @@ const Layout = () => {
        <SocialSidebar/>
       </div>
       <main className="flex-grow">
+      <Toaster richColors position="top-right" theme="light" />
         <Outlet />
       </main>
       <Footer />
