@@ -85,7 +85,7 @@ const HeroSection = () => {
                     <div className='flex flex-col justify-center items-center text-base  '>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in-up font-roboto leading-tight">
                             <span className=" text-green-400 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] block mb-2 animate-[fade-in_1s_ease-out] opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
-                                {t("home.heroTitle")}<span className="text-cta">{t("home.heroBrand")}</span>
+                                {t("home.heroTitle")} <span className="text-cta">{t("home.heroBrand")}</span>
                             </span>
                             {/* <span
                                 className="text-2xl md:text-3xl lg:text-4xl block font-semibold text-banh-green drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] animate-[fade-in_1s_ease-out] opacity-0"

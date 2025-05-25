@@ -9,8 +9,11 @@ import banhcuon1 from "./Images/banhcuon1 .png"
 import banhcuon2 from "./Images/banhcuon2.png"
 import banhcuon3 from "./Images/banhcuon3.png"
 import banhcuon4 from "./Images/banhcuon4.png";
-import bgMenu from "./Images/bg-menu-banhcuon1.jpg"
 import img1SectionAbout from "./Images/img-banh-cuon-section-about.jpg"
+import banner_about from "./Images/banner-about.png"
+import banner_Recruitment from "./Images/banner-Recruitment.png"
+import banner_contact from "./Images/banner-contact.png"
+import banner_menu from "./Images/banner-menu.png"
 
 // import vedieo_header_home from "@/assets/video/video_banner.mp4"
 
@@ -26,8 +29,11 @@ export const Media = {
   banhcuon2: banhcuon2 || "",
   banhcuon3: banhcuon3 || "",
   banhcuon4: banhcuon4 || "",
-  bg_menu: bgMenu || "",
   img1_section_about: img1SectionAbout || "",
+  banner_about: banner_about || "",
+  banner_Recruitment: banner_Recruitment||"",
+  banner_contact: banner_contact || "",
+  banner_menu: banner_menu || "",
 
   
 }

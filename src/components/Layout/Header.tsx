@@ -4,7 +4,7 @@ import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Language, useLanguage } from '@/Contexts/LanguageContext';
 import { Media } from '@/assets/Media';
-import { set } from 'date-fns';
+import ReactCountryFlag from "react-country-flag";
 import { preloadAbout, preloadContact, preloadHome, preloadMenu, preloadRecruitment } from '@/Routers';
 // import { Button } from '../ui/button';
 
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
 
     <header id="scroll-header" className="header-custom">
 
-      <div className="container mx-auto px-4 py-4 flex h-16 items-center justify-between">
+      <div className="container mx-auto px-4 py-4 flex h-16 items-center justify-between gap-8">
         <Link
           to="/"
           className="relative overflow-hidden flex items-center justify-center top-auto font-poppins font-bold text-2xl text-banhcuon-600"
@@ -109,29 +109,35 @@ const Header: React.FC = () => {
               className={`language-option ${language === 'vi' ? 'active' : ''}`}
               onClick={() => handleLanguageChange('vi')}
             >
-              🇻🇳
+             <div className="flex items-center justify-center">
+                <ReactCountryFlag countryCode="VN" svg style={{ width: "1.5em", height: "1.5em", margin: "auto" }} />
+             </div>
             </button>
             <button
               className={`language-option ${language === 'en' ? 'active' : ''}`}
               onClick={() => handleLanguageChange('en')}
             >
-              🇬🇧
+              <div className="flex items-center justify-center">
+                <ReactCountryFlag countryCode="GB" svg style={{ width: "1.5em", height: "1.5em" }} />
+              </div>
             </button>
             <button
               className={`language-option ${language === 'jp' ? 'active' : ''}`}
               onClick={() => handleLanguageChange('jp')}
             >
-              🇯🇵
+              <div className="flex items-center justify-center">
+                <ReactCountryFlag countryCode="JP" svg style={{ width: "1.5em", height: "1.5em" }} />
+              </div>
             </button>
           </div>
 
-          <button
-            // onClick={toggleTheme}
+          {/* <button
+             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-accent transition-colors"
             aria-label={theme === 'dark' ? t('common.lightMode') : t('common.darkMode')}
           >
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -150,7 +156,7 @@ const Header: React.FC = () => {
         >
           <div className="flex flex-col h-full p-6">
             <div className="flex justify-between items-center mb-8">
-              <Link to="/" className="font-poppins font-bold text-2xl text-banhcuon-800"
+              <Link to="/" className="font-poppins font-bold text-2xl text-banh-green"
                 onClick={() => setIsMenuOpen(false)}>
                 Bánh Cuốn <span className="text-cta ml-1 ">Tây Hồ</span>
               </Link>
@@ -185,29 +191,35 @@ const Header: React.FC = () => {
                     className={`language-option ${language === 'vi' ? 'active' : ''}`}
                     onClick={() => handleLanguageChange('vi')}
                   >
-                    🇻🇳
+                    <div className="flex items-center justify-center">
+                        <ReactCountryFlag countryCode="VN" svg style={{ width: "1.5em", height: "1.5em", margin: "auto" }} />
+                    </div>
                   </button>
                   <button
                     className={`language-option ${language === 'en' ? 'active' : ''}`}
                     onClick={() => handleLanguageChange('en')}
                   >
-                    🇬🇧
+                    <div className="flex items-center justify-center">
+                      <ReactCountryFlag countryCode="GB" svg style={{ width: "1.5em", height: "1.5em" }} />
+                    </div>
                   </button>
                   <button
                     className={`language-option ${language === 'jp' ? 'active' : ''}`}
                     onClick={() => handleLanguageChange('jp')}
                   >
-                    🇯🇵
+                    <div className="flex items-center justify-center">
+                      <ReactCountryFlag countryCode="JP" svg style={{ width: "1.5em", height: "1.5em" }} />
+                     </div>
                   </button>
                 </div>
 
-                <button
-                  //   onClick={toggleTheme}
+                {/* <button
+                  onClick={toggleTheme}
                   className="p-2 rounded-full hover:bg-accent transition-colors"
                   aria-label={theme === 'dark' ? t('common.lightMode') : t('common.darkMode')}
                 >
                   {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

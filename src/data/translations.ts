@@ -62,7 +62,7 @@ type TranslationType = {
       },
       menu: {
         title: 'Thực Đơn',
-        subtitle: 'Hương Vị Truyền Thống',
+        subtitle: 'Tìm hiểu thực đơn đa dạng của chúng tôi, từ món chay thanh đạm đến món mặn',
         vegetarianTitle: 'Món Chay',
         nonVegetarianTitle: 'Món Mặn',
         price: 'Giá',
@@ -188,7 +188,7 @@ type TranslationType = {
       },
       menu: {
         title: 'Menu',
-        subtitle: 'Traditional Flavors',
+        subtitle: 'Discover our diverse menu, from light vegetarian dishes to flavorful savory options.',
         vegetarianTitle: 'Vegetarian',
         nonVegetarianTitle: 'Non-Vegetarian',
         price: 'Price',
@@ -317,7 +317,7 @@ type TranslationType = {
       },
       menu: {
         title: 'メニュー',
-        subtitle: '伝統の味',
+        subtitle: 'あっさりとしたベジタリアン料理から風味豊かな料理まで、私たちの多彩なメニューをご覧ください。',
         vegetarianTitle: 'ベジタリアン',
         nonVegetarianTitle: '非ベジタリアン',
         price: '価格',
