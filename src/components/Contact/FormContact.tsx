@@ -1,8 +1,8 @@
 import { useLanguage } from "@/Contexts/LanguageContext";
-import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
+import { toast } from "sonner";
 
 interface ContactFormData {
   from_name: string;
@@ -24,7 +24,6 @@ const FormContact = ()=>{
     const serviceId = 'service_k52q99s';
     const templateId = 'template_5g34lzb';
     const userId = 'a3Wq8WGDg50mE54Tg'; //public key
-    const { toast } = useToast();
   
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       const { name, value } = e.target;
@@ -47,8 +46,7 @@ const FormContact = ()=>{
                         console.log('Email sent successfully:', result.text);
                         setIsSubmitting(false);
                         setFormData(initialFormData);
-                        toast({
-                            title: t('recruitment.successMessage'),
+                        toast.success(t('recruitment.successMessage'),{
                             description: `${formData.from_name}, ${t('recruitment.emailSentSuccess')}`,
                         });
                     })
@@ -56,10 +54,8 @@ const FormContact = ()=>{
                         console.error('Failed to send email:', error.text);
                         setIsSubmitting(false);
         
-                        toast({
-                            title: t('recruitment.errorMessage'),
-                            description: t('recruitment.emailSentError'),
-                            variant: 'destructive',
+                        toast.error( t('recruitment.errorMessage'), {
+                           description: t('recruitment.emailSentError'),
                         });
                     });
       }, 1500);
