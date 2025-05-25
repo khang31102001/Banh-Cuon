@@ -151,6 +151,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
       </button>
     </div>
   </div>
+  
     </div>
   );
 };

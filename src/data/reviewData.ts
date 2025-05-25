@@ -16,9 +16,9 @@ interface Review {
 export const  mockReviews: Review[] = [
     {
       id: "1",
-      author_name: "Am I XNhi?",
+      author_name:"Am I XNhi?",
       rating: 5,
-      relative_time_description: "1 tháng trước",
+      relative_time_description:"1 tháng trước",
       link: "https://maps.app.goo.gl/k2CvQR4wxB5XFZVAA",
       text: {
         vi: "Nơi duy nhất ở thành phố khiến mình biết thèm bánh cuốn và cũng là nơi duy nhất mình cảm giác giá tiền cao (trung bình 50-65K/ dĩa) đi đôi với chất lượng.",
@@ -30,9 +30,9 @@ export const  mockReviews: Review[] = [
     },
     {
       id: "2",
-      author_name: "Thanh Tran Thi Thien",
+      author_name:"Thanh Tran Thi Thien",
       rating: 4,
-      relative_time_description: "2 tuần trước",
+      relative_time_description:"2 tuần trước",
       link: "https://maps.app.goo.gl/6TNArR52s5qr6bNL6",
       text: {
         vi: "Bánh cuốn ngon, giá cả hợp lý. Điểm trừ là quán không có máy lạnh nên hơi nực. Một phần bánh cuốn chỉ có 4 cuốn bánh cuốn nhân thịt, không chả, không nem. Muốn ăn phải gọi thêm. Một phần chả, nem có thể ăn được 2 người.",

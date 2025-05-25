@@ -59,10 +59,16 @@ const Menu: React.FC = () => {
           </p>
         </div>
       </div> */}
-      <SectionBanner title="Menu"  backgroundImage= {Media.bg_menu} >
-        <p className="text-white/90 max-w-3xl mx-auto text-center mt-4">
+      <SectionBanner 
+      title={t("menu.title")}
+      backgroundImage={Media.banner_menu}
+      >
+        {/* <p className="text-white/90 max-w-3xl mx-auto text-center mt-4">
           Tìm hiểu thực đơn đa dạng của chúng tôi, từ món chay thanh đạm đến món mặn
-         </p>
+         </p> */}
+         <p className="text-neutral-200 text-lg md:text-xl mt-2 drop-shadow-sm tracking-wide">
+            Tìm hiểu thực đơn đa dạng của chúng tôi, từ món chay thanh đạm đến món mặn
+        </p>
       </SectionBanner>
 
 

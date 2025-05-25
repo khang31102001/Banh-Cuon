@@ -4,6 +4,7 @@ import SectionBanner from "@/components/SectionBanner";
 import SectionStory from "@/components/About/SectionStory";
 import SectionDevelopment from "@/components/About/SectionDevelopment";
 import SectionValue from "@/components/About/SectionValue";
+import { Media } from "@/assets/Media";
 
 
 
@@ -14,9 +15,9 @@ const About = () => {
         <div >
             <SectionBanner
                 title="Giới Thiệu"
-                backgroundImage=""
+                backgroundImage={Media.banner_about}
             >
-                <p className="text-white/90 max-w-3xl mx-auto text-center mt-4">
+                <p className="text-neutral-200 text-lg md:text-xl mt-2 drop-shadow-sm tracking-wide">
                     Tìm hiểu câu chuyện, giá trị cốt lõi và hành trình phát triển của Bánh Cuốn Tây Hồ
                 </p>
             </SectionBanner>

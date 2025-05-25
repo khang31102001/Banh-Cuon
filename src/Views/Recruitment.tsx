@@ -5,6 +5,8 @@ import { useLanguage } from '@/Contexts/LanguageContext';
 import SectionGallery from '@/components/Recruitment/SctionGallery';
 import SectionProcess from '@/components/Recruitment/SectionProcess';
 import FormRecruitment from '@/components/Recruitment/FormRecruitment';
+import SectionBanner from '@/components/SectionBanner';
+import { Media } from '@/assets/Media';
 
 
 const Recruitment: React.FC = () => {
@@ -12,14 +14,23 @@ const Recruitment: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="bg-banhcuon-100 dark:bg-banhcuon-900 py-16 px-4 md:py-24">
+      {/* <div className="bg-banhcuon-100 dark:bg-banhcuon-900 py-16 px-4 md:py-24">
         <div className="container mx-auto text-center">
           <h1 className="primary-heading">{t('recruitment.title')}</h1>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
             {t('recruitment.subtitle')}
           </p>
         </div>
-      </div>
+      </div> */}
+
+      <SectionBanner
+      title={t('recruitment.title')}
+      backgroundImage={Media.banner_Recruitment}
+      >
+          <p className="text-neutral-200 text-lg md:text-xl mt-2 drop-shadow-sm tracking-wide">
+            {t('recruitment.subtitle')}
+          </p>
+      </SectionBanner>
 
       <div className="container mx-auto px-4 py-12">
         {/* Benefits Section */}

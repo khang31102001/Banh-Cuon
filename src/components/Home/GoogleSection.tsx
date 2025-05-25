@@ -131,7 +131,7 @@ const GoogleReviews = () => {
                             /> */}
                             <AvatarGenerate name={review.author_name}   />
                             <div>
-                              <h4 className="font-semibold">{review.author_name}</h4>
+                              <h4 className="font-semibold text-left">{review.author_name}</h4>
                               <div className="flex items-center gap-2">
                                 <div className="flex">
                                   {[...Array(review.rating)].map((_, i) => (
