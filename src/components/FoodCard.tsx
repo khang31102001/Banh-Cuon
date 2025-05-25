@@ -22,7 +22,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
   const handleCopyLink = (itemId: number, event: React.MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
-    const url = `${window.location.origin}/menu/${itemId}`;
+    const url = `${window.location.origin}/menu`;
     navigator.clipboard.writeText(url)
       .then(() => {
         toast.success("Đã sao chép đường dẫn vào bộ nhớ tạm");
@@ -44,7 +44,8 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
   const handleShareFacebook = (itemId: number, event: React.MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
-    const url = `${window.location.origin}/menu/${itemId}`;
+    // const url = `${window.location.origin}/menu/${itemId}`;
+    const url = `${window.location.origin}/menu/`;
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, 
       '_blank', 'width=600,height=400');
   };
@@ -52,7 +53,8 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
   const handleShareLinkedIn = (itemId: number, event: React.MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
-    const url = `${window.location.origin}/menu/${itemId}`;
+    // const url = `${window.location.origin}/menu/${itemId}`;
+    const url = `${window.location.origin}/menu`;
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, 
       '_blank', 'width=600,height=400');
   };
@@ -82,7 +84,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
 
       {item.category.name && (
         <Badge className={`text-xs text-white ${item.category.name.vi === "Món chay" ? "bg-banh-green" : "bg-red-400"}`}>
-          {item.category.name.vi}
+          {item.category.name[language]}
         </Badge>
       )}
     </div>

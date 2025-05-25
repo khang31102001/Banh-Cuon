@@ -1,7 +1,7 @@
-import { useToast } from "@/hooks/use-toast";
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import { useLanguage, Language } from '@/Contexts/LanguageContext';
+import { toast } from "sonner";
 
 interface FormData {
     from_name: string;
@@ -65,7 +65,6 @@ const FormRecruitment = () => {
     const serviceId = 'service_k52q99s';
     const templateId = 'template_5g34lzb';
     const userId = 'a3Wq8WGDg50mE54Tg'; //public key
-    const { toast } = useToast();
     const { language, t } = useLanguage();
     const form = useRef<HTMLFormElement>(null);
 
@@ -142,20 +141,14 @@ const FormRecruitment = () => {
                 setFormData(initialFormData);
                 setFormProgress(0);
 
-                // toast({
-                //     title: t('recruitment.successMessage'),
-                //     description: `${formData.name}, ${t('recruitment.emailSentSuccess')}`,
-                // });
+                toast.success(t('recruitment.successMessage'), {
+                    description: `${formData.from_name}, ${t('recruitment.emailSentSuccess')}`,
+                  });
             })
             .catch((error) => {
                 console.error('Failed to send email:', error.text);
                 setIsSubmitting(false);
-
-                // toast({
-                //     title: t('recruitment.errorMessage'),
-                //     description: t('recruitment.emailSentError'),
-                //     variant: 'destructive',
-                // });
+                toast.error(t('recruitment.errorMessage'),{ description: t('recruitment.emailSentError'),});
             });
     };
 
