@@ -14,6 +14,7 @@ import banner_about from "./Images/banner-about.png"
 import banner_Recruitment from "./Images/banner-Recruitment.png"
 import banner_contact from "./Images/banner-contact.png"
 import banner_menu from "./Images/banner-menu.png"
+import QRcode from "./Images/QRcode.png"
 
 // import vedieo_header_home from "@/assets/video/video_banner.mp4"
 
@@ -34,6 +35,7 @@ export const Media = {
   banner_Recruitment: banner_Recruitment||"",
   banner_contact: banner_contact || "",
   banner_menu: banner_menu || "",
+  QRcode: QRcode || ""
 
   
 }

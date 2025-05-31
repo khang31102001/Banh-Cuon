@@ -1,6 +1,7 @@
 import { Clock, MapPin, Phone } from "lucide-react";
 import FormContact from "./FormContact";
 import { useLanguage } from "@/Contexts/LanguageContext";
+import { Media } from "@/assets/Media";
 
 const InfoContact = ()=> {
     const {t} = useLanguage();
@@ -53,8 +54,8 @@ const InfoContact = ()=> {
               <p className="mb-4 text-muted-foreground">{t('contact.scanQR')}</p>
               <div className="bg-white p-2 rounded shadow-md">
                 <img 
-                  src="/images/shopeefood-qr.png"
-                  alt="ShopeeFood QR Code"
+                  src={Media.QRcode}
+                  alt="ShopeeFood QR Code "
                   className="w-40 h-40"
                 />
               </div>

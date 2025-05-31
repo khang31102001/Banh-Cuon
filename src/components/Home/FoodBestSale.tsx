@@ -54,8 +54,6 @@ const FoodBestSale = () => {
             subtitle={t('home.foodSubtitle1')}
             className=" fade-in-up"
             subtitleColorClass="text-white drop-shadow-md"
-            
-
           />
         </NavLink>
 
@@ -70,7 +68,7 @@ const FoodBestSale = () => {
               <SwiperSlide key={index}>
                 <Link to="/menu">
                   <div className="">
-                    <FoodCard item={item} />
+                    <FoodCard item={item} showSocial={false} />
                   </div>
                 </Link>
               </SwiperSlide>

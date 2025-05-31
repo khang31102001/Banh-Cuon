@@ -9,11 +9,13 @@ import "swiper/css/navigation";
 import { Autoplay, EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/Contexts/LanguageContext";
 interface Props {
   Menu?: [];
 }
 const FoodSwiper = ({ Menu }: Props) => {
   const limitMenu = menuItems.slice(0, 9);
+  const {t} = useLanguage();
 
   const swiperConfig = {
     grabCursor: true,
@@ -54,13 +56,13 @@ const FoodSwiper = ({ Menu }: Props) => {
       <div className="container mx-auto px-4 py-12">
 
         <div className="text-center mb-6 cursor-pointer">
-          <NavLink to='/menu'>
-            <SectionTitle 
-              title1=""
-              title2=""
-              subtitle="Khám phá các loại bánh cuốn đặc sắc của Tây Hồ – từ bánh cuốn chay đến nhân thịt thơm ngon." 
-              lightText={false} />
-          </NavLink>
+            <SectionTitle
+                underline={false}
+                title1={t('home.foodTitle1')}
+                subtitle={t('home.foodSubtitle1')}
+                className=" fade-in-up"
+                subtitleColorClass="text-white drop-shadow-md"
+              />
 
         </div>
 
@@ -68,20 +70,20 @@ const FoodSwiper = ({ Menu }: Props) => {
           {limitMenu?.map((item, index) => (
             <SwiperSlide key={index}>
               <Link to="/menu">
-                <FoodCard item={item} />
+                <FoodCard item={item} showSocial={false} />
               </Link>
             </SwiperSlide>
           ))}
         </Swiper>
 
 
-        <div className="text-center mt-12 reveal">
+        {/* <div className="text-center mt-12 reveal">
           <Button asChild className="">
             <NavLink to="/menu" className="inline-flex items-center">
               Xem Toàn Bộ Thực Đơn <ArrowRight size={16} className="ml-2" />
             </NavLink>
           </Button>
-        </div>
+        </div> */}
 
 
       </div>

@@ -123,7 +123,7 @@ const Menu: React.FC = () => {
         {/* Food Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in-up">
           {filteredItems.map((item) => (
-            <FoodCard key={item.id} item={item} openLightbox={openLightbox} className="" />
+            <FoodCard key={item.id} item={item} openLightbox={openLightbox} className="" showSocial={true}/>
           ))}
         </div>
 

@@ -21,14 +21,13 @@ const FoodMenu = () => {
       <div className="container mx-auto px-4 py-12">
            
           <div  className="text-center mb-6 cursor-pointer">
-            <NavLink to='/menu'>
-            <SectionTitle 
-              title1=""
-              title2=""
-              subtitle={t('home.foodSubtitle')} 
-              lightText={false} />
-            </NavLink>
-
+            <SectionTitle
+              underline={false}
+              title1={t('home.foodTitle1')}
+              subtitle={t('home.foodSubtitle1')}
+              className=" fade-in-up"
+              subtitleColorClass="text-white drop-shadow-md"
+            />
           </div>
 
 
@@ -37,7 +36,7 @@ const FoodMenu = () => {
               return (
                 <Link to="/menu">
                   <div className=''>
-                    <FoodCard key={index} item={items} />
+                    <FoodCard key={index} item={items} showSocial={false} />
                   </div>
                 </Link>
 
@@ -46,13 +45,13 @@ const FoodMenu = () => {
 
           </div>
 
-          <div className="text-center mt-12 reveal">
+          {/* <div className="text-center mt-12 reveal">
             <Button asChild className="">
               <NavLink to="/menu" className="inline-flex items-center">
                 {t('common.seeAllMenu')} <ArrowRight size={16} className="ml-2" />
               </NavLink>
             </Button>
-        </div>
+        </div> */}
 
 
       </div>
