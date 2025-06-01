@@ -121,7 +121,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className, show
   {/* Content Container with Fixed Layout */}
   <div className="p-4 flex flex-col flex-grow">
     <div className="mb-2 h-14 overflow-hidden fade-in-left">
-      <h3 className="text-xl font-semibold font-vietnam text-banhcuon-800 line-clamp-2">{item.name[language]}</h3>
+      <h3 className="text-xl font-semibold text-banhcuon-800 line-clamp-2">{item.name[language]}</h3>
     </div>
     
     {/* Description with fixed height and ellipsis */}

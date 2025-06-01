@@ -19,15 +19,15 @@ const SectionShortStory = () => {
                                 title2={t("home.heroBrand")}
                                 lightText={true}
                                 centered={false}
-                                className="mb-6 fade-in-left text-3xl font-extrabold text-[#4A2F17]"
+                                className="mb-6 fade-in-left text-3xl font-anton font-extrabold text-[#4A2F17]"
                             />
 
                             <div className='"mt-8'>
-                                <p className="text-gray-700 text-lg leading-[3] font-quicksand fade-in-up">
+                                <p className="text-gray-700 text-lg leading-[3] font-anton fade-in-up">
                                     {t('home.storyFirst')} <strong className="text-banh-green">1972</strong>, {t("home.heroTitle")} <strong className="text-[#EF3F36]"> {t("home.heroBrand")}</strong> {t('home.storySecond')} <span className="italic">{t('home.storyThird')}</span>.
                                 </p>
 
-                                <p className="text-gray-700 text-lg leading-[3] font-quicksand fade-in-up">
+                                <p className="text-gray-700 text-lg leading-[3] font-anton fade-in-up">
                                     {t('home.storyFour')} <strong className="text-banh-green">60 {t('common.year')}</strong>, {t('home.storyFive')} <strong>Hà Nội</strong>.
                                     {t('home.storySix')} <span className="font-medium text-[#4A2F17]">{t('home.storySeven')}</span>.
                                 </p>
@@ -42,7 +42,7 @@ const SectionShortStory = () => {
                                         bg-[length:0%_100%] bg-left hover:bg-[length:100%_100%] hover:text-white 
                                         bg-no-repeat"
                                 >
-                                    <span className="font-semibold tracking-wide">
+                                    <span className="font-anton font-semibold tracking-wide">
                                         {t('common.viewMenu') || 'Xem Thực Đơn'}
                                     </span>
                                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

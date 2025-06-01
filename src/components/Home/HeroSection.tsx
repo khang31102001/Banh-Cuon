@@ -83,7 +83,7 @@ const HeroSection = () => {
                 <div id='banner-title' className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
 
                     <div className='flex flex-col justify-center items-center text-base  '>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in-up font-roboto leading-tight">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in-up font-anton leading-tight">
                             <span className=" text-green-400 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] block mb-2 animate-[fade-in_1s_ease-out] opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
                                 {t("home.heroTitle")} <span className="text-cta">{t("home.heroBrand")}</span>
                             </span>
@@ -128,21 +128,21 @@ const HeroSection = () => {
                             <div className="flex items-center">
                                 <Clock className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>
-                                    <p className="text-sm font-medium">{t("home.heroOpenTime")}</p>
+                                    <p className="text-sm font-medium font-anton">{t("home.heroOpenTime")}</p>
                                     <p className="text-xs text-gray-300">5:30 - 21:30</p>
                                 </div>
                             </div>
                             <div className="flex items-center">
                                 <MapPin className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>
-                                    <p className="text-sm font-medium">{t("home.heroAddress")}</p>
+                                    <p className="text-sm font-medium font-anton">{t("home.heroAddress")}</p>
                                     <p className="text-xs text-gray-300">{t("home.heroLocation")}</p>
                                 </div>
                             </div>
                             <div className="flex items-center">
                                 <Phone className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>
-                                    <p className="text-sm font-medium">{t("home.heroOrder")}</p>
+                                    <p className="text-sm font-medium font-anton">{t("home.heroOrder")}</p>
                                     <p className="text-xs text-gray-300">+84 28 38200 584</p>
                                 </div>
                             </div>

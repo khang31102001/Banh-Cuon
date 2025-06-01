@@ -33,7 +33,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
       className={`mb-12 ${centered ? "text-center" : ""} ${className} `}
     >
       <h2
-        className={`group text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${textColorClass1} font-vietnam relative inline-block animate-[fade-in_1s_ease-out] opacity-0`}
+        className={`group text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${textColorClass1} font-anton relative inline-block animate-[fade-in_1s_ease-out] opacity-0`}
         style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
       >
         {title1} <span className={`${textColorClass2}`}>{title2}</span>  <span className={`${textColorClass3}`}>{title3}</span>
@@ -43,7 +43,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
                 && (<span className="absolute -bottom-2 left-0 h-1 w-full bg-banh-green rounded-full "></span>)}
       </h2>
       {subtitle && (
-        <p className={`text-[1.2rem] font-quicksand md:text-xl ${subtitleColorClass} max-w-3xl mx-auto mt-4 leading-relaxed`}>
+        <p className={`text-[1.2rem] font-anton md:text-xl ${subtitleColorClass} max-w-3xl mx-auto mt-4 leading-relaxed`}>
           {subtitle}
         </p>
       )}

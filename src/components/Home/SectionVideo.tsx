@@ -26,7 +26,7 @@ const SectionVideo = () => {
              
                 <div className={`absolute inset-0 bg-gradient-to-t from-black/60  to-black/30 z-10 flex flex-col justify-center items-center text-white px-4 transition-all duration-3000 transform
                 ${isHover ?  "translate-y-0 opacity-100" : "translate-y-full opacity-0" }`}>
-                <p className="text-xl font-semibold mb-4 drop-shadow-md">
+                <p className="text-xl font-anton font-semibold mb-4 drop-shadow-md">
                   {t("home.processTitle") || "Quy Trình Làm Bánh"}
                 </p>
                 <button
@@ -72,7 +72,7 @@ const SectionVideo = () => {
               subtitle={t('home.videoSubtitle')}
               className="text-banhcuon-700 mb-6 fade-in-up"
             />
-            <p className="text-gray-700 text-lg leading-relaxed font-playfair fade-in-up">{t('home.videoDescription')}</p>
+            <p className="text-gray-700 text-lg leading-relaxed font-anton fade-in-up">{t('home.videoDescription')}</p>
           </div>
       </div>
     </section>

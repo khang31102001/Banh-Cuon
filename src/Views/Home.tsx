@@ -10,7 +10,6 @@ import FoodNonVegetarian from '@/components/Home/FoodNonVegetarian';
 // import Testimonials from '@/components/Home/Testimonials';
 import GoogleReviews from '@/components/Home/GoogleSection';
 import FoodMenu from '@/components/Home/FoodMenu';
-import FoodBestSale from '@/components/Home/FoodBestSale';
 import FoodSwiper from '@/components/Home/FoodSwiper';
 import CTASection from '@/components/Home/CTASection';
 import SectionShortStory from '@/components/Home/SectionShortStory';
@@ -43,14 +42,13 @@ const Home: React.FC = () => {
           <div className="hidden md:block">
             <FoodMenu/>
           </div>
-        
           <div className="block md:hidden">
             <FoodSwiper/>
           </div> 
         </div>
      </div>
     
-        <CTASection/>     
+      <CTASection/>     
    
         
       {/* <FoodNonVegetarian/>

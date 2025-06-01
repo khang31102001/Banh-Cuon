@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
           {/* Social Media */}
           <div className="space-y-4 ">
             <div className='flex flex-col justify-center items-center'>
-              <h4 className="font-poppins font-semibold text-lg">{t('common.follow')}</h4>
+              <h4 className=" font-semibold text-lg">{t('common.follow')}</h4>
               <div className="flex mt-2 space-x-4">
                 <a
                   href="https://www.facebook.com/banhcuontayho127"
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-poppins font-semibold text-lg">{t('common.home')}</h4>
+            <h4 className=" font-semibold text-lg">{t('common.home')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-cta transition-colors">
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="font-poppins font-semibold text-lg">{t('common.contact')}</h4>
+            <h4 className=" font-semibold text-lg">{t('common.contact')}</h4>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 text-cta" />

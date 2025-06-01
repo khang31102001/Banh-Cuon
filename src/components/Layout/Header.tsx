@@ -17,9 +17,6 @@ const Header: React.FC = () => {
 
   const isActive = (path: string) => location.pathname === path;
   const [isScrolled, setIsScrolled] = useState(false);
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   //  console.log(images.logo)
   const handleLanguageChange = (lang: Language) => {
@@ -43,17 +40,15 @@ const Header: React.FC = () => {
       if (currentScroll > 100) {
         setIsScrolled(true);
         header.classList.add(
-          'bg-[#FFF8F2]',
-          'shadow-md',
+          'bg-[#FFF8F2]'
         );
-        header.classList.remove('py-4');
+
       } else {
         setIsScrolled(false)
         header.classList.remove(
-          'bg-[#FFF8F2]',
-          'shadow-md'
+          'bg-[#FFF8F2]'
         );
-        header.classList.add('py-4');
+       
       }
 
     }
@@ -64,17 +59,16 @@ const Header: React.FC = () => {
 
   return (
 
-    <header id="scroll-header" className="header-custom">
-
+    <header id="scroll-header" className="header-custom shadow-sm">
       <div className="container mx-auto px-4 py-4 flex h-16 items-center justify-between gap-8">
         <Link
           to="/"
-          className="relative overflow-hidden flex items-center justify-center top-auto font-poppins font-bold text-2xl text-banhcuon-600"
+          className="relative overflow-hidden flex items-center justify-center top-auto font-anton font-bold text-2xl text-banhcuon-600"
         >
           <img
             src={Media.logo_gift}
             alt="Bánh Cuốn Tây Hồ Logo"
-            className="w-48  object-cover"
+            className={`w-48  object-cover transition-all duration-3000 ease-in-out ${isScrolled ? " scale-75": "scale-100"}`}
           />
         </Link>
 
@@ -82,13 +76,12 @@ const Header: React.FC = () => {
       
         <nav className="hidden md:flex items-center space-x-8">
           {menuItems.map((item) => (
-     
-       
+
             <Link
               key={item.path}
               to={item.path}
               onMouseEnter={item.preload}
-              className={`group relative font-playfair font-semibold text-base 
+              className={`group relative font-anton font-semibold text-base 
                           transition-colors duration-300
                           ${isActive(item.path) ? 'text-cta' : isScrolled ? ' text-black hover:text-cta ' : 'text-white hover:text-[#F44336]'}
                         `}
@@ -142,40 +135,34 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 rounded-md hover:bg-accent"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {!isMenuOpen && (<Menu size={24} className="text-grey-600 drop-shadow-md" />)}
+                className="md:hidden flex flex-col justify-center items-center space-y-1.5 z-50"
+                onClick={()=>setIsMenuOpen(!isMenuOpen)}
+                aria-label="open menu"
+              >
+                <span className={`block w-6 h-0.5 bg-current transform transition-all duration-300 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+                <span className={`block w-6 h-0.5 bg-current transform transition-all duration-300 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
         </button>
-
         {/* Mobile Menu */}
         <div
-          className={`md:hidden fixed inset-0 z-50 bg-background/95 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? ' translate-x-0' : 'translate-x-full'
-            }`}
+          className={`md:hidden fixed top-0 left-0 right-0 h-full bg-[#FFF8F2] shadow-md transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? "translate-y-0" :  "-translate-y-full"
+          } flex flex-col  items-start opacity-100`}
         >
+         <div className="block w-full p-4">
+            <Link to="/" className="font-anton font-bold text-2xl text-banh-green"
+                    onClick={() => setIsMenuOpen(false)}>
+                    Bánh Cuốn <span className="text-cta ml-1 ">Tây Hồ</span>
+            </Link>
+         </div>
           <div className="flex flex-col h-full p-6">
-            <div className="flex justify-between items-center mb-8">
-              <Link to="/" className="font-poppins font-bold text-2xl text-banh-green"
-                onClick={() => setIsMenuOpen(false)}>
-                Bánh Cuốn <span className="text-cta ml-1 ">Tây Hồ</span>
-              </Link>
-              <button
-                className="p-2 rounded-md hover:bg-accent"
-                onClick={toggleMenu}
-                aria-label="Close menu"
-              >
-                <X size={24} />
-              </button>
-            </div>
-
             <nav className="flex flex-col space-y-6 mb-8">
               {menuItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onMouseEnter={item.preload}
-                  className={`font-poppins text-xl transition-colors hover:text-primary ${isActive(item.path) ? 'text-cta' : 'text-foreground'
+                  className={`font-anton text-xl transition-colors hover:text-primary ${isActive(item.path) ? 'text-cta' : 'text-foreground'
                     }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
