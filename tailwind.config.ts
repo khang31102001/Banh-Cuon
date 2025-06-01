@@ -139,12 +139,14 @@ export default {
 				'shake': 'shake 0.5s ease-in-out'
 			},
 			fontFamily: {
+				 anton: ['Anton', 'sans-serif'],
 				'poppins': ['Poppins', 'sans-serif'],
 				'roboto': ['Roboto', 'sans-serif'],
 				'vietnam': ['Be Vietnam Pro', 'sans-serif'],
 				'quicksand': ['Quicksand', 'sans-serif'],
 				'playfair': ['Playfair Display', 'serif'],
 				 montserrat: ['Montserrat', 'sans-serif'],
+				
 			},
 		}
 	},

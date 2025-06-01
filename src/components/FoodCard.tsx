@@ -10,9 +10,10 @@ interface FoodCardProps {
   item?: MenuItem;
   className?: string; 
   openLightbox?: (image: string) => void;
+  showSocial?: boolean;
 }
 
-const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) => {
+const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className, showSocial }) => {
   const { language, t } = useLanguage();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -90,29 +91,31 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className }) =>
     </div>
     
     {/* Floating Social Media Icons that appear on hover */}
-    <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 flex justify-center space-x-3 transform transition-all duration-300 ${isHovered ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
-      <button
-        onClick={(e) => handleShareFacebook(item.id, e)}
-        className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full flex items-center justify-center transition-transform hover:scale-110"
-        aria-label="Chia sẻ lên Facebook"
-      >
-        <Facebook size={16} />
-      </button>
-      <button
-        onClick={(e) => handleShareLinkedIn(item.id, e)}
-        className="bg-blue-700 hover:bg-blue-800 text-white p-2 rounded-full flex items-center justify-center transition-transform hover:scale-110"
-        aria-label="Chia sẻ lên LinkedIn"
-      >
-        <Linkedin size={16} />
-      </button>
-      <button
-        onClick={(e) => handleCopyLink(item.id, e)}
-        className="bg-gray-700 hover:bg-gray-800 text-white p-2 rounded-full flex items-center justify-center transition-transform hover:scale-110"
-        aria-label="Sao chép liên kết"
-      >
-        <Copy size={16} />
-      </button>
-    </div>
+    {showSocial && (
+        <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 flex justify-center space-x-3 transform transition-all duration-300 ${isHovered ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
+        <button
+          onClick={(e) => handleShareFacebook(item.id, e)}
+          className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+          aria-label="Chia sẻ lên Facebook"
+        >
+          <Facebook size={16} />
+        </button>
+        <button
+          onClick={(e) => handleShareLinkedIn(item.id, e)}
+          className="bg-blue-700 hover:bg-blue-800 text-white p-2 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+          aria-label="Chia sẻ lên LinkedIn"
+        >
+          <Linkedin size={16} />
+        </button>
+        <button
+          onClick={(e) => handleCopyLink(item.id, e)}
+          className="bg-gray-700 hover:bg-gray-800 text-white p-2 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+          aria-label="Sao chép liên kết"
+        >
+          <Copy size={16} />
+        </button>
+      </div>
+    )}
   </div>
 
   {/* Content Container with Fixed Layout */}
