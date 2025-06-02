@@ -11,8 +11,8 @@ const Map = () => {
     const storeInfo = {
         name: "Bánh Cuốn Tây Hồ",
         address: "127 Đinh Tên Hoàng ",
-        phone: "+84 123 456 789",
-        hours: "7:00 - 22:00 (Hàng ngày)",
+        phone: "+84 28 38200 584",
+        hours: "5:30 - 21:30 (Hàng ngày)",
         coordinates: {
             lat: 21.0758,
             lng: 105.8196

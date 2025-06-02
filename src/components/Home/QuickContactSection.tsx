@@ -10,7 +10,7 @@ export const QuickContactSection = () => {
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
                 Tọa lạc tại trung tâm 127 Đinh Tên Hoàng - Q1, với không gian ấm cúng và phục vụ chuyên nghiệp. 
-                Chúng tôi mở cửa từ 6h sáng đến 10h tối mỗi ngày.
+                Chúng tôi mở cửa từ 5h30 sáng đến 21h30 tối mỗi ngày.
               </p>
               
               {/* <div className="space-y-4">

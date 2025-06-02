@@ -13,13 +13,11 @@ import FoodMenu from '@/components/Home/FoodMenu';
 import FoodSwiper from '@/components/Home/FoodSwiper';
 import CTASection from '@/components/Home/CTASection';
 import SectionShortStory from '@/components/Home/SectionShortStory';
-import SectionVideo from '@/components/Home/SectionVideo';
 import { Media } from '@/assets/Media';
 import Video from '@/components/Home/Video';
 import { StatsSection } from '@/components/Home/StatsSection';
 import { WhyChooseUsSection } from '@/components/Home/WhyChooseUsSection';
 import { QuickContactSection } from '@/components/Home/QuickContactSection';
-// import { StatsSection, WhyChooseUsSection, ProcessSection, QuickContactSection, AdditionalHomeSections } from '@/components/test';
 
 
 const Home: React.FC = () => {
@@ -56,7 +54,6 @@ const Home: React.FC = () => {
       {/* <CTASection/>    */}
       <StatsSection/>
     
-   
         
       {/* <FoodNonVegetarian/>
       <FoodVegetarian/> */}
@@ -64,9 +61,8 @@ const Home: React.FC = () => {
 
       <GoogleReviews/>
       <WhyChooseUsSection/>  
-      {/* <ProcessSection/> */}
       <QuickContactSection/>
-      {/* <AdditionalHomeSections/> */}
+
      
     
       
