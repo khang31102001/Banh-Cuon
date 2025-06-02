@@ -15,7 +15,8 @@ import { Media } from '@/assets/Media';
 import { StatsSection } from '@/components/Home/StatsSection';
 import { WhyChooseUsSection } from '@/components/Home/WhyChooseUsSection';
 import { QuickContactSection } from '@/components/Home/QuickContactSection';
-import Video from '@/components/Home/Video';
+import Video from '@/components/Home/SectionVedeo';
+
 
 
 const Home: React.FC = () => {
