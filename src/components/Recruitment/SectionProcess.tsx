@@ -79,7 +79,7 @@ const SectionProcess = () => {
                                     <div className="w-12 h-12 bg-banhcuon-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                                         {item.step[language]}
                                     </div>
-                                    <h3 className="text-xl font-bold mb-3 text-banhcuon-900 font-serif">
+                                    <h3 className="text-xl font-bold mb-3 text-banhcuon-900 ">
                                         {item.title[language]}
                                     </h3>
                                     <p className="text-gray-600">{item.description[language]}</p>

@@ -16,9 +16,9 @@ return(
                                 centered={false}
                                 className="mb-6"
                             />
-                            <p className="text-gray-600 mb-4 font-playfair">{t('about.storyDescription1')}</p>
-                            <p className="text-gray-600 mb-4 font-playfair">{t('about.storyDescription2')}</p>
-                            <p className="text-gray-600 font-playfair">{t('about.storyDescription3')}</p>
+                            <p className="text-gray-600 mb-4 ">{t('about.storyDescription1')}</p>
+                            <p className="text-gray-600 mb-4 ">{t('about.storyDescription2')}</p>
+                            <p className="text-gray-600 ">{t('about.storyDescription3')}</p>
                         </div>
                         <div className="relative animation-element">
                             <img
@@ -27,7 +27,7 @@ return(
                                 className="rounded-lg shadow-lg w-full object-cover"
                             />
                             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg w-48">
-                                <p className="text-banhcuon-900 font-bold text-lg">{t('about.storyImgtitle1')}</p>
+                                <p className="text-banhcuon-900  text-lg">{t('about.storyImgtitle1')}</p>
                                 <p className="text-gray-600">{t('about.storyImgtitle2')}</p>
                             </div>
                         </div>

@@ -8,7 +8,7 @@ const SectionGallery = () => {
             <section className="bg-banhcuon-50 py-16">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionTitle
-                        title="Môi Trường Làm Việc"
+                        title1="Môi Trường Làm Việc"
                         subtitle="Khám phá không gian làm việc năng động và thân thiện tại Bánh Cuốn Tây Hồ"
                     />
 

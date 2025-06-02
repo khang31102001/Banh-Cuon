@@ -136,10 +136,10 @@ const SectionValue = () => {
                                 className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center animate-on-scroll"
                             >
                                 <div className="flex justify-center mb-4">{value.icon}</div>
-                                <h3 className="text-xl font-bold mb-3 text-banhcuon-900 font-vietnam">
+                                <h3 className="text-xl font-bold mb-3 text-banhcuon-900 ">
                                     {value.title[language]}
                                 </h3>
-                                <p className="text-gray-600 font-playfair">{value.description[language]}</p>
+                                <p className="text-gray-600">{value.description[language]}</p>
                             </div>
                         ))}
                     </div>

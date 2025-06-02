@@ -4,6 +4,7 @@ import SectionMap from '@/components/Contact/SectionMap';
 import InfoContact from '@/components/Contact/InfoContact';
 import SectionBanner from '@/components/SectionBanner';
 import { Media } from '@/assets/Media';
+import Map from '@/components/Contact/maptest';
 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
@@ -33,6 +34,7 @@ const Contact: React.FC = () => {
       <div className="container mx-auto px-4 py-12">
         <InfoContact/>
         <SectionMap/>
+        {/* <Map/> */}
       </div>
     </div>
   );

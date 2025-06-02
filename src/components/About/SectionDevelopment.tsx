@@ -81,7 +81,7 @@ const SectionDevelopment = () => {
                                         <span className="inline-block px-4 py-2 rounded-full bg-banhcuon-600 text-white text-sm font-semibold mb-4">
                                             {event.year[language]}
                                         </span>
-                                        <h3 className="text-2xl font-bold mb-4 text-banhcuon-900 font-roboto">
+                                        <h3 className="text-2xl font-bold mb-4 text-banhcuon-900 ">
                                             {event.title[language]}
                                         </h3>
                                         <p className="text-gray-600 leading-relaxed">{event.description[language]}</p>
