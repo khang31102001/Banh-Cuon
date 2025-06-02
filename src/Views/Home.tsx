@@ -15,7 +15,11 @@ import CTASection from '@/components/Home/CTASection';
 import SectionShortStory from '@/components/Home/SectionShortStory';
 import SectionVideo from '@/components/Home/SectionVideo';
 import { Media } from '@/assets/Media';
-import Video from '@/components/Home/video';
+import Video from '@/components/Home/Video';
+import { StatsSection } from '@/components/Home/StatsSection';
+import { WhyChooseUsSection } from '@/components/Home/WhyChooseUsSection';
+import { QuickContactSection } from '@/components/Home/QuickContactSection';
+// import { StatsSection, WhyChooseUsSection, ProcessSection, QuickContactSection, AdditionalHomeSections } from '@/components/test';
 
 
 const Home: React.FC = () => {
@@ -34,8 +38,8 @@ const Home: React.FC = () => {
       </div>
 
       {/* section video */}
-      <SectionVideo/>
-       {/* <Video/> */}
+      {/* <SectionVideo/> */}
+       <Video/>
        
      <div className=" relative z-0  bg-cover bg-center" style={{ backgroundImage: `url(${Media.bg_home_section_menu})` }}>
         <div className="absolute z-1 inset-0 bg-black bg-opacity-50"></div>
@@ -49,7 +53,9 @@ const Home: React.FC = () => {
         </div>
      </div>
     
-      <CTASection/>     
+      {/* <CTASection/>    */}
+      <StatsSection/>
+    
    
         
       {/* <FoodNonVegetarian/>
@@ -57,6 +63,10 @@ const Home: React.FC = () => {
       
 
       <GoogleReviews/>
+      <WhyChooseUsSection/>  
+      {/* <ProcessSection/> */}
+      <QuickContactSection/>
+      {/* <AdditionalHomeSections/> */}
      
     
       

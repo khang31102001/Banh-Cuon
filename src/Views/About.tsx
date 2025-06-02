@@ -5,6 +5,7 @@ import SectionStory from "@/components/About/SectionStory";
 import SectionDevelopment from "@/components/About/SectionDevelopment";
 import SectionValue from "@/components/About/SectionValue";
 import { Media } from "@/assets/Media";
+import { ProcessSection } from "@/components/About/ProcessSection";
 
 
 
@@ -24,6 +25,7 @@ const About = () => {
 
             {/* Story Section */}
             <SectionStory/>
+            <ProcessSection/>
 
             {/* Timeline Section */}
             <SectionDevelopment/>

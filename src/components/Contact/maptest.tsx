@@ -10,7 +10,7 @@ const Map = () => {
     // Store information
     const storeInfo = {
         name: "Bánh Cuốn Tây Hồ",
-        address: "127 Tây Hồ, Ba Đình, Hà Nội",
+        address: "127 Đinh Tên Hoàng ",
         phone: "+84 123 456 789",
         hours: "7:00 - 22:00 (Hàng ngày)",
         coordinates: {
@@ -84,8 +84,8 @@ const Map = () => {
                 />
 
                 {/* Store Info Cards */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-                    {/* Address Card */}
+                {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                 
                     <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                         <div className="flex items-start space-x-4">
                             <div className="bg-red-100 p-3 rounded-xl">
@@ -110,7 +110,7 @@ const Map = () => {
                         </div>
                     </div>
 
-                    {/* Contact Card */}
+                  
                     <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                         <div className="flex items-start space-x-4">
                             <div className="bg-green-100 p-3 rounded-xl">
@@ -135,7 +135,7 @@ const Map = () => {
                         </div>
                     </div>
 
-                    {/* Hours Card */}
+                  
                     <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                         <div className="flex items-start space-x-4">
                             <div className="bg-blue-100 p-3 rounded-xl">
@@ -157,7 +157,7 @@ const Map = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Map Container */}
                 <div className="relative">

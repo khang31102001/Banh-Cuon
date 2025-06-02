@@ -33,8 +33,8 @@ const Contact: React.FC = () => {
 
       <div className="container mx-auto px-4 py-12">
         <InfoContact/>
-        <SectionMap/>
-        {/* <Map/> */}
+        {/* <SectionMap/> */}
+        <Map/>
       </div>
     </div>
   );

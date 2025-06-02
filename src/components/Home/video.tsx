@@ -1,32 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, Volume2, VolumeX, Maximize, X, SkipBack, SkipForward } from 'lucide-react';
+import { useLanguage } from '@/Contexts/LanguageContext';
+import SectionTitle from '../SectionTitle';
 
-// Mock translation function
-const useLanguage = () => ({
-  t: (key) => {
-    const translations = {
-      'home.processTitle': 'Quy Trình Sản Xuất',
-      'home.videoTitle1': 'Khám Phá',
-      'home.videoTitle2': 'Quy Trình Của Chúng Tôi',
-      'home.videoSubtitle': 'Công nghệ hiện đại, chất lượng vượt trội',
-      'home.videoDescription': 'Với hơn 20 năm kinh nghiệm, chúng tôi tự hào mang đến quy trình sản xuất khép kín, đảm bảo chất lượng cao nhất cho sản phẩm.'
-    };
-    return translations[key] || key;
-  }
-});
-
-const SectionTitle = ({ title1, title2, subtitle, className }) => (
-  <div className={className}>
-    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-      <span className="text-gray-600">{title1}</span>
-      <br />
-      <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
-        {title2}
-      </span>
-    </h2>
-    <p className="text-xl text-gray-600 font-light">{subtitle}</p>
-  </div>
-);
 
 const Video = () => {
   const { t } = useLanguage();
@@ -267,17 +243,30 @@ const Video = () => {
           {/* Enhanced Content Section */}
           <div className="space-y-8 order-1 lg:order-2">
             <div className="space-y-6">
-              <SectionTitle
+              {/* <SectionTitle
                 title1={t('home.videoTitle1')}
                 title2={t('home.videoTitle2')}
                 subtitle={t('home.videoSubtitle')}
                 className="text-left"
-              />
+              /> */}
+
+            <SectionTitle
+              title1={t('home.videoTitle1')}
+              title2={t('home.videoTitle2')}
+              underline={false}
+              lightText={true}
+              centered={true}
+              subtitle={t('home.videoSubtitle')}
+              className="text-banhcuon-700 mb-6 fade-in-up"
+            />
+           
               
               <div className="space-y-6">
-                <p className="text-gray-700 text-lg leading-relaxed font-light">
+                {/* <p className="text-gray-700 text-lg leading-relaxed font-light">
                   {t('home.videoDescription')}
-                </p>
+                </p> */}
+
+              <p className="text-gray-700 text-lg leading-relaxed font-anton fade-in-up">{t('home.videoDescription')}</p>
                 
                 {/* Enhanced feature highlights */}
                 <div className="grid grid-cols-2 gap-4 mt-8">
@@ -303,14 +292,14 @@ const Video = () => {
       {isPlaying && (
         <div 
           ref={containerRef}
-          className="fixed inset-0 z-[100] bg-black flex items-center justify-center animate-in fade-in duration-300"
+          className="fixed inset-0 z-[100] bg-black flex items-center justify-center animate-in fade-in-up duration-300"
           onMouseMove={handleMouseMove}
         >
           {/* Video container */}
           <div className="relative w-full h-full">
             <video
               ref={videoRef}
-              src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+              src="https://res.cloudinary.com/dwqqve7ja/video/upload/v1745419906/o5wjjvglpclr5dze9cp0.mp4"
               className="w-full h-full object-contain"
               onTimeUpdate={handleTimeUpdate}
               onLoadedMetadata={handleLoadedMetadata}
