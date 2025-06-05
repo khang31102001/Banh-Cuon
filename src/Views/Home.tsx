@@ -60,7 +60,7 @@ const Home: React.FC = () => {
 
       <GoogleReviews/>
       <WhyChooseUsSection/>  
-      <QuickContactSection/>
+      // <QuickContactSection/>
 
      
     
