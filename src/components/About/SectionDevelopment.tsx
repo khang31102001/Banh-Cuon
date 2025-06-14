@@ -24,16 +24,18 @@ const SectionDevelopment = () => {
                     <SectionTitle
                         title1={t('about.timelineTitle')}
                         subtitle={t('about.timeSubtitle')}
-                        className="text-banhcuon-900"
+                     
+                        lightText={true}
+                    
                     />
                     
                     <div ref={timelineRef} className="max-w-6xl mx-auto relative">
                         <motion.div 
-                            className="absolute left-4 md:left-1/2 top-0 h-full w-1 bg-banhcuon-300 origin-top"
+                            className="absolute left-4 md:left-1/2 top-0 h-full w-1 bg-red-300 origin-top"
                             style={{ scaleY }}
                         >
                             <motion.div 
-                                className="absolute left-0 top-0 w-full bg-tay-ho-sunflower h-full"
+                                className="absolute left-0 top-0 w-full bg-[#F4A259] h-full"
                                 style={{ scaleY }}
                             />
                         </motion.div>
@@ -50,7 +52,7 @@ const SectionDevelopment = () => {
                                 }`}
                             >
                                 <motion.div 
-                                    className="timeline-dot absolute left-4 md:left-1/2 top-8 h-6 w-6 bg-banhcuon-600 rounded-full border-4 border-banhcuon-100 transform md:translate-x-[-12px] translate-x-[-12px] z-20 flex items-center justify-center"
+                                    className="timeline-dot absolute left-4 md:left-1/2 top-8 h-6 w-6 bg-red-600 rounded-full border-4 border-banhcuon-100 transform md:translate-x-[-12px] translate-x-[-12px] z-20 flex items-center justify-center"
                                     whileHover={{ scale: 1.2 }}
                                 >
                                     <span className="text-white text-xs font-bold">{index + 1}</span>
@@ -78,10 +80,10 @@ const SectionDevelopment = () => {
                                             index % 2 === 0 ? "order-2 md:pl-12" : "order-1 md:pr-12"
                                         } bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300`}
                                     >
-                                        <span className="inline-block px-4 py-2 rounded-full bg-banhcuon-600 text-white text-sm font-semibold mb-4">
+                                        <span className="inline-block px-4 py-2 rounded-full bg-red-600 text-white text-sm font-semibold mb-4">
                                             {event.year[language]}
                                         </span>
-                                        <h3 className="text-2xl font-bold mb-4 text-banhcuon-900 ">
+                                        <h3 className="text-2xl font-bold mb-4 text-[#F4A259] ">
                                             {event.title[language]}
                                         </h3>
                                         <p className="text-gray-600 leading-relaxed">{event.description[language]}</p>

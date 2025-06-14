@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '@/Contexts/LanguageContext';
 import HeroSection from '@/components/Home/HeroSection';
 // import CTASection from '@/components/Home/CTASection';
-import ProductBestSale from '@/components/Home/FoodBestSale';
-import FoodVegetarian from '@/components/Home/FoodVegetarian';
-import FoodNonVegetarian from '@/components/Home/FoodNonVegetarian';
 import GoogleReviews from '@/components/Home/GoogleSection';
 import FoodMenu from '@/components/Home/FoodMenu';
 import FoodSwiper from '@/components/Home/FoodSwiper';
@@ -14,8 +11,7 @@ import SectionShortStory from '@/components/Home/SectionShortStory';
 import { Media } from '@/assets/Media';
 import { StatsSection } from '@/components/Home/StatsSection';
 import { WhyChooseUsSection } from '@/components/Home/WhyChooseUsSection';
-import { QuickContactSection } from '@/components/Home/QuickContactSection';
-import Video from '@/components/Home/SectionVedeo';
+import Video from '@/components/Home/SectionVideo';
 
 
 
@@ -52,15 +48,10 @@ const Home: React.FC = () => {
     
       {/* <CTASection/>    */}
       <StatsSection/>
-    
-        
-      {/* <FoodNonVegetarian/>
-      <FoodVegetarian/> */}
       
-
       <GoogleReviews/>
       <WhyChooseUsSection/>  
-      // <QuickContactSection/>
+  
 
      
     

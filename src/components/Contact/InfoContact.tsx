@@ -10,11 +10,11 @@ const InfoContact = ()=> {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="space-y-8">
           <div>
-            <h2 className="secondary-heading mb-6">{t('common.contact')}</h2>
+            <h2 className="secondary-heading text-green-800 mb-6">{t('common.contact')}</h2>
             
             <div className="space-y-4">
               <div className="contact-info-item">
-                <MapPin className="h-5 w-5 text-primary" />
+                <MapPin className="h-5 w-5 text-red-500" />
                 <span className="cursor-pointers">
                   <a onClick={()=>{
                     const scrollToMap= document.getElementById('map');
@@ -29,7 +29,7 @@ const InfoContact = ()=> {
                 </span>
               </div>
               <div className="contact-info-item">
-                <Phone className="h-5 w-5 text-primary" />
+                <Phone className="h-5 w-5 text-red-500" />
                 <span className="cursor-pointers">
                   <a href="tel:028 3820 0584 " >
                     +84 028 3820 0584 
@@ -38,7 +38,7 @@ const InfoContact = ()=> {
                 </span>
               </div>
               <div className="contact-info-item">
-                <Clock className="h-5 w-5 text-primary" />
+                <Clock className="h-5 w-5 text-red-500" />
                 <span className="cursor-pointers">
                   <a href="https://maps.app.goo.gl/oeAyzjwaQS7A3kTv9" target="_blank" rel="noopener noreferrer">
                   {t('contact.hours')}
@@ -49,7 +49,7 @@ const InfoContact = ()=> {
           </div>
           
           <div>
-            <h2 className="secondary-heading mb-6">{t('contact.orderOnline')}</h2>
+            <h2 className="secondary-heading text-green-800 mb-6">{t('contact.orderOnline')}</h2>
             <div className="flex flex-col items-center">
               <p className="mb-4 text-muted-foreground">{t('contact.scanQR')}</p>
               <div className="bg-white p-2 rounded shadow-md">

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Star, Award, Users, ChefHat} from 'lucide-react';
+import SectionTitle from "../SectionTitle";
 export const StatsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [counts, setCounts] = useState({ customers: 0, years: 0, dishes: 0, reviews: 0 });
@@ -40,15 +41,12 @@ export const StatsSection = () => {
   return (
     <section ref={sectionRef} className="py-16 bg-gradient-to-r from-orange-50 to-yellow-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Những Con Số Ấn Tượng
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Hơn 60 năm phục vụ, chúng tôi tự hao về chất lượng và sự tin tưởng từ khách hàng
-          </p>
-        </div>
-        
+
+        <SectionTitle
+        title1="Những Con Số Ấn Tượng"
+        subtitle=" Hơn 60 năm phục vụ, chúng tôi tự hao về chất lượng và sự tin tưởng từ khách hàng"
+        lightText={true}
+        />        
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className={`text-center p-6 bg-white rounded-2xl shadow-lg transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
             <Users className="w-12 h-12 text-orange-500 mx-auto mb-4" />

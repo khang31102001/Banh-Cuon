@@ -81,6 +81,7 @@ const Map = () => {
                 <SectionTitle
                     title1="Vị Trí Cửa Hàng"
                     subtitle="Ghé thăm cửa hàng Bánh Cuốn Tây Hồ ở Hà Nội ngay hôm nay"
+                    lightText={true}
                 />
 
                 {/* Store Info Cards */}
@@ -212,10 +213,12 @@ const Map = () => {
 
                 {/* Transportation Options */}
                 <div className="mt-12">
-                    <div className="text-center mb-8">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">Cách thức di chuyển</h3>
-                        <p className="text-gray-600">Chọn phương tiện phù hợp để đến với chúng tôi</p>
-                    </div>
+                   
+                    <SectionTitle
+                        title1="Phương tiện di chuyển"
+                        subtitle="Dễ dàng đến cửa hàng Bánh Cuốn Tây Hồ bằng nhiều phương tiện khác nhau"
+                        lightText={true}
+                    />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {transportOptions.map((option, index) => (

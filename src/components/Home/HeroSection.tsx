@@ -84,7 +84,7 @@ const HeroSection = () => {
 
                     <div className='flex flex-col justify-center items-center text-base  '>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in-up font-anton leading-tight">
-                            <span className=" text-green-400 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] block mb-2 animate-[fade-in_1s_ease-out] opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
+                            <span className=" text-green-500 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] block mb-2 animate-[fade-in_1s_ease-out] opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
                                 {t("home.heroTitle")} <span className="text-cta">{t("home.heroBrand")}</span>
                             </span>
                             {/* <span
@@ -94,7 +94,7 @@ const HeroSection = () => {
                                 Gói trọn tinh hoa Việt
                             </span> */}
                             <p
-                                className="text-lg md:text-[1.4rem] text-white/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] mb-8 max-w-3xl mx-auto animate-[fade-in_1s_ease-out] opacity-0"
+                                className="text-[1rem] md:text-[1.4rem] text-white/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] mb-8 max-w-3xl mx-auto animate-[fade-in_1s_ease-out] opacity-0"
                                 style={{ fontStyle: 'italic', animationDelay: '0.9s', animationFillMode: 'forwards' }}
                             >
                                 "{t("home.heroSubtitle")}"

@@ -22,13 +22,13 @@ const SectionShortStory = () => {
                                 className="mb-6 fade-in-left text-3xl font-anton font-extrabold text-[#4A2F17]"
                             />
 
-                            <div className='"mt-8'>
-                                <p className="text-gray-700 text-lg leading-[3] font-anton fade-in-up">
-                                    {t('home.storyFirst')} <strong className="text-banh-green">1972</strong>, {t("home.heroTitle")} <strong className="text-[#EF3F36]"> {t("home.heroBrand")}</strong> {t('home.storySecond')} <span className="italic">{t('home.storyThird')}</span>.
+                            <div className='"mt-8 font-math leading-2 space-y-4'>
+                                <p className="text-gray-700 text-lg fade-in-up">
+                                    {t('home.storyFirst')} <strong className="text-green-800">1972</strong>, {t("home.heroTitle")} <strong className="text-red-800"> {t("home.heroBrand")}</strong> {t('home.storySecond')} <span className="italic">{t('home.storyThird')}</span>.
                                 </p>
 
-                                <p className="text-gray-700 text-lg leading-[3] font-anton fade-in-up">
-                                    {t('home.storyFour')} <strong className="text-banh-green">60 {t('common.year')}</strong>, {t('home.storyFive')} <strong>Hà Nội</strong>.
+                                <p className="text-gray-700 text-lg fade-in-up">
+                                    {t('home.storyFour')} <strong className="text-green-800">60 {t('common.year')}</strong>, {t('home.storyFive')} <strong>Hà Nội</strong>.
                                     {t('home.storySix')} <span className="font-medium text-[#4A2F17]">{t('home.storySeven')}</span>.
                                 </p>
                             </div>
@@ -36,7 +36,7 @@ const SectionShortStory = () => {
                                 <Link
                                     to="/menu"
                                     className="inline-flex items-center justify-center px-5 py-2 rounded-full 
-                                        text-white bg-[#44e844] hover:bg-[#369b36] 
+                                        text-white bg-green-800 hover:bg-green-800 
                                         shadow-md transition-all duration-300 group
                                         bg-gradient-to-r from-banh-green to-banh-green 
                                         bg-[length:0%_100%] bg-left hover:bg-[length:100%_100%] hover:text-white 
@@ -54,40 +54,40 @@ const SectionShortStory = () => {
                         {/* Image Section */}
                         <div className="grid grid-cols-2 gap-4 relative order-1 md:order-2 animate-on-scroll">
                             <div className="space-y-4">
-                                <span style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
+                                <div  style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
                                     <img
-                                        src={Media.banhcuon1}
+                                        src="https://media.baothaibinh.com.vn/upload/news/2_2023/banh_cuon_viet_nam_lot_top_10_mon_an_hap_dan_nhat_the_gioi_08241609022023.jpg"
                                         alt="Bánh Cuốn Tây Hồ"
                                         className="rounded-lg h-auto max-w-full transition-all duration-300 hover:scale-105 animation-element"
                                     />
-                                </span>
+                                </div>
 
-                                <span style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}>
+                                <div style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}>
                                     <img
-                                        src={Media.banhcuon2}
+                                        src="https://cafefcdn.com/203337114487263232/2023/2/6/photo-12-16756819003051743090099.jpg"
                                         alt="Bánh Cuốn Tây Hồ"
                                         className="rounded-lg h-auto max-w-full transition-all duration-300 hover:scale-105 animation-element"
                                     />
-                                </span>
+                                </div>
                             </div>
                             <div className="pt-8">
-                                <span style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
+                                <div style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
                                     <img
-                                        src={Media.banhcuon3}
+                                        src="https://cdn.buffetposeidon.com/app/media/Kham-pha-am-thuc/11.2023/241123-banh-cuon-buffet-poseidon-4.jpg"
                                         alt="Bánh Cuốn Tây Hồ"
                                         className="rounded-lg  h-auto max-w-full transition-all duration-300 hover:scale-105 animation-element"
                                     />
-                                </span>
+                                </div>
 
                                 {/* Video thumbnail with play button */}
                                 <div className="relative mt-4 rounded-lg overflow-hidden group">
-                                    <span style={{ animationDelay: '1.5s', animationFillMode: 'forwards' }}>
+                                    <div style={{ animationDelay: '1.5s', animationFillMode: 'forwards' }}>
                                         <img
-                                            src={Media.banhcuon4}
+                                            src="https://cafefcdn.com/203337114487263232/2023/2/6/photo-11-1675681892622756817619.jpg"
                                             alt="Bánh Cuốn Tây Hồ"
                                             className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105 animation-element"
                                         />
-                                    </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

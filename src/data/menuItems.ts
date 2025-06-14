@@ -31,7 +31,7 @@ const menuItems: MenuItem[] = [
   {
     id: 1,
     name: {
-      vi: 'Bánh Cuốn Chà Công',
+      vi: 'Bánh Cuốn Chà Bông',
       en: 'Vegetarian Banh Cuon with Vegan Floss',
       jp: 'ビーガンバインクオン（菜食フロス添え）',
     },

@@ -1,3 +1,5 @@
+import SectionTitle from "../SectionTitle";
+
 export const ProcessSection = () => {
   const steps = [
     {
@@ -29,14 +31,12 @@ export const ProcessSection = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-orange-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Quy Trình Làm Bánh Cuốn
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Từng bước được thực hiện tỉ mỉ để tạo ra món bánh cuốn hoàn hảo
-          </p>
-        </div>
+    
+        <SectionTitle
+        title1="Quy Trình Làm Bánh Cuốn"
+        subtitle=" Từng bước được thực hiện tỉ mỉ để tạo ra món bánh cuốn hoàn hảo"
+        lightText={true}
+        />
         
         <div className="relative">
           {/* Connection Line */}

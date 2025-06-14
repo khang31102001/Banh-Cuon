@@ -22,7 +22,6 @@ const FoodMenu = () => {
            
           <div  className="text-center mb-6 cursor-pointer">
             <SectionTitle
-              underline={false}
               title1={t('home.foodTitle1')}
               subtitle={t('home.foodSubtitle1')}
               className=" fade-in-up"

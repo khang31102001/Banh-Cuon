@@ -7,7 +7,7 @@ const SectionValue = () => {
         {
             icon: (
                 <svg
-                    className="w-12 h-12 text-banhcuon-500"
+                    className="w-12 h-12 "
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -36,7 +36,7 @@ const SectionValue = () => {
         {
             icon: (
                 <svg
-                    className="w-12 h-12 text-banhcuon-500"
+                    className="w-12 h-12 "
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -65,7 +65,7 @@ const SectionValue = () => {
         {
             icon: (
                 <svg
-                    className="w-12 h-12 text-banhcuon-500"
+                    className="w-12 h-12 "
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -94,7 +94,7 @@ const SectionValue = () => {
         {
             icon: (
                 <svg
-                    className="w-12 h-12 text-banhcuon-500"
+                    className="w-12 h-12 "
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -128,6 +128,7 @@ const SectionValue = () => {
                     <SectionTitle
                         title1={t('about.valueTitle')}
                         subtitle={t('about.valueSubtitle')}
+                        lightText={true}
                     />
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {values.map((value, index) => (
@@ -135,8 +136,8 @@ const SectionValue = () => {
                                 key={index}
                                 className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center animate-on-scroll"
                             >
-                                <div className="flex justify-center mb-4">{value.icon}</div>
-                                <h3 className="text-xl font-bold mb-3 text-banhcuon-900 ">
+                                <div className="flex justify-center text-red-500  mb-4">{value.icon}</div>
+                                <h3 className="text-xl font-bold mb-3  ">
                                     {value.title[language]}
                                 </h3>
                                 <p className="text-gray-600">{value.description[language]}</p>

@@ -1,4 +1,5 @@
 import { Star, Award, Clock, Users, ChefHat, Heart, MapPin, Truck, Phone, CheckCircle } from 'lucide-react';
+import SectionTitle from '../SectionTitle';
 export const WhyChooseUsSection = () => {
   const features = [
     {
@@ -28,16 +29,13 @@ export const WhyChooseUsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white my-4">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Tại Sao Chọn Chúng Tôi?
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Với hơn 20 năm kinh nghiệm, chúng tôi mang đến trải nghiệm ẩm thực tuyệt vời nhất
-          </p>
-        </div>
+        <SectionTitle
+         title1='Tại Sao Chọn Chúng Tôi?'
+         subtitle=' Với hơn 20 năm kinh nghiệm, chúng tôi mang đến trải nghiệm ẩm thực tuyệt vời nhất'
+         lightText={true}
+        />
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (

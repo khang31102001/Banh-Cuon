@@ -63,7 +63,7 @@ const FormContact = ()=>{
     return(
         <div>
         <div className="bg-white dark:bg-card p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold mb-6">{t('contact.messageUs')}</h2>
+          <h2 className="text-2xl text-green-800 font-semibold mb-6">{t('contact.messageUs')}</h2>
           
           <form ref={form} onSubmit={handleSubmit} className="space-y-4">
             <div>

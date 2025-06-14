@@ -14,6 +14,7 @@ return(
                             <SectionTitle
                                 title1={t('about.storyTitle')}
                                 centered={false}
+                                lightText={true}
                                 className="mb-6"
                             />
                             <p className="text-gray-600 mb-4 ">{t('about.storyDescription1')}</p>
@@ -27,7 +28,7 @@ return(
                                 className="rounded-lg shadow-lg w-full object-cover"
                             />
                             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg w-48">
-                                <p className="text-banhcuon-900  text-lg">{t('about.storyImgtitle1')}</p>
+                                <p className="text-[#F4A259]  text-lg">{t('about.storyImgtitle1')}</p>
                                 <p className="text-gray-600">{t('about.storyImgtitle2')}</p>
                             </div>
                         </div>

@@ -84,7 +84,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className, show
       <img src={Media.logo} alt="Tây Hồ Logo" className="h-12 object-contain" />
 
       {item.category.name && (
-        <Badge className={`text-xs text-white ${item.category.name.vi === "Món chay" ? "bg-banh-green" : "bg-red-400"}`}>
+        <Badge className={`text-xs text-white ${item.category.name.vi === "Món chay" ? "bg-green-700" : "bg-red-700"}`}>
           {item.category.name[language]}
         </Badge>
       )}
@@ -121,7 +121,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className, show
   {/* Content Container with Fixed Layout */}
   <div className="p-4 flex flex-col flex-grow">
     <div className="mb-2 h-14 overflow-hidden fade-in-left">
-      <h3 className="text-xl font-semibold text-banhcuon-800 line-clamp-2">{item.name[language]}</h3>
+      <h3 className="text-xl font-semibold text-green-700 line-clamp-2">{item.name[language]}</h3>
     </div>
     
     {/* Description with fixed height and ellipsis */}
@@ -131,7 +131,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className, show
 
     {/* Ingredients with fixed height */}
     <div className="mb-3 h-16 overflow-hidden zoom-in ">
-      <h4  className="text-sm font-medium ">{t('menu.ingredients')}:</h4>
+      <h4  className="text-sm font-medium  ">{t('menu.ingredients')}:</h4>
       <p className="text-xs text-muted-foreground line-clamp-2">
         {item.ingredients[language]}
       </p>
@@ -139,7 +139,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ item, openLightbox, className, show
 
     {/* Push price and button to bottom with margin-top: auto */}
     <div className="mt-auto pt-2 flex items-center justify-between ">
-      <div className="font-semibold text-primary">
+      <div className="font-semibold text-xl text-red-600">
         {formatPrice(item.price)} {t('menu.currency')}
       </div>
       <button 

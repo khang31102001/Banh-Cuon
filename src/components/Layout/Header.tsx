@@ -83,7 +83,7 @@ const Header: React.FC = () => {
               onMouseEnter={item.preload}
               className={`group relative font-anton font-semibold text-base 
                           transition-colors duration-300
-                          ${isActive(item.path) ? 'text-cta' : isScrolled ? ' text-black hover:text-cta ' : 'text-white hover:text-[#F44336]'}
+                          ${isActive(item.path) ? 'text-cta' : isScrolled ? ' text-green-900 hover:text-cta ' : 'text-white hover:text-[#F44336]'}
                         `}
             >
               {item.label}
@@ -135,7 +135,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button
-                className="md:hidden flex flex-col justify-center items-center space-y-1.5 z-50"
+                className="md:hidden flex flex-col justify-center items-center text-green-900 space-y-1.5 z-50"
                 onClick={()=>setIsMenuOpen(!isMenuOpen)}
                 aria-label="open menu"
               >
@@ -162,7 +162,7 @@ const Header: React.FC = () => {
                   key={item.path}
                   to={item.path}
                   onMouseEnter={item.preload}
-                  className={`font-anton text-xl transition-colors hover:text-primary ${isActive(item.path) ? 'text-cta' : 'text-foreground'
+                  className={`font-anton text-xl transition-colors hover:text-primary ${isActive(item.path) ? 'text-cta' : 'text-green-900'
                     }`}
                   onClick={() => setIsMenuOpen(false)}
                 >

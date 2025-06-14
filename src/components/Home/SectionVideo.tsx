@@ -253,7 +253,6 @@ const Video = () => {
             <SectionTitle
               title1={t('home.videoTitle1')}
               title2={t('home.videoTitle2')}
-              underline={false}
               lightText={true}
               centered={true}
               subtitle={t('home.videoSubtitle')}
@@ -266,7 +265,7 @@ const Video = () => {
                   {t('home.videoDescription')}
                 </p> */}
 
-              <p className="text-gray-700 text-lg leading-relaxed font-anton fade-in-up">{t('home.videoDescription')}</p>
+              <p className="text-gray-700 text-lg leading-relaxed  fade-in-up">{t('home.videoDescription')}</p>
                 
                 {/* Enhanced feature highlights */}
                 <div className="grid grid-cols-2 gap-4 mt-8">
@@ -381,9 +380,9 @@ const Video = () => {
                 {/* Right side controls */}
                 <div className="flex items-center space-x-4">
                   {/* Video title */}
-                  <div className="text-white text-lg font-semibold">
+                  <h1 className="hidden sm:block text-white text-lg font-semibold">
                     {t("home.processTitle")}
-                  </div>
+                  </h1>
                   
                   {/* Close button */}
                   <button

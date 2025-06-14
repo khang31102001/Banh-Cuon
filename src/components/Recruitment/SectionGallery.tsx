@@ -10,6 +10,7 @@ const SectionGallery = () => {
                     <SectionTitle
                         title1="Môi Trường Làm Việc"
                         subtitle="Khám phá không gian làm việc năng động và thân thiện tại Bánh Cuốn Tây Hồ"
+                        lightText={true}
                     />
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4  animation-element in-vew">

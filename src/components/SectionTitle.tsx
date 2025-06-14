@@ -8,7 +8,6 @@ interface SectionTitleProps {
   subtitle?: string;
   centered?: boolean;
   className?: string;
-  underline?: boolean;
   lightText?: boolean;
   subtitleColorClass?: string;
 }
@@ -21,11 +20,10 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   centered = true,
   className = "",
   lightText = false,
-  underline = false,
   subtitleColorClass = "",
 }) => {
-  const textColorClass1 = lightText ? "text-banh-green" : "text-[#F4A259]";
-  const textColorClass2 = lightText ? "text-cta" : "text-black";
+  const textColorClass1 = lightText ? "text-green-900" : "text-[#F4A259]";
+  const textColorClass2 = lightText ? "text-red-800" : "text-black";
   const textColorClass3 = lightText ? "text-black" : "text-white";
 
   return (
@@ -37,13 +35,9 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
         style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
       >
         {title1} <span className={`${textColorClass2}`}>{title2}</span>  <span className={`${textColorClass3}`}>{title3}</span>
-        {title1 !== '' 
-                && title2 !==''  
-                && !!underline 
-                && (<span className="absolute -bottom-2 left-0 h-1 w-full bg-banh-green rounded-full "></span>)}
       </h2>
       {subtitle && (
-        <p className={`text-[1.2rem] font-anton md:text-xl ${subtitleColorClass} max-w-3xl mx-auto mt-4 leading-relaxed`}>
+        <p className={`text-[1.2rem]  md:text-xl ${subtitleColorClass} max-w-3xl mx-auto mt-4 leading-relaxed`}>
           {subtitle}
         </p>
       )}

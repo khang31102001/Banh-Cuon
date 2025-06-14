@@ -146,6 +146,7 @@ export default {
 				'quicksand': ['Quicksand', 'sans-serif'],
 				'playfair': ['Playfair Display', 'serif'],
 				 montserrat: ['Montserrat', 'sans-serif'],
+				 math: ['math'], 
 				
 			},
 		}

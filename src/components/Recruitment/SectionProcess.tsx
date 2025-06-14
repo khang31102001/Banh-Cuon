@@ -62,11 +62,12 @@ const SectionProcess = () => {
     return (
         <div>
             {/* Application Process Section */}
-            <section className="section-padding bg-banhcuon-50">
+            <section className="section-padding bg-red-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionTitle
                         title1={t('recruitment.processTitle')}
                         subtitle={t('recruitment.processSubtitle')}
+                        lightText={true}
                     />
 
                     <div className="max-w-4xl mx-auto">
@@ -76,10 +77,10 @@ const SectionProcess = () => {
                                     key={index}
                                     className="bg-white p-6 rounded-xl shadow-sm text-center animate-on-scroll"
                                 >
-                                    <div className="w-12 h-12 bg-banhcuon-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                                    <div className="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                                         {item.step[language]}
                                     </div>
-                                    <h3 className="text-xl font-bold mb-3 text-banhcuon-900 ">
+                                    <h3 className="text-xl font-bold mb-3  ">
                                         {item.title[language]}
                                     </h3>
                                     <p className="text-gray-600">{item.description[language]}</p>
