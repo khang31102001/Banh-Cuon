@@ -34,7 +34,7 @@ export const WhyChooseUsSection = () => {
         <SectionTitle
          title1='Tại Sao Chọn Chúng Tôi?'
          subtitle=' Với hơn 20 năm kinh nghiệm, chúng tôi mang đến trải nghiệm ẩm thực tuyệt vời nhất'
-         lightText={true}
+         
         />
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

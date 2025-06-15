@@ -83,7 +83,7 @@ const Header: React.FC = () => {
               onMouseEnter={item.preload}
               className={`group relative font-anton font-semibold text-base 
                           transition-colors duration-300
-                          ${isActive(item.path) ? 'text-cta' : isScrolled ? ' text-green-900 hover:text-cta ' : 'text-white hover:text-[#F44336]'}
+                          ${isActive(item.path) ? 'text-cta' : isScrolled ? ' text-black hover:text-cta ' : 'text-white hover:text-[#F44336]'}
                         `}
             >
               {item.label}
@@ -162,7 +162,7 @@ const Header: React.FC = () => {
                   key={item.path}
                   to={item.path}
                   onMouseEnter={item.preload}
-                  className={`font-anton text-xl transition-colors hover:text-primary ${isActive(item.path) ? 'text-cta' : 'text-green-900'
+                  className={`font-anton text-xl transition-colors hover:text-red-700 ${isActive(item.path) ? 'text-cta' : 'text-black'
                     }`}
                   onClick={() => setIsMenuOpen(false)}
                 >

@@ -125,21 +125,21 @@ const HeroSection = () => {
                 <div className="absolute bottom-0 left-0 w-full bg-black/70 backdrop-blur-sm text-white py-4">
                     <div className="container mx-auto px-4">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center sm:justify-items-center">
-                            <div className="flex items-center">
+                            <div className="flex items-start h-full">
                                 <Clock className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>
                                     <p className="text-sm font-medium font-anton">{t("home.heroOpenTime")}</p>
                                     <p className="text-xs text-gray-300">5:30 - 21:30</p>
                                 </div>
                             </div>
-                            <div className="flex items-center">
+                            <div className="flex items-start h-full">
                                 <MapPin className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>
                                     <p className="text-sm font-medium font-anton">{t("home.heroAddress")}</p>
                                     <p className="text-xs text-gray-300">{t("home.heroLocation")}</p>
                                 </div>
                             </div>
-                            <div className="flex items-center">
+                            <div className="flex items-start h-full">
                                 <Phone className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>
                                     <p className="text-sm font-medium font-anton">{t("home.heroOrder")}</p>

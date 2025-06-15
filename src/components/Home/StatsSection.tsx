@@ -45,7 +45,7 @@ export const StatsSection = () => {
         <SectionTitle
         title1="Những Con Số Ấn Tượng"
         subtitle=" Hơn 60 năm phục vụ, chúng tôi tự hao về chất lượng và sự tin tưởng từ khách hàng"
-        lightText={true}
+        
         />        
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className={`text-center p-6 bg-white rounded-2xl shadow-lg transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>

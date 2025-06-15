@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
           {/* Social Media */}
           <div className="space-y-4 ">
             <div className='flex flex-col justify-center items-center'>
-              <h4 className=" font-semibold text-green-800 text-lg">{t('common.follow')}</h4>
+              <h4 className=" font-semibold text-black text-lg">{t('common.follow')}</h4>
               <div className="flex mt-2 space-x-4">
                 {socials.map((social, index)=> {
                   return(
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-lg text-green-900">{t('common.home')}</h4>
+            <h4 className="font-semibold text-lg text-black">{t('common.home')}</h4>
             {Links.map((link, index)=> {
               return (
                 <ul key={index} className="space-y-2">
@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className=" font-semibold text-lg text-green-900">{t('common.contact')}</h4>
+            <h4 className=" font-semibold text-lg text-black">{t('common.contact')}</h4>
             {contactInfo.map((info, index)=>{
               return(
                 <ul key={index} className="space-y-2">

@@ -3,21 +3,23 @@ import React from "react";
 interface SectionBannerProps {
   title: string;
   backgroundImage?: string;
+  backgroundPosition?: string;
   children?: React.ReactNode;
   className?: string;
 }
 
-const SectionBanner: React.FC<SectionBannerProps> = ({
+const SectionBanner = ({
   title,
   backgroundImage,
+  backgroundPosition = "center",
   children,
   className = "",
-}) => {
+}: SectionBannerProps) => {
   const bgStyle = backgroundImage
     ? {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: backgroundPosition,
         backgroundAttachment: "fixed",
       }
     : {};

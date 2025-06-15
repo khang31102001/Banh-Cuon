@@ -54,7 +54,7 @@ export const ProcessSection = () => {
                 <div className="bg-white rounded-2xl p-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2">
                   <div className="text-4xl mb-4">{step.image}</div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-3">{step.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                  <p className="text-black leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}

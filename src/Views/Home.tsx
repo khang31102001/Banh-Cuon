@@ -12,6 +12,7 @@ import { Media } from '@/assets/Media';
 import { StatsSection } from '@/components/Home/StatsSection';
 import { WhyChooseUsSection } from '@/components/Home/WhyChooseUsSection';
 import Video from '@/components/Home/SectionVideo';
+import { ProcessSection } from '@/components/Home/ProcessSection';
 
 
 
@@ -33,6 +34,7 @@ const Home: React.FC = () => {
       {/* section video */}
       {/* <SectionVideo/> */}
        <Video/>
+       <ProcessSection/>
        
      <div className=" relative z-0  bg-cover bg-center" style={{ backgroundImage: `url(${Media.bg_home_section_menu})` }}>
         <div className="absolute z-1 inset-0 bg-black bg-opacity-50"></div>
@@ -47,10 +49,11 @@ const Home: React.FC = () => {
      </div>
     
       {/* <CTASection/>    */}
+     
       <StatsSection/>
-      
       <GoogleReviews/>
-      <WhyChooseUsSection/>  
+      {/* <WhyChooseUsSection/>   */}
+      
   
 
      
