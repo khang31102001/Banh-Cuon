@@ -10,7 +10,7 @@ const InfoContact = ()=> {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="space-y-8">
           <div>
-            <h2 className="secondary-heading text-green-800 mb-6">{t('common.contact')}</h2>
+            <h2 className="secondary-heading text-gray-900 mb-6">{t('common.contact')}</h2>
             
             <div className="space-y-4">
               <div className="contact-info-item">
@@ -49,7 +49,7 @@ const InfoContact = ()=> {
           </div>
           
           <div>
-            <h2 className="secondary-heading text-green-800 mb-6">{t('contact.orderOnline')}</h2>
+            <h2 className="secondary-heading text-grey-900 mb-6">{t('contact.orderOnline')}</h2>
             <div className="flex flex-col items-center">
               <p className="mb-4 text-muted-foreground">{t('contact.scanQR')}</p>
               <div className="bg-white p-2 rounded shadow-md">

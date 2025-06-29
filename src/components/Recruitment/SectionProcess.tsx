@@ -65,7 +65,7 @@ const SectionProcess = () => {
             <section className="section-padding bg-red-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionTitle
-                        title1={t('recruitment.processTitle')}
+                        title3={t('recruitment.processTitle')}
                         subtitle={t('recruitment.processSubtitle')}
                         lightText={true}
                     />

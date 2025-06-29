@@ -20,6 +20,7 @@ const Recruitment: React.FC = () => {
       <SectionBanner
       title={t('recruitment.title')}
       backgroundImage={Media.banner_Recruitment}
+       className="h-[600px]"
       >
           <p className="text-neutral-200 text-lg md:text-xl mt-2 drop-shadow-sm tracking-wide">
             {t('recruitment.subtitle')}
@@ -31,7 +32,7 @@ const Recruitment: React.FC = () => {
         <div className="mb-16">
          
           <SectionTitle
-          title1={t('recruitment.joinUs')}
+          title3={t('recruitment.joinUs')}
           lightText={true}
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

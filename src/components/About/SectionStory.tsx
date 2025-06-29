@@ -12,10 +12,11 @@ return(
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="animation-element">
                             <SectionTitle
-                                title1={t('about.storyTitle')}
+                                title3={t('about.storyTitle')}
+                                lightText = {true}
                                 centered={false}
-                                lightText={true}
-                                className="mb-6"
+                             
+                                className="mb-6 text-black"
                             />
                             <p className="text-gray-600 mb-4 ">{t('about.storyDescription1')}</p>
                             <p className="text-gray-600 mb-4 ">{t('about.storyDescription2')}</p>
@@ -23,7 +24,7 @@ return(
                         </div>
                         <div className="relative animation-element">
                             <img
-                                src={Media.img1_section_about}
+                                src="https://res.cloudinary.com/dwqqve7ja/image/upload/v1751182632/511201316_122119091714885814_2975169683791964939_n_ijxpa2.jpg"
                                 alt="Bánh Cuốn Tây Hồ"
                                 className="rounded-lg shadow-lg w-full object-cover"
                             />

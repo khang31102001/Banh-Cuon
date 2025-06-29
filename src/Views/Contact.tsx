@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/Contexts/LanguageContext';
-import SectionMap from '@/components/Contact/SectionMap';
 import InfoContact from '@/components/Contact/InfoContact';
 import SectionBanner from '@/components/SectionBanner';
 import { Media } from '@/assets/Media';
@@ -14,9 +13,10 @@ const Contact: React.FC = () => {
     <div className="min-h-screen">
       
       <SectionBanner
+      
       title={t('contact.title')}
       backgroundImage={Media.banner_contact}
-      className=''
+      className='h-[600px]'
       >
         <p className="text-neutral-200 text-lg md:text-xl mt-2 drop-shadow-sm tracking-wide">
             {t('contact.subtitle')}

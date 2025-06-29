@@ -153,7 +153,7 @@ const FormRecruitment = () => {
     };
 
     return (
-        <div>
+        <section className="py-8">
             {/* Application Form */}
             <div id="application-form" className="max-w-2xl mx-auto bg-white dark:bg-card p-8 rounded-lg shadow-lg animate-slide-up">
                 <h2 className="text-2xl font-semibold mb-6">{t('recruitment.applyForm')}</h2>
@@ -288,7 +288,7 @@ const FormRecruitment = () => {
                     </div>
                 </form>
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -33,21 +33,25 @@ const Lightbox: React.FC<LightboxProps> = ({ isOpen, image, onClose }) => {
       className={`lightbox ${isOpen ? 'active' : ''}`}
       onClick={onClose}
     >
-      <button
-        className="absolute top-4 right-4 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
-        onClick={(e) => {
-          e.stopPropagation();
-          onClose();
-        }}
-      >
-        <X size={24} />
-      </button>
-      <img
-        src={image || 'https://placehold.co/800x600/e2d1c3/white?text=Bánh+Cuốn+Tây+Hồ'}
-        alt="Enlarged food"
-        className="lightbox-image"
-        onClick={(e) => e.stopPropagation()}
-      />
+        <div className="relative">
+          <button
+          className="absolute top-4 z-50 right-4 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
+          onClick={(e) => {
+            e.stopPropagation();
+            onClose();
+          }}
+        >
+          <X size={24} />
+        </button>
+        <img
+          src={image || 'https://placehold.co/800x600/e2d1c3/white?text=Bánh+Cuốn+Tây+Hồ'}
+          alt="Enlarged food"
+          className="lightbox-image"
+          onClick={(e) => e.stopPropagation()}
+        />
+
+        </div>
+     
     </div>
   );
 };

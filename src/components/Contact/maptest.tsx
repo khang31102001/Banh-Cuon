@@ -79,7 +79,7 @@ const Map = () => {
             {/* Map Section */}
             <div id="map" className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-40">
                 <SectionTitle
-                    title1="Vị Trí Cửa Hàng"
+                    title3="Vị Trí Cửa Hàng"
                     subtitle="Ghé thăm cửa hàng Bánh Cuốn Tây Hồ ở Hà Nội ngay hôm nay"
                     lightText={true}
                 />
@@ -215,7 +215,7 @@ const Map = () => {
                 <div className="mt-12">
                    
                     <SectionTitle
-                        title1="Phương tiện di chuyển"
+                        title3="Phương tiện di chuyển"
                         subtitle="Dễ dàng đến cửa hàng Bánh Cuốn Tây Hồ bằng nhiều phương tiện khác nhau"
                         lightText={true}
                     />

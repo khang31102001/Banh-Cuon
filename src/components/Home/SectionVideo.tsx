@@ -3,8 +3,12 @@ import { Play, Pause, Volume2, VolumeX, Maximize, X, SkipBack, SkipForward } fro
 import { useLanguage } from '@/Contexts/LanguageContext';
 import SectionTitle from '../SectionTitle';
 
+interface Props {
+  backgroundImage?: string
+  videoOverlay?: string
+}
 
-const Video = () => {
+const Video = ({backgroundImage, videoOverlay}:Props) => {
   const { t } = useLanguage();
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHover, setIsHover] = useState(false);
@@ -148,7 +152,7 @@ const Video = () => {
   }, [isPlaying, isVideoPlaying]);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20" style={{ backgroundImage: `url(${backgroundImage})` }}>
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-red-100/30 to-orange-100/30 rounded-full blur-3xl"></div>
@@ -174,7 +178,7 @@ const Video = () => {
                 
                 {/* Video preview */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900">
-                  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpIi8+Cjwvc3ZnPgo=')] opacity-30"></div>
+                  <div className={`absolute inset-0 bg-[url('${videoOverlay}')]  opacity-30`}></div>
                 </div>
                 
                 {/* Gradient overlay with animation */}
@@ -243,13 +247,6 @@ const Video = () => {
           {/* Enhanced Content Section */}
           <div className="space-y-8 order-1 lg:order-2">
             <div className="space-y-6">
-              {/* <SectionTitle
-                title1={t('home.videoTitle1')}
-                title2={t('home.videoTitle2')}
-                subtitle={t('home.videoSubtitle')}
-                className="text-left"
-              /> */}
-
             <SectionTitle
               title1={t('home.videoTitle1')}
               title2={t('home.videoTitle2')}
@@ -291,7 +288,7 @@ const Video = () => {
       {isPlaying && (
         <div 
           ref={containerRef}
-          className="fixed inset-0 z-[100] bg-black flex items-center justify-center animate-in fade-in-up duration-300"
+          className="fixed inset-0 z-[9999] bg-black flex items-center justify-center animate-in fade-in-up duration-300"
           onMouseMove={handleMouseMove}
         >
           {/* Video container */}
@@ -299,7 +296,7 @@ const Video = () => {
             <video
               ref={videoRef}
               src="https://res.cloudinary.com/dwqqve7ja/video/upload/v1745419906/o5wjjvglpclr5dze9cp0.mp4"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover"
               onTimeUpdate={handleTimeUpdate}
               onLoadedMetadata={handleLoadedMetadata}
               onEnded={() => setIsVideoPlaying(false)}

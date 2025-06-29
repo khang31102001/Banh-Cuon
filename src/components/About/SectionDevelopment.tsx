@@ -22,9 +22,8 @@ const SectionDevelopment = () => {
             <section className="section-padding bg-banhcuon-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionTitle
-                        title1={t('about.timelineTitle')}
+                        title3={t('about.timelineTitle')}
                         subtitle={t('about.timeSubtitle')}
-                     
                         lightText={true}
                     
                     />

@@ -2,7 +2,7 @@
 import React from "react";
 
 interface SectionTitleProps {
-  title1: string;
+  title1?: string;
   title2?: string;
   title3?: string;
   subtitle?: string;
@@ -24,7 +24,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
 }) => {
   const textColorClass1 = lightText ? "text-green-900" : "text-[#F4A259]";
   const textColorClass2 = lightText ? "text-red-800" : "text-black";
-  const textColorClass3 = lightText ? "text-black" : "text-white";
+  const textColorClass3 = lightText ? "text-gray-900" : "text-white";
 
   return (
     <div

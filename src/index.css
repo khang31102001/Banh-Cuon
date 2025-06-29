@@ -81,7 +81,8 @@
   
   
   body {
-    @apply bg-background text-foreground font-anton;
+    @apply bg-background text-foreground font-anton ;
+    /* font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Arial", sans-serif; */
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -371,4 +372,17 @@
     background-color: var(--light-green);
     border-radius: 12px;
     padding: 16px;
+  }
+
+  
+  .custom-button-prev{
+    left: 0x;
+    z-index: 50;
+
+  }
+
+  .custom-button-next{
+    right: 0px;
+    z-index: 50;
+
   }

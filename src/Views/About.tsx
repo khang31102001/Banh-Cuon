@@ -17,6 +17,7 @@ const About = () => {
                 title="Giới Thiệu"
                 backgroundImage={Media.banner_about}
                 backgroundPosition="75% 50%"
+                className="h-[600px]"
             >
                 <p className="text-neutral-200 text-lg md:text-xl mt-2 drop-shadow-sm tracking-wide">
                     Tìm hiểu câu chuyện, giá trị cốt lõi và hành trình phát triển của Bánh Cuốn Tây Hồ

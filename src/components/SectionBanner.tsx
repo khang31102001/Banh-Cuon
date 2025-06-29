@@ -28,8 +28,8 @@ const SectionBanner = ({
  
 
   return (
-    <header
-      className={`py-[21rem] ${backgroundImage ? "bg-banhcuon-400" : "bg-gradient-to-r from-banhcuon-50 to-leaf-50"} ${className}`}
+    <div
+      className={`py-[10rem] ${backgroundImage ? "bg-banhcuon-400" : "bg-gradient-to-r from-banhcuon-50 to-leaf-50"} ${className}`}
       style={bgStyle}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,7 +41,7 @@ const SectionBanner = ({
          
         {children && <div className="mt-8">{children}</div>}
       </div>
-    </header>
+    </div>
   );
 };
 

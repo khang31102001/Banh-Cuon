@@ -6,7 +6,7 @@ import { Media } from "@/assets/Media";
 const SocialSidebar = () => {
   const [isHover, setIsHover] = useState(false);
   return (
-    <div className="fixed right-0 bottom-0 z-50 flex flex-col space-y-4 p-4">
+    <div className="fixed right-0 bottom-0 z-[9999] flex flex-col space-y-4 p-4">
       {/* Phone Button */}
       <a
         href="tel:(028) 3820 0584"
