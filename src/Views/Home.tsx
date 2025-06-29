@@ -31,7 +31,7 @@ const Home: React.FC = () => {
       
       {/* section video */}
       {/* <SectionVideo/> */}
-       <Video videoOverlay='https://mayviendong.vn/wp-content/uploads/2018/09/banh-cuon-0.jpg'/>
+       <Video videoOverlay='https://mayviendong.vn/wp-content/uploads/2018/09/banh-cuon-0.jpg' />
        <ProcessSection/>
        <FoodMenu backgroundImage="https://feedthepudge.com/wp-content/uploads/2025/02/Banh-Cuon-Cover-.webp"/>
     

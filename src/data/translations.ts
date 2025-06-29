@@ -159,7 +159,7 @@ type TranslationType = {
         heroSubtitle: "Crafted by skillful hands, each roll tells a story of Vietnam",
         heroOpenTime: 'Open daily',
         heroAddress:'Main Address',
-        heroLocation: "127 Dinh Tien Hoang Street, Da Kao Ward, District 1, Ho Chi Minh City",
+        heroLocation: "127 Dinh Tien Hoang - Da Kao, District 1, Ho Chi Minh City",
         heroOrder: "Reserve a Table",
         welcomeTitle: 'Welcome to Banh Cuon Tay Ho',
         storyFirst: 'Since the year',

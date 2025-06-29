@@ -32,12 +32,7 @@ export const ProcessSection = () => {
     <section className="py-20 bg-gradient-to-b from-orange-50 to-white">
       <div className="container mx-auto px-4">
     
-        <SectionTitle
-        title1="Quy Trình Làm Bánh Cuốn"
-        subtitle=" Từng bước được thực hiện tỉ mỉ để tạo ra món bánh cuốn hoàn hảo"
-        lightText={true}
-        />
-        
+     
         <div className="relative">
           {/* Connection Line */}
           <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-orange-200 via-orange-400 to-orange-200 transform -translate-y-1/2"></div>

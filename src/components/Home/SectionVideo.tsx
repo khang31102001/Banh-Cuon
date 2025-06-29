@@ -178,7 +178,7 @@ const Video = ({backgroundImage, videoOverlay}:Props) => {
                 
                 {/* Video preview */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900">
-                  <div className={`absolute inset-0 bg-[url('${videoOverlay}')]  opacity-30`}></div>
+                  <div className="absolute inset-0  opacity-30 bg-cover bg-center" style={{ backgroundImage: `url(${videoOverlay})` }}></div>
                 </div>
                 
                 {/* Gradient overlay with animation */}
@@ -270,7 +270,7 @@ const Video = ({backgroundImage, videoOverlay}:Props) => {
                     { icon: "🏭", text: "Quy trình khép kín", color: "from-blue-500/10 to-blue-600/10 border-blue-200" },
                     { icon: "✨", text: "Chất lượng cao", color: "from-yellow-500/10 to-yellow-600/10 border-yellow-200" },
                     { icon: "🛡️", text: "An toàn vệ sinh", color: "from-green-500/10 to-green-600/10 border-green-200" },
-                    { icon: "⏰", text: "20+ năm kinh nghiệm", color: "from-purple-500/10 to-purple-600/10 border-purple-200" }
+                    { icon: "⏰", text: "60+ năm kinh nghiệm", color: "from-purple-500/10 to-purple-600/10 border-purple-200" }
                   ].map((item, index) => (
                     <div key={index} className={`flex items-center space-x-3 p-4 bg-gradient-to-r ${item.color} rounded-xl backdrop-blur-sm border hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer`}>
                       <span className="text-2xl">{item.icon}</span>
