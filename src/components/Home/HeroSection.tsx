@@ -126,25 +126,33 @@ const HeroSection = () => {
                     <div className="container mx-auto px-4">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
                             <div className="flex items-start h-full">
-                                <Clock className="text-restaurant-secondary mr-2 flex-shrink-0" />
+                                <div className='flex items-starts w-[200px]' >
+                                    <Clock className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>
                                     <p className="text-sm font-medium font-anton">{t("home.heroOpenTime")}</p>
                                     <p className="text-xs text-gray-300">5:30 - 21:30</p>
                                 </div>
-                            </div>
-                            <div className="flex items-center h-full">
-                                <MapPin className="text-restaurant-secondary mr-2 flex-shrink-0" />
-                                <div>
-                                    <p className="text-sm font-medium font-anton">{t("home.heroAddress")}</p>
-                                    <p className="text-xs text-gray-300">{t("home.heroLocation")}</p>
                                 </div>
+                               
+                            </div>
+                            <div className="flex items-starts h-full">
+                                <div className="flex items-starts w-[200px]">
+                                     <MapPin className="text-restaurant-secondary mr-2 flex-shrink-0" />
+                                    <div>
+                                        <p className="text-sm font-medium font-anton">{t("home.heroAddress")}</p>
+                                        <p className="text-xs text-gray-300 ">{t("home.heroLocation")}</p>
+                                    </div>
+                                </div> 
                             </div>
                             <div className="flex items-start h-full">
-                                <Phone className="text-restaurant-secondary mr-2 flex-shrink-0" />
+                                <div className='flex items-starts w-[200px]'>
+                                    <Phone className="text-restaurant-secondary mr-2 flex-shrink-0" />
                                 <div>
                                     <p className="text-sm font-medium font-anton">{t("home.heroOrder")}</p>
                                     <p className="text-xs text-gray-300">+84 28 38200 584</p>
                                 </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
